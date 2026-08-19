@@ -1,0 +1,39 @@
+# Dependencies & build output
+node_modules/
+dist/
+
+# Licensed art assets — NOT redistributable in a public repo.
+# The game's art comes from third-party packs (Cute Fantasy, Sunnyside) whose
+# licenses forbid redistribution. Players download the packs themselves and drop
+# them here; see README "Getting the art assets". This keeps the repo legal.
+public/assets/
+
+# Agent / editor tooling and local skills (machine-specific)
+.claude/
+.codex/
+.agents/
+.frontend-loop/
+.playwright-cli/
+
+# Large local planning + generation artifacts (1.2 GB; never commit)
+planning_artifacts/
+
+# Test / generation scratch output
+output/
+test-results/
+tmp/
+.tmp/
+playwright-report/
+
+# Internal QA playtest logs (contain machine-specific paths / dated evidence)
+docs/playtest-reports/
+
+# Old art snapshots — the game's own PixelLab art, but stale "v1" backups a new
+# user doesn't need. Kept out to stay code-focused; regenerate art from the packs.
+docs/art-backups/
+
+# Stray art-gen artifact (script wrote to an "undefined" path)
+undefined/
+
+# OS
+.DS_Store

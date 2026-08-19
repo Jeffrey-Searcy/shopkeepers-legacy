@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopkeeper's Legacy</title>
+    <style>
+      /* Full-viewport dark backdrop; the Phaser canvas is centered and pixel-crisp. */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #1a1420;
+        overflow: hidden;
+      }
+      #game {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+      }
+      canvas {
+        image-rendering: pixelated; /* keep pixel art crisp when scaled */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
