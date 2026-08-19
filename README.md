@@ -16,8 +16,10 @@ with dungeon-diving in the mines. Built with Phaser 3 + TypeScript + Vite.
 |---|---|
 | ![The farm at daytime — farmhouse, player, hotbar and stamina HUD](docs/screenshots/farm-daytime.png) | ![The same farm at night, with warm-lit windows and the day/night lighting](docs/screenshots/farm-night.png) |
 | *Your inherited farm and home, by day.* | *The day/night cycle — 10 PM on the farm.* |
-| ![A Moonlighter-style mines fight — the player faces slimes and spiders with an HP bar](docs/screenshots/mines-combat.png) | ![A quiet forest clearing with a pond, trees and flowers](docs/screenshots/forest-pond.png) |
-| *Combat in the mines — the Moonlighter side.* | *A forest pond, one of many explorable maps.* |
+
+![A Moonlighter-style mines fight — the player faces slimes and spiders with an HP bar](docs/screenshots/mines-combat.png)
+
+*Combat in the mines — the Moonlighter side.*
 
 ## What works today
 
