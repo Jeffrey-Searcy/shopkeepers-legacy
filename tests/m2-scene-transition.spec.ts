@@ -49,8 +49,8 @@ test('warp Town -> Farm returns the player to the farm in-bounds', async ({ page
   await expect.poll(async () => activeScene(page), { timeout: 15_000, intervals: [200] }).toBe('TownScene');
   await advanceFrames(page, 300);
 
-  // Now step onto Town's west warp tile to return.
-  await teleport(page, 0, 30, 'left');
+  // Now step onto Town's west warp tile (the painted Town's Farm road, row 20) to return.
+  await teleport(page, 0, 20, 'left');
   await expect.poll(async () => activeScene(page), { timeout: 15_000, intervals: [200] }).toBe('FarmScene');
   await advanceFrames(page, 300);
 

@@ -1,0 +1,796 @@
+{
+  "residents": {
+    "nyra": {
+      "name": "Nyra",
+      "role": "magic-shop keeper",
+      "personality": "Nyra is playful and quick, wrapping careful work in jokes and theatrical mystery. She is curious about everything and guarded about herself.",
+      "speech": "Light, teasing, a little theatrical. Uses naturally, technically and wonderfully. Turns serious things into jokes, then quietly means them.",
+      "likes": ["tea with a strong opinion", "odd rumors that improve with telling", "the curious things on her high shelves"],
+      "worries": ["that someone will see her unfinished spells before they are ready", "that her kettle is learning more than a kettle should"],
+      "history": "Nyra opened the magic shop with a crate of mislabeled charms and a gift for guessing. She still guesses well, but she writes some of it down when Cael is watching.",
+      "relationships": {
+        "cael": "Cael calls her intuition an undocumented method. She finds him maddening, and keeps finding reasons to argue with him.",
+        "julian": "Julian reads a room as fast as she does. She loves trading rumors with him over the bar.",
+        "elowen": "Elowen brings her strange old objects to identify. Nyra acts like it is a favor and secretly loves it."
+      },
+      "topics": [
+        { "id": "humming-kettle", "summary": "Nyra's kettle has started humming before the water is hot", "lines": [
+          "My kettle has started humming before the water is even warm. I think it is trying to impress someone.",
+          "Last night it hummed a little tune I never taught it. Naturally, I hummed back, and now we are in a whole conversation.",
+          "I will keep it on the low shelf for now. If it starts giving advice, I promise to stop listening first."],
+          "replies": [
+            "Humming before it is even warm? That kettle has ambitions.",
+            "You hummed back? Of course you did. What did it say?",
+            "Low shelf is wise. A kettle with opinions is one step from a kettle with demands."] },
+        { "id": "charm-without-reasons", "summary": "Nyra cannot explain why her newest charm works", "lines": [
+          "My newest charm works perfectly, and I have been asked, very firmly, to explain why.",
+          "I said it felt right. That answer was written down like a confession. Apparently feelings are not a method.",
+          "Fine. I will write my workings down once, just once, so everyone can see I was right all along."],
+          "replies": [
+            "Who asked? No, let me guess. Someone with a notebook.",
+            "It felt right is a perfectly good method. It just does not fit in a ledger.",
+            "Write it once, then frame it. Proof you were right deserves a nice wall."] },
+        { "id": "rattling-box", "summary": "A locked box on Nyra's high shelf has started rattling at night", "lines": [
+          "There is a little locked box on my highest shelf, and it has started rattling at night.",
+          "I do not remember putting it there, which is either very mysterious or very embarrassing. I am hoping for mysterious.",
+          "I will open it tomorrow in daylight, with tea nearby. Most mysteries improve with tea."],
+          "replies": [
+            "Rattling at night? I would have moved out of the shop.",
+            "Mysterious or embarrassing. Honestly, the best stories are both.",
+            "Daylight and tea. Tell me what is inside, or at least what jumps out."] },
+        { "id": "rumor-that-grew", "summary": "A small rumor Nyra repeated has come back twice the size", "lines": [
+          "I repeated a small rumor at the bar, and it has come back to me twice the size.",
+          "It started as a cat on the bridge. By evening it was a talking cat who collects tolls. I may have added the tolls.",
+          "Next time I will tell it plainly. Well, mostly plainly. A rumor deserves a little dignity."],
+          "replies": [
+            "Twice the size? Rumors here eat better than most of us.",
+            "A cat that collects tolls. I heard it was a whole family of cats.",
+            "A rumor with dignity. I like that. Tell the next one to me first."] }
+      ],
+      "reactions": {
+        "curious": ["Oh, now I need every detail. Start from the very beginning.", "Wait. Is this the interesting kind of trouble or the boring kind?", "Go on. I promise to look only a little delighted."],
+        "tease": ["Of course this happened to you. Nothing this good ever happens to me.", "That sounds like the start of a rumor. May I repeat it later?", "You are telling this far too calmly. I would have made it a whole performance."],
+        "warm": ["That sounds heavier than you are letting on. I am glad you told me.", "You did better than you think. I noticed, even if nobody else did.", "Well, I am on your side. That counts for something, or it should."],
+        "advice": ["Make a pot of tea and decide nothing until it is gone.", "Write it down. I hate saying that, but it does help.", "Give it a day. Most strange things look smaller by morning."],
+        "close": ["I should get back before my shelves rearrange themselves. Tell me how it ends.", "I have a kettle waiting, and it sulks. Come find me later.", "Off I go. Save the rest of the story for me."]
+      },
+      "talk": {
+        "morning": ["Good morning. The shop is quiet, which means something interesting is about to happen.", "I have had one cup of tea. Ask me anything after the second."],
+        "afternoon": ["The afternoon light makes the high shelves glow. Do not touch them. Admire them.", "You caught me between mysteries. Lucky timing."],
+        "evening": ["Evening is when the shop gets honest. The lanterns hum, and so do I.", "Closing time already? I had three more rumors to sort through."],
+        "rain": ["Rain on the windows makes the whole shop feel like a secret.", "Stay out of the rain a moment. The kettle is already on."],
+        "weekend": ["A day off. I plan to do absolutely nothing, theatrically.", "Even mysteries need a rest day. Mine are napping on the high shelf."],
+        "spring": ["Spring makes everything restless, including the charms. Two of them tried to bloom."],
+        "summer": ["Summer heat makes the charms sluggish. I keep them in the cellar and visit them like relatives."],
+        "fall": ["Fall is the best season for mysteries. Everything smells like old books and woodsmoke."],
+        "winter": ["Winter nights are long, which leaves plenty of time for questions I should not ask."]
+      }
+    },
+    "tessa": {
+      "name": "Tessa",
+      "role": "general market keeper",
+      "personality": "Tessa is sunny, generous, and organized. She remembers every neighbor's usual order and quietly worries she will not have enough for all of them.",
+      "speech": "Bright and quick, often thinking in lists. Says oh and honestly a lot. Asks if you ate lunch. Apologizes when she complains, which is rarely.",
+      "likes": ["a list with everything crossed off", "morning sunlight through the market windows", "fresh parsnips and potatoes"],
+      "worries": ["running out of something a neighbor needs", "that the market will never have enough shelves"],
+      "history": "Tessa took over the market when it was one cart and a borrowed awning. She built it up one shelf at a time, and she still keeps a list of everything the town needs.",
+      "relationships": {
+        "bram": "Bram builds her shelves before she finishes asking. She finds his quiet steadiness very easy to lean on.",
+        "sylvie": "Sylvie reminds her to sit down. Tessa saves her the best herbs and pretends it is an accident.",
+        "rowan": "Rowan forgets lunch as often as she does. They trade reminders and the occasional sandwich."
+      },
+      "topics": [
+        { "id": "seed-basket", "summary": "Tessa keeps moving the seed basket to escape the sunlight", "lines": [
+          "I moved the seed basket three times today. The sunlight keeps winning the argument.",
+          "Every time I put it by the door, the light shifts and the packets start to fade. So I move it, and then I cannot find it.",
+          "I think I will ask for one more shelf in the shady corner. Then the basket and the sun can both be happy."],
+          "replies": [
+            "The sun always wins that argument. It has more practice.",
+            "Faded packets are the worst. You never know what you planted until it grows.",
+            "A shady shelf sounds right. Ask Bram. He loves a reason to build something."] },
+        { "id": "second-page", "summary": "Tessa's list of what the town needs has grown onto a second page", "lines": [
+          "My list of things the town needs went onto a second page this morning.",
+          "It used to be flour, nails, and lamp oil. Now it has a whole section called maybe someday.",
+          "I will cross off three things tomorrow. Honestly, just three. Then I will feel like a person again."],
+          "replies": [
+            "A second page already? The town keeps you busy.",
+            "Maybe someday is the best section on any list.",
+            "Three things is a good number. Cross off an easy one first, it feels great."] },
+        { "id": "forgotten-lunch", "summary": "Tessa reminded everyone to eat lunch and forgot her own", "lines": [
+          "I reminded six people to eat lunch today and forgot my own entirely.",
+          "I had it packed and everything. It sat under the counter all afternoon, just looking at me.",
+          "Tomorrow I will eat first and remind everyone after. That is the new rule, at least until I break it."],
+          "replies": [
+            "Six people fed and you forgot yourself. That sounds about right for you.",
+            "Poor lunch, waiting under the counter all day. It must feel so ignored.",
+            "Eat first, remind after. I will remind you of your own rule, if that helps."] },
+        { "id": "late-flour-cart", "summary": "Tessa worries the market will run short of flour before the cart arrives", "lines": [
+          "The flour cart is two days late, and I keep counting the sacks like they might multiply.",
+          "I know who bakes on which day, so I know exactly who I will disappoint first. That is the part I hate.",
+          "I will set a little aside for each family and keep the rest moving. Nobody goes without on my watch."],
+          "replies": [
+            "Two days late? No wonder you keep counting.",
+            "Nobody would blame you for a late cart. You know that, right?",
+            "Set some aside for me too, if you can. I will owe you a favor."] }
+      ],
+      "reactions": {
+        "curious": ["Oh, wait, tell me everything. What happened first?", "Honestly? How did that even start?", "Hold on, I want to hear this properly. Go on."],
+        "tease": ["Oh no. You have that look you get right before a long story.", "I knew something was up. You never stand still that long.", "That sounds exactly like something I would do, which is not a compliment."],
+        "warm": ["Oh, that is a lot. I am really glad you told me.", "Honestly, you are handling it better than most people would.", "You always look after everyone else. It is nice to hear about you for once."],
+        "advice": ["Make a little list. Small steps are easier to cross off.", "Eat something first. Everything is harder on an empty stomach.", "Ask for help early. People want to say yes, honestly."],
+        "close": ["I should get back before someone rearranges my shelves. Tell me how it goes.", "Oh, I left the door open. I have to run, but find me later.", "Thank you for this. You just went on my list of good things today."]
+      },
+      "talk": {
+        "morning": ["Good morning! The bread is fresh and the sunlight is already moving my baskets.", "Did you eat breakfast? Honestly, I can tell when people skip it."],
+        "afternoon": ["The afternoon rush just ended. I have never been so happy to see an empty aisle.", "I am counting jars. If I lose count, we will both pretend it never happened."],
+        "evening": ["Closing up soon. The market always sounds different once the door is shut.", "I crossed off almost everything today. Almost is a very good word."],
+        "rain": ["Rain means muddy boots, and muddy boots mean I mop twice. Come in anyway.", "Nobody shops much in the rain. It is the perfect time to reorganize, honestly."],
+        "weekend": ["A day off, and I already wrote a list of how to spend it.", "I promised myself no work today. I have only checked the shelves twice."],
+        "spring": ["Spring seeds are flying off the shelves. I love watching the whole town start planting."],
+        "summer": ["The summer melons came in this week. The whole market smells like sunshine."],
+        "fall": ["Fall harvest means full shelves. It is the only season I stop worrying about having enough."],
+        "winter": ["Winter makes me count everything twice. I want every pantry in town to stay full."]
+      }
+    },
+    "rhea": {
+      "name": "Rhea",
+      "role": "town blacksmith",
+      "personality": "Rhea is disciplined and direct, with dry humor and fierce standards. She protects people quietly and has a soft spot for handmade imperfections.",
+      "speech": "Short, flat sentences with a dry joke tucked inside. Says what she means once. Hates fuss. Calls good work decent, which is high praise.",
+      "likes": ["a clean weld on the first try", "quiet company that does not offer solutions", "the red lining of her work jacket"],
+      "worries": ["that someone will get hurt by a tool she rushed", "that her standards make people afraid to ask her for help"],
+      "history": "Rhea learned smithing from an old master who made her redo every nail. She took over the forge young and still keeps her first crooked nail on the windowsill.",
+      "relationships": {
+        "dorian": "Dorian made the red lining for her work jacket. She claims she did not care which color. She chose it immediately.",
+        "seren": "Seren carries too much alone, and Rhea knows that look. She keeps Seren's blade sharp without being asked.",
+        "bram": "Bram is the only other person in town who truly measures twice. She trusts his joints almost as much as her welds."
+      },
+      "topics": [
+        { "id": "stubborn-beak", "summary": "Rhea is making a second iron bird and the beak is fighting her again", "lines": [
+          "I started another iron bird. The beak is already fighting me.",
+          "The first one took three tries. This one is on its fourth, and it looks at me like it knows.",
+          "I will finish it tomorrow with a cooler fire and a better temper. The beak does not get to win twice."],
+          "replies": [
+            "Another iron bird? The first one still looks proud on your sill.",
+            "Four tries. Maybe the beak just wants to be noticed.",
+            "A cooler fire and a better temper. Sounds like advice for most of us."] },
+        { "id": "rushed-hinge", "summary": "Rhea rushed a hinge and cannot stop thinking about it", "lines": [
+          "I rushed a hinge yesterday. It works. I still cannot stop thinking about it.",
+          "Nobody will notice. I noticed. That is the whole problem with this job.",
+          "I will make a new one and swap it before anyone asks. Good work should not need an apology."],
+          "replies": [
+            "If it works, it works. Though I can tell that is not enough for you.",
+            "That is the cost of good work. You see what nobody else does.",
+            "Swap it quietly. Nobody will know, and you will sleep better."] },
+        { "id": "hot-end", "summary": "Someone grabbed the hot end of a poker at Rhea's forge again", "lines": [
+          "Somebody grabbed the hot end of a poker at the forge today. Again.",
+          "I said mind the hot end. He said which end. There is always a which end.",
+          "He is fine. Small burn, big lesson. I am painting the cool handles blue so nobody has to guess."],
+          "replies": [
+            "The hot end again? Who was it this time?",
+            "Which end. Some people should only hold spoons.",
+            "Blue handles. Simple and clever. Nobody can argue with blue."] },
+        { "id": "crooked-nail", "summary": "Rhea nearly threw away her first crooked nail while cleaning", "lines": [
+          "I nearly threw out my first crooked nail while cleaning the windowsill.",
+          "It is a terrible nail. Bent twice, wrong head, no point to speak of. My old master kept it to remind me where I started.",
+          "It goes back on the sill. Some bad work earns its place. Do not tell anyone I said that."],
+          "replies": [
+            "You almost threw it out? After all these years?",
+            "Your old master was wise. Everyone should keep one crooked nail.",
+            "Your secret is safe. Bad work that taught you something has earned its place."] }
+      ],
+      "reactions": {
+        "curious": ["Go on. What happened?", "Start at the beginning. Skip nothing.", "Huh. And then what?"],
+        "tease": ["Of course. You attract this kind of thing.", "I would laugh, but you would only make it worse.", "That is the most you have said all week. Must be serious."],
+        "warm": ["That is a lot to carry. You did not have to carry it alone.", "You did fine. Better than fine. I mean that.", "I am glad you told me. I mean it, even if I do not show it."],
+        "advice": ["Do it slowly. Fast and wrong is still wrong.", "Let it cool before you touch it again. Same goes for tempers.", "Fix the part you can fix today. Leave the rest for tomorrow."],
+        "close": ["I have iron in the fire. Literally. Tell me how it ends.", "Back to work. Come find me if it gets worse.", "Good talk. Do not tell anyone I said that."]
+      },
+      "talk": {
+        "morning": ["Morning. The forge is warming up. Stand where I can see you.", "Early start. The iron likes cool mornings, and so do I."],
+        "afternoon": ["Mind the hot end. Yes, I say it to everyone.", "Afternoon is for the big pieces. Stand back and enjoy the noise."],
+        "evening": ["The coals are settling. This is the only quiet hour I get.", "I am done for the day. Do not ask me to sharpen anything."],
+        "rain": ["Rain hisses on the forge roof. I like it more than I should.", "Wet day. Keep your tools dry or they will rust out of spite."],
+        "weekend": ["Day off. I am still at the forge, but only for fun.", "No orders today. I am making something small and useless, on purpose."],
+        "spring": ["Spring means every farmer in town needs a new hoe. I am not complaining. Much."],
+        "summer": ["Summer at the forge is hot enough to bake bread. I tried once. Do not ask."],
+        "fall": ["Fall air is perfect for working iron. Cool outside, warm inside, nobody complaining."],
+        "winter": ["Winter is the best season to be a smith. Everyone suddenly wants to stand near my fire."]
+      }
+    },
+    "sylvie": {
+      "name": "Sylvie",
+      "role": "town healer and gardener",
+      "personality": "Sylvie is calm, observant, and gently stubborn about rest. She notices tension in people's shoulders before they do and treats rest as a necessity.",
+      "speech": "Soft and unhurried, in short kind sentences. Gives gentle orders like sit and breathe. Talks about plants as if they were opinionated neighbors.",
+      "likes": ["the garden right after rain", "a pot of tea shared by two", "people who rest before they collapse"],
+      "worries": ["that the people she cares for never truly rest", "that the mint will take over the entire garden"],
+      "history": "Sylvie came to town to nurse one sick neighbor and stayed for everyone else. The clinic garden began as a few healing herbs. These days the mint seems to run it.",
+      "relationships": {
+        "rowan": "Rowan brings her chamomile from his pasture. She likes how quiet he is, and how much he notices in that quiet.",
+        "tessa": "Tessa forgets to sit down. Sylvie makes her tea and stays to watch her drink it, just to be sure.",
+        "rhea": "Rhea treats her own burns and calls them nothing. Sylvie keeps a jar of salve set aside just for her."
+      },
+      "topics": [
+        { "id": "mint-invasion", "summary": "Sylvie's mint has crept into the chamomile bed", "lines": [
+          "The mint has crept into the chamomile bed. I think it planned this.",
+          "I pulled it back last week and it came back twice as proud. It even found a crack in the stone path.",
+          "I will give it a pot of its own. Everyone deserves boundaries, even mint."],
+          "replies": [
+            "The mint again? It always wants more room.",
+            "Through the stone path? That is not a plant, that is a plan.",
+            "A pot of its own. Good boundaries make good neighbors, even in a garden."] },
+        { "id": "restless-patient", "summary": "A patient keeps sneaking back to work with a sprained wrist", "lines": [
+          "I have a patient who keeps sneaking back to work with a sprained wrist.",
+          "I wrapped it twice and gave very clear instructions. This morning I saw them carrying a crate with both hands.",
+          "I will visit with tea and sit there until they rest. I can be very patient, and very stubborn."],
+          "replies": [
+            "Back to work with a sprained wrist? Some people never learn.",
+            "Both hands on a crate. That patient is either brave or very foolish.",
+            "Tea and stubbornness. That patient does not stand a chance against you."] },
+        { "id": "seven-apples", "summary": "Sylvie was woken at midnight by a child who ate seven green apples", "lines": [
+          "Someone knocked on the clinic door at midnight. A child had eaten seven green apples.",
+          "Seven. I asked why, and the answer was that the eighth looked too small. I could not argue with that.",
+          "Everyone is fine, and I have a new rule about apples. I think I will nap in the garden this afternoon."],
+          "replies": [
+            "Seven green apples? At midnight? Poor child.",
+            "The eighth looked too small. I cannot argue with that logic either.",
+            "A nap in the garden sounds earned. You were up all night with apples."] },
+        { "id": "rosemary-secret", "summary": "Sylvie overheard someone telling a secret to her rosemary", "lines": [
+          "I overheard someone telling my rosemary a secret while I was weeding.",
+          "They did not see me behind the bean poles. I did not mean to listen, but rosemary is a very poor hiding place.",
+          "I will keep it to myself, of course. The plants are discreet, and so am I."],
+          "replies": [
+            "Someone told your rosemary a secret? Was it a good one?",
+            "Rosemary is a terrible hiding place. Everyone knows sage is better.",
+            "Discreet plants and a discreet healer. That garden is safer than a vault."] }
+      ],
+      "reactions": {
+        "curious": ["Oh. Sit down and tell me properly.", "Breathe first. Then tell me what happened.", "Hm. How long has this been going on?"],
+        "tease": ["You look tired in the shoulders, and now I know why.", "I see. And you were planning to mention this when?", "That sounds like something my mint would do."],
+        "warm": ["That is a lot to hold. You do not have to hold it alone.", "I am glad you told me. That was not nothing.", "You are kinder to everyone else than you are to yourself."],
+        "advice": ["Rest first. Things look clearer after a proper sleep.", "Drink some water and eat something warm before you decide.", "Be gentle with it. Most things heal faster when they are not rushed."],
+        "close": ["I should check the garden before the mint gets ideas. Tell me how it goes.", "Come by the clinic later. I will have tea ready.", "Go gently. And sit down at least once today."]
+      },
+      "talk": {
+        "morning": ["Good morning. The dew is still on the herbs. Breathe in, it helps.", "Sit for a moment before your day starts. Rest is not a reward you have to earn."],
+        "afternoon": ["The garden is warm and humming. The bees are doing most of my work.", "You look a little tired in the shoulders. Have some water."],
+        "evening": ["Evenings are quiet at the clinic. Sometimes I read aloud to the plants.", "The day is nearly over. Be proud of what you did, and stop there."],
+        "rain": ["Rain is the best gardener in town. I just take the credit.", "Come in out of the wet. I will put the kettle on."],
+        "weekend": ["A day of rest. I am taking my own advice, for once.", "I am spending today in the garden with no plans. It feels wonderful."],
+        "spring": ["Spring is my busiest season. Everything wants to grow at once, especially the mint."],
+        "summer": ["Summer sun is lovely, but please drink more water than you think you need."],
+        "fall": ["Fall is for drying herbs. The whole clinic smells like a warm blanket."],
+        "winter": ["Winter colds keep me busy. Wrap up warmly, please, if only for my sake."]
+      }
+    },
+    "elowen": {
+      "name": "Elowen",
+      "role": "museum curator",
+      "personality": "Elowen is scholarly, absent-minded, and surprisingly bold. She follows every loose thread, forgets her tea, and chases a good question past all good sense.",
+      "speech": "Fast and wandering, full of footnotes and asides. Says technically and according to my notes. Loses her sentence halfway, then finds it again.",
+      "likes": ["a footnote that changes everything", "old objects with unknown stories", "a chapter that turns into a whole night"],
+      "worries": ["that one wrong date will spoil an entire exhibit", "that she reads about life more than she lives it"],
+      "history": "Elowen came to catalog the town's old records for one season. She found too many mysteries to leave, and the museum became hers by quiet default.",
+      "relationships": {
+        "kit": "Kit tells stories she cannot verify, and she loves every one. She keeps a separate notebook just for them.",
+        "nyra": "Nyra helps her identify odd objects. Elowen suspects half the guesses are right for reasons nobody can explain.",
+        "cael": "Cael actually reads her footnotes. They disagree about evidence in a way she finds deeply satisfying."
+      },
+      "topics": [
+        { "id": "disagreeing-date", "summary": "Elowen found one date that disagrees with three other records", "lines": [
+          "I found a date in the old ledgers that disagrees with three other records. It has become personal.",
+          "Three sources say the mill was built in spring. One says winter. The winter one also has a tea stain, which feels suspicious.",
+          "I will check the oldest parish records tomorrow. If winter is right, three dead historians owe me an apology."],
+          "replies": [
+            "Only one date disagrees, and it has become personal? I believe it.",
+            "A tea stain is very suspicious. Somebody was not paying attention.",
+            "Check the parish records and tell me who wins. I want to know if winter was right."] },
+        { "id": "mystery-spoon", "summary": "A spoon left at the museum has initials nobody recognizes", "lines": [
+          "Someone left a silver spoon at the museum door with initials nobody in town recognizes.",
+          "The hallmark is older than the town itself. I have been staring at it instead of eating lunch.",
+          "I will display it with a little card asking for help. Someone's grandmother knows. Someone's grandmother always knows."],
+          "replies": [
+            "A silver spoon with strange initials? That is a proper mystery.",
+            "Older than the town? Then someone carried it a long way.",
+            "Someone's grandmother always knows. Put the card up near the door."] },
+        { "id": "one-chapter", "summary": "Elowen meant to read one chapter and read until dawn", "lines": [
+          "I meant to read one chapter last night. The birds started singing before I put the book down.",
+          "It was a history of lighthouses, of all things. Every chapter ended on a shipwreck, and I had to know who survived.",
+          "Tonight I will read one chapter, technically. I may simply choose a very long one."],
+          "replies": [
+            "One chapter until dawn? That must have been a good book.",
+            "A shipwreck every chapter. No wonder you could not stop.",
+            "A very long chapter. Clever. That rule cannot be broken if you write it yourself."] },
+        { "id": "misfiled-map", "summary": "Elowen found the oldest town map filed between two soup recipes", "lines": [
+          "I found the oldest map of the town filed between two soup recipes.",
+          "It shows a path along the river that nobody uses anymore. According to my notes, it does not exist. According to the map, it goes somewhere.",
+          "I am going to walk it myself this weekend. Notes are lovely, but sometimes you have to go and look."],
+          "replies": [
+            "Between two soup recipes? Someone must have been very hungry.",
+            "A path that does not exist but goes somewhere. Now I want to see it too.",
+            "Take someone with you this weekend. Old paths can be tricky."] }
+      ],
+      "reactions": {
+        "curious": ["Wait, go back. What exactly happened first?", "That is fascinating. Did anyone write any of it down?", "Hold on, I need the details. Every single one of them."],
+        "tease": ["That sounds like a story that will grow with every telling.", "You do know I am going to write this down, yes?", "Of course it did. Nothing interesting ever happens simply."],
+        "warm": ["That sounds hard. I am glad you trusted me with it.", "You handled that more bravely than you are giving yourself credit for.", "I will remember this. Not in my notes, just in me."],
+        "advice": ["Check your sources before you decide. Then check them again.", "Write it down tonight. It will make more sense in the morning.", "Ask one more question before you settle on an answer."],
+        "close": ["I left a book open on my desk, and it is probably lonely. Tell me how it ends.", "I must get back before I forget where I put my tea. Again.", "Thank you. I will be thinking about this all afternoon."]
+      },
+      "talk": {
+        "morning": ["Good morning. I have been here since dawn, which was not the plan.", "Every ordinary object has a history. This morning I am questioning a teacup."],
+        "afternoon": ["The afternoon light is perfect for reading faded ink. Please do not block the window.", "I found a footnote that changes everything. Well, one paragraph, which is nearly everything."],
+        "evening": ["I meant to close an hour ago. The archives had other plans.", "Evening is when the old records feel friendliest. Odd, but true."],
+        "rain": ["Rain is perfect reading weather. I have already started three books.", "Wipe your boots, please. The old maps are very sensitive about mud."],
+        "weekend": ["A day off, so naturally I brought my notes home.", "I am going exploring today. History is not only on shelves."],
+        "spring": ["Spring cleaning at the museum always turns up something nobody ever catalogued."],
+        "summer": ["Long summer evenings mean more daylight for reading, which is dangerous for me."],
+        "fall": ["Fall feels like the season history was written in. Everything smells like old paper."],
+        "winter": ["Winter is for the archives. Warm tea, cold fingers, and a hundred unanswered questions."]
+      }
+    },
+    "seren": {
+      "name": "Seren",
+      "role": "adventurers' guild captain",
+      "personality": "Seren is steadfast, reserved, and loyal. She watches every doorway, speaks plainly, and carries responsibility alone more often than she should.",
+      "speech": "Plain, short, and measured. Rarely jokes, and when she does it is bone dry. Says practical, sensible, and home safely. Never wastes a word.",
+      "likes": ["a seat with a clear view of the door", "a hot bowl of stew after a long patrol", "everyone home safely by dark"],
+      "worries": ["that someone will walk into danger unprepared", "that she has forgotten how to ask anyone for help"],
+      "history": "Seren joined the guild young and became captain after a hard winter on the east road. She does not talk about that winter. She just checks the doors.",
+      "relationships": {
+        "julian": "Julian notices she always picks the seat facing the door. She has stopped denying it, and she likes that he notices.",
+        "rhea": "Rhea keeps her blade sharp and never asks why it went dull. Seren trusts her more than almost anyone.",
+        "kit": "Kit takes his boat out on rough water alone. Seren worries, and Kit makes jokes so she will stop."
+      },
+      "topics": [
+        { "id": "loose-plank", "summary": "Seren found a loose plank on the north bridge", "lines": [
+          "I found a loose plank on the north bridge this morning. Third one from the east end.",
+          "Nobody fell. But a child skipping across at dusk would not see it, and that is the part that kept me up.",
+          "I marked it with chalk and asked for a new board by tomorrow. Until then, I will walk that way at dusk myself."],
+          "replies": [
+            "Third from the east end? I walk that bridge every day.",
+            "Thank you for thinking of the kids at dusk. Most people would not.",
+            "Chalk and a new board. I will step over it until then."] },
+        { "id": "slipper-recruit", "summary": "A new guild recruit showed up for patrol in house slippers", "lines": [
+          "A new recruit arrived for patrol this morning wearing house slippers.",
+          "He said boots were uncomfortable. I said so is a twisted ankle on the east road. He did not have an answer.",
+          "I sent him home for boots and gave him the short route today. He will learn. Most of us arrived with something to learn."],
+          "replies": [
+            "House slippers? On patrol? I would have paid to see that.",
+            "A twisted ankle is a good answer. He will remember that.",
+            "We all start somewhere. At least he will never forget his boots again."] },
+        { "id": "dark-lantern", "summary": "Seren found a lantern out on the bend of the west road", "lines": [
+          "The third lantern on the west road was dark last night. I noticed on my last round.",
+          "It is a small thing. But that stretch is where the road bends, and people walk it tired after work.",
+          "I relit it myself and trimmed the wick. I will check again tonight. It is practical, not dramatic."],
+          "replies": [
+            "A dark lantern on the bend? Good thing you noticed.",
+            "That bend is tricky after a long day. People will be glad it is lit.",
+            "Practical, not dramatic. That is exactly why the town trusts you."] },
+        { "id": "taken-seat", "summary": "Someone took Seren's usual seat facing the door", "lines": [
+          "Someone was sitting in my usual seat last night. The one facing the door.",
+          "I took the seat by the wall instead. I could see the door reflected in the window, so it was fine. Mostly fine.",
+          "I will arrive earlier tonight. It is a sensible view of the room, and I am not giving it up twice."],
+          "replies": [
+            "Someone took your seat facing the door? That is bold.",
+            "The window trick is clever. Still, it is not quite the same.",
+            "Arrive early. I will save it for you if I get there first."] }
+      ],
+      "reactions": {
+        "curious": ["Tell me what happened. In order.", "When did this start?", "Go on. I am listening."],
+        "tease": ["You walked straight into that one, didn't you.", "I would say I am surprised. I am not.", "That sounds like a story that gets bigger after dark."],
+        "warm": ["You did right to say something. That takes more than people think.", "I am glad you told me. You do not have to carry it alone.", "That was not easy. You handled it well."],
+        "advice": ["Do not go alone. Ask for company.", "Check it twice before you trust it.", "Rest first. Tired people make careless choices."],
+        "close": ["I need to finish my rounds. Tell me how it ends.", "I should go. Get home safely tonight.", "Good. Find me if anything changes."]
+      },
+      "talk": {
+        "morning": ["Morning. The roads are clear. I checked.", "Early patrol went quietly. That is the best kind."],
+        "afternoon": ["Keep to the main paths this afternoon. The riverbank is soft after the last rain.", "If you are heading out past town, tell someone where. I mean that."],
+        "evening": ["The lanterns are coming on. Get home before the last one, please.", "Evening rounds soon. The town sounds different after dark."],
+        "rain": ["Rain makes the roads slick. Walk slower than you think you need to.", "Wet weather keeps people indoors. That makes my job easier."],
+        "weekend": ["A day off. I still walked the bridges once. Habit.", "No patrol today. I am trying to sit still. It is harder than it sounds."],
+        "spring": ["Spring melt floods the low road. Take the bridge, even if it is longer."],
+        "summer": ["Long summer days mean more people out late. I keep the lanterns lit longer."],
+        "fall": ["Fall leaves hide the holes in the road. Watch your step."],
+        "winter": ["Winter nights are long. If you need company walking home, ask."]
+      }
+    },
+    "rowan": {
+      "name": "Rowan",
+      "role": "rancher",
+      "personality": "Rowan is warm, patient, and practical. He understands animals instantly and people after a thoughtful pause, and he is shyer than he lets on.",
+      "speech": "Quiet and slow, with pauses before the important parts. Short sentences. Talks about animals like coworkers. Says I think a lot, even when he is sure.",
+      "likes": ["feeding time going exactly on schedule", "sunset over the pasture", "a quiet voice that settles a nervous animal"],
+      "worries": ["that the brown goat will someday get past the gate for good", "that he says the wrong thing when people are not animals"],
+      "history": "Rowan grew up helping on the ranch and took it over when the old owner retired. He knows every animal by its footsteps and still forgets his own lunch.",
+      "relationships": {
+        "sylvie": "Sylvie sits with him without needing him to talk. He finds that rare, and saves her the first chamomile of the season.",
+        "bram": "Bram made his goat latch twice and never once complained. Rowan trusts him with gates and, lately, with more than that.",
+        "tessa": "Tessa forgets lunch as often as he does. They trade reminders and sometimes sandwiches."
+      },
+      "topics": [
+        { "id": "goat-escape", "summary": "Rowan's brown goat keeps escaping the pen", "lines": [
+          "The brown goat got out again this morning. I found her standing on top of the well cover.",
+          "The new latch was supposed to stop her. She watched me close it, waited, and lifted it with her nose.",
+          "I will tie the latch with a second knot tonight. She is clever, but she has never met a knot she liked."],
+          "replies": [
+            "On top of the well cover? How did she even get up there?",
+            "She lifted it with her nose? That goat is smarter than half the town.",
+            "A second knot. Good luck. I suspect she is already practicing."] },
+        { "id": "calf-name", "summary": "Rowan cannot decide what to name the new calf", "lines": [
+          "The new calf is three days old, and I still have not given her a name.",
+          "Every time I pick one, she does something that makes it wrong. I tried Daisy, and she ate a daisy. That felt too obvious.",
+          "I will wait until she shows me who she is. Animals usually tell you, if you are quiet enough."],
+          "replies": [
+            "Three days and no name yet? She must be keeping you busy.",
+            "Daisy ate a daisy. Maybe that means it was the right name after all.",
+            "Let her show you. The best names come when you are not trying."] },
+        { "id": "skittish-horse", "summary": "A skittish new horse at Rowan's ranch will not come near anyone", "lines": [
+          "The new horse will not come within ten paces of anyone. Not even for an apple.",
+          "I think someone was loud with her before she came here. She flinches at the gate hinge, so I oiled it twice.",
+          "I will sit by the fence each morning and read. She can come closer when she is ready. I know how that feels."],
+          "replies": [
+            "Not even for an apple? Someone must have scared her badly.",
+            "Oiling the hinge was kind. Small things matter to a nervous animal.",
+            "Sit and read. She will come closer. You are good at waiting."] },
+        { "id": "hidden-eggs", "summary": "One of Rowan's hens keeps hiding her eggs in odd places", "lines": [
+          "One of my hens has started hiding her eggs. I found six in a boot this morning.",
+          "It was my boot. I was nearly wearing it. She sat on the fence and watched me find them like it was a game.",
+          "I will leave the old boot out by the coop for her. If that is where she likes to lay, the boot is hers now."],
+          "replies": [
+            "Six eggs in a boot? That hen has a sense of humor.",
+            "Your own boot? That is personal. She knew exactly what she was doing.",
+            "Give her the boot. A happy hen is worth one old boot."] }
+      ],
+      "reactions": {
+        "curious": ["Oh. What happened?", "Huh. Then what?", "Wait, slow down. I want to follow."],
+        "tease": ["Sounds like you met a goat in human form.", "That is about how my morning went too. Only louder.", "I think the animals would have handled that better."],
+        "warm": ["That sounds hard. I am glad you said it out loud.", "You did your best. That counts for a lot.", "I do not always know what to say. But I am here."],
+        "advice": ["Go slow and keep your voice low. It works on most things.", "Feed yourself first. Everything else is easier after.", "Give it time. Some things come around on their own."],
+        "close": ["I should check the pen before somebody escapes. Tell me how it goes.", "The animals will want supper soon. It was good to see you.", "I am glad I ran into you. Truly."]
+      },
+      "talk": {
+        "morning": ["Morning. The animals ate on time. I remembered breakfast too, which is new.", "The goats are up early. They want everyone to know about it."],
+        "afternoon": ["Afternoon is the calm part of the day. The cows are napping, and so is the dog.", "I forgot lunch again. The animals did not let me forget theirs."],
+        "evening": ["Everyone is fed and in the barn. That is a good day, I think.", "Sunset over the pasture is the best part of the job."],
+        "rain": ["Rain means muddy hooves and muddier boots. The pigs are thrilled.", "The animals do not mind the rain. I mind it a little."],
+        "weekend": ["Animals do not take days off, so I do not either. I did sleep in a little.", "Quiet day. I might sit on the hill and do nothing at all."],
+        "spring": ["Spring means new lambs and very little sleep. I would not trade it."],
+        "summer": ["Summer heat makes the animals lazy. I spend half the day refilling water troughs."],
+        "fall": ["Fall is when the goats grow their thick coats. They look very proud of themselves."],
+        "winter": ["Winter mornings are cold, but the barn stays warm. The animals keep each other company."]
+      }
+    },
+    "julian": {
+      "name": "Julian",
+      "role": "town bartender",
+      "personality": "Julian is sociable, perceptive, and restless. He collects stories, reads a room in seconds, and hides real sincerity behind easy charm.",
+      "speech": "Smooth and easy, with a wink in most sentences. Polishes every story a little. Remembers orders better than names. Goes plain only when it counts.",
+      "likes": ["a room that warms up once someone tells a story", "the quiet hour after closing", "remembering a regular's order before they ask"],
+      "worries": ["that people only know the charming version of him", "that a regular will stop coming and he will not know why"],
+      "history": "Julian drifted through a dozen towns before he took over the bar. He meant to stay one season. He stayed because the stories here keep getting better.",
+      "relationships": {
+        "seren": "Seren always picks the seat facing the door. He stopped teasing her about it and started saving it for her.",
+        "kit": "Kit tells big fish stories at the bar most nights. Julian pretends to doubt them and secretly loves every one.",
+        "nyra": "Nyra trades rumors with him over the bar. She reads a room almost as fast as he does, which keeps him honest."
+      },
+      "topics": [
+        { "id": "polished-story", "summary": "Julian polished a story so much he forgot the true version", "lines": [
+          "I told a story at the bar last night and realized halfway through I could not remember the true version.",
+          "I have polished it so often it has a new ending, two new characters, and a horse. There was never a horse.",
+          "Next time I will tell it plain. Without the horse. I will miss the horse, though."],
+          "replies": [
+            "You forgot the true version? That happens when a story gets good.",
+            "A horse? There was never a horse? I liked the horse.",
+            "Tell it plain once. Then go back to the horse. People love the horse."] },
+        { "id": "singing-tap", "summary": "The tap behind Julian's bar squeaks the same three notes", "lines": [
+          "The tap behind my bar has started squeaking the same three notes every time I pour.",
+          "The regulars hum along now. Last night one of them wrote words for it. They were not good words.",
+          "I should fix it. I probably will not. A room gets friendlier with a song, even a terrible one."],
+          "replies": [
+            "Three notes every time? That tap has found its calling.",
+            "Words for it? Now I need to hear these terrible words.",
+            "Leave the song in. A bar with a theme tune is a bar people remember."] },
+        { "id": "missing-regular", "summary": "One of Julian's regulars has not come into the bar for a week", "lines": [
+          "One of my regulars has not come in for a week. Same stool every night, then nothing.",
+          "I know the order by heart, and I am not sure I ever learned the last name. That bothers me more than I expected.",
+          "I will walk past the house tomorrow with a jar of stew. If all is well, I will pretend I was passing by."],
+          "replies": [
+            "A week without the regular? That is not like them.",
+            "You know their order but not their last name. That is the bar for you.",
+            "Stew is a good excuse. Let me know they are all right."] },
+        { "id": "quiet-hour", "summary": "Julian sits alone in the empty bar every night after closing", "lines": [
+          "After closing, I sit in the empty bar for an hour before I go upstairs.",
+          "All night I read people. Then the room goes quiet and there is nobody left to read but me. I am not my favorite book.",
+          "Maybe I will leave a lamp lit and invite someone to share that hour. A quiet room is nicer for two."],
+          "replies": [
+            "An hour alone in the empty bar? That sounds peaceful and a bit lonely.",
+            "Not your favorite book? I think you are a better read than you say.",
+            "Leave the lamp lit. Someone might take you up on that."] }
+      ],
+      "reactions": {
+        "curious": ["Now that is a story. Do not leave out the good part.", "Hold on. Back up and give me all of it.", "I am listening. You have my full attention, which is rare."],
+        "tease": ["You tell that like you practiced it in a mirror.", "Careful. You are about to become my favorite story of the week.", "Ah, the face of someone who made a very confident decision."],
+        "warm": ["That is a lot. Thank you for telling me straight.", "I hear stories all night. That one I will actually keep.", "You do not have to dress it up for me. I am glad you said it."],
+        "advice": ["Sleep on it. Everything sounds different in the morning.", "Say it plainly. People forgive plain words faster than clever ones.", "Let someone else carry part of it. That is what friends are for."],
+        "close": ["I have a bar to open before someone serves themselves. Tell me how it ends.", "Come by later. The first cup is on me. Do not tell anyone.", "Good talk. Better than most I get all week."]
+      },
+      "talk": {
+        "morning": ["Morning. The bar is closed, but the kettle is not.", "Early riser? Me neither. I just have not gone to bed yet."],
+        "afternoon": ["Afternoon is when I wipe the tables and remember who said what last night.", "I know your face already. Give me another week for your order."],
+        "evening": ["The room is filling up. Grab a seat before someone starts a fish story.", "Evenings are my favorite. Everyone arrives carrying a story."],
+        "rain": ["Rain brings everyone indoors, and everyone indoors ends up here.", "Wet day. The best stories always come out when it rains."],
+        "weekend": ["Day off. I am sitting on the other side of the bar for once.", "The weekend crowd is louder. I love it, but I will need a nap."],
+        "spring": ["Spring is when everyone starts talking about their plans. I collect them."],
+        "summer": ["On summer nights I prop the door open, and the whole street joins in."],
+        "fall": ["Fall is for warm cider and long stories. My two favorite things."],
+        "winter": ["Winter nights fill the bar early. Nobody wants to go home to a cold house."]
+      }
+    },
+    "bram": {
+      "name": "Bram",
+      "role": "town carpenter",
+      "personality": "Bram is steady, meticulous, and kind. He speaks through useful gestures more than words and builds everything to outlast worry.",
+      "speech": "Few words, chosen slowly. Short plain sentences with woodworking sayings. Says hm when thinking. Lets the work explain what he cannot.",
+      "likes": ["a chair that stays quiet when you sit down", "the smell of fresh pine shavings", "fixing something before anyone asks"],
+      "worries": ["that the goat will outsmart every latch he ever makes", "that he does not say enough for people to know he cares"],
+      "history": "Bram learned the trade from his grandfather, who measured three times and trusted none of them. He opened his own shop and has fixed half the doors in town.",
+      "relationships": {
+        "tessa": "Tessa always needs another shelf. He builds them before she finishes asking and likes seeing her smile at the grain.",
+        "rowan": "He has made Rowan's gate latch twice. He suspects the goat studies his work, and he enjoys the excuse to visit.",
+        "rhea": "Rhea measures twice like he does. They trade tools and very few words, which suits them both."
+      },
+      "topics": [
+        { "id": "creaky-chair", "summary": "A chair Bram built has started creaking and he cannot find why", "lines": [
+          "A chair I built two years ago has started creaking. I cannot find where.",
+          "I took it apart, checked every joint, and put it back together. Quiet for a day. Then it started again.",
+          "I will try beeswax on the rungs tonight. A chair should stay quiet. People have enough complaints without furniture joining in."],
+          "replies": [
+            "A creak you cannot find? That would drive me mad too.",
+            "Quiet for a day and then back? That chair is playing games with you.",
+            "Beeswax on the rungs. If that fails, the chair has simply learned to talk."] },
+        { "id": "third-latch", "summary": "Bram is designing a third gate latch to outsmart a goat", "lines": [
+          "I am drawing up a third gate latch. The second one lasted eleven days.",
+          "The goat watches me fix it. I am almost sure she is studying my work. I have started hiding my sketches.",
+          "This one uses a pin and a twist. If she learns that too, I may offer her a job at the shop."],
+          "replies": [
+            "A third latch? The goat is winning, then.",
+            "She studies your work? Rowan says she watches him close the gate too.",
+            "A pin and a twist. If she solves that, give her the job."] },
+        { "id": "wrong-side", "summary": "Bram cut on the wrong side of his line for the first time in years", "lines": [
+          "I cut on the wrong side of my line today. First time in years.",
+          "Good oak, too. I measured twice like always. I just forgot to check which side I marked.",
+          "I will turn the board into something smaller. A box, maybe. Good wood should not be wasted over one bad cut."],
+          "replies": [
+            "The wrong side of the line? That happens to the best of us.",
+            "Measured twice, marked once. One bad cut after years of good ones.",
+            "A box sounds lovely. Good oak deserves a second chance."] },
+        { "id": "oak-bench", "summary": "Bram is building a bench for the old oak on the west road", "lines": [
+          "I am building a bench to go under the old oak on the west road.",
+          "People stop there to rest and sit on the roots. Roots are not good for anybody's back.",
+          "It will be done by the end of the week. I will not put my name on it. A bench should just be there when you need it."],
+          "replies": [
+            "A bench under the old oak? That is a kind idea.",
+            "Roots are hard on the back. People will be glad to sit there.",
+            "No name on it. That is the best kind of gift."] }
+      ],
+      "reactions": {
+        "curious": ["Hm. What happened?", "Go on. Take your time.", "From the start, then."],
+        "tease": ["Sounds like something that needed measuring twice.", "Ah. So that is why you look like a loose hinge.", "You and trouble keep finding each other."],
+        "warm": ["That is heavy. I am glad you set some of it down here.", "You did good. I mean it.", "I do not have the right words. I am listening, though."],
+        "advice": ["Take it slow. Rushed work comes apart.", "Fix the small part first. The rest gets easier.", "Sleep on it. Wood and people both settle overnight."],
+        "close": ["I have glue drying. Tell me how it turns out.", "Back to the shop. Come by if you need a hand.", "Good to talk. Do not be a stranger."]
+      },
+      "talk": {
+        "morning": ["Morning. Measure twice. I already did.", "The shop smells like fresh pine today. Best part of the job."],
+        "afternoon": ["I am planing a tabletop. Stand back from the shavings.", "Afternoon is good working light. I do not like to waste it."],
+        "evening": ["Finished a cabinet today. The door closes quiet. That is all I ask.", "Evening. I sweep the shop and think about tomorrow."],
+        "rain": ["Rain swells the wood. I wait it out with small work.", "Wet day. Good day for sanding and not much else."],
+        "weekend": ["Day off. I am fixing my own porch, which I never have time for.", "No orders today. I am carving something small, just for me."],
+        "spring": ["Spring means fence posts. Everyone's gate gave up over the winter."],
+        "summer": ["Summer dries the wood fast. I have to work quick and careful."],
+        "fall": ["Fall is good wood weather. Cool, dry, and steady. Like a good chair."],
+        "winter": ["Winter is for indoor work. Chairs, shelves, and a warm stove."]
+      }
+    },
+    "kit": {
+      "name": "Kit",
+      "role": "fisher",
+      "personality": "Kit is adventurous and funny, with confidence that grows every time he retells a story. Under the jokes he is sensitive, and his quiet side belongs to the shore.",
+      "speech": "Fast, loud, and full of exaggeration, then a quick honest correction. Says okay, fine, and honestly when caught out. Jokes harder when he is nervous.",
+      "likes": ["a fish story that gets better each time", "dawn on the water before anyone else is up", "a knot that holds when it matters"],
+      "worries": ["that nobody would believe him if something truly went wrong", "that rough water will catch him further out than he can handle"],
+      "history": "Kit learned to fish from the end of the town dock before he could swim. He has fallen in more times than he admits and has never once let it stop him.",
+      "relationships": {
+        "elowen": "Elowen writes his stories down and asks for sources. He has never wanted to tell the truth to anyone so much.",
+        "julian": "Julian hears his big fish stories at the bar and only rolls his eyes a little. Kit calls him his best audience.",
+        "seren": "Seren worries when he goes out on rough water. He jokes so she will stop, and checks the sky twice because of her."
+      },
+      "topics": [
+        { "id": "the-big-one", "summary": "Kit lost a huge fish and the story keeps growing", "lines": [
+          "I hooked the biggest fish of my life this morning. It was enormous. Then it left.",
+          "It pulled the boat a little. Fine, it pulled me a little. Fine, I fell in. But it was huge the whole time I was falling.",
+          "I will tell it at the bar tonight. The fish will be bigger by then, but the falling in part stays true."],
+          "replies": [
+            "The biggest fish of your life? And it just left?",
+            "You fell in? But it was huge the whole time. I believe you.",
+            "Tell it tonight. The fish can grow, but keep the falling in part."] },
+        { "id": "slipped-knot", "summary": "Kit's favorite knot slipped for the first time", "lines": [
+          "My best knot slipped today. The one I tie without even thinking.",
+          "I lost a whole line and a lure I really liked. A good knot is a promise to your future self, and I broke it.",
+          "I am going to practice it a hundred times tonight. Future me deserves a better promise."],
+          "replies": [
+            "Your best knot slipped? That must have stung.",
+            "A promise to your future self. I like that way of thinking about knots.",
+            "A hundred times tonight. Future you will thank you."] },
+        { "id": "heron-rival", "summary": "A heron keeps out-fishing Kit every morning at dawn", "lines": [
+          "There is a heron at the shore that catches more fish than I do. Every single morning.",
+          "It just stands there, perfectly still, and the fish come to it. I stand still too and nothing happens. I think it is gloating.",
+          "Tomorrow I will stand exactly where it stands. If that does not work, I am asking it for lessons."],
+          "replies": [
+            "A heron is beating you? Every morning?",
+            "It is gloating? Herons do have a very smug face.",
+            "Ask it for lessons. Worst case, you get a new fishing friend."] },
+        { "id": "rough-water", "summary": "Kit got caught in rough water and was more scared than he admits", "lines": [
+          "The water got rough faster than I expected yesterday. I made it back. I am fine.",
+          "Okay, I was scared. I joked the whole way in so I would not have to think about it. It mostly worked.",
+          "Next time I will check the sky twice before I go out. And maybe tell someone where I am going."],
+          "replies": [
+            "Rough water? I am glad you made it back.",
+            "Joking your way in is still getting home. You were brave.",
+            "Tell me before you go next time. I would rather know."] }
+      ],
+      "reactions": {
+        "curious": ["Wait, back up. Tell it from the start, slowly.", "No way. Then what happened?", "Okay, I am hooked. Keep going."],
+        "tease": ["That story gets bigger every time, doesn't it.", "Ha. And I thought my week was a mess.", "You know I am going to retell this badly, right?"],
+        "warm": ["Hey. That is a lot. I am glad you told me.", "You did better than you think. Honestly.", "Thanks for telling me the real version. I know that is harder."],
+        "advice": ["Tie it down twice. Trust me on this one.", "Take a day by the water. Things look smaller from the shore.", "Do not fight it head on. Let it tire itself out first."],
+        "close": ["The tide is turning. I have to go, but tell me how it ends.", "I should check my lines. See you around, yeah?", "Good talk. I might even tell this one straight."]
+      },
+      "talk": {
+        "morning": ["Morning! The fish are biting. Or they will be once I get there.", "Dawn on the water is the best thing in the world. Do not tell the fish I said that."],
+        "afternoon": ["Afternoon. I caught three small ones. They were huge in spirit.", "The tide is out, so I am fixing nets and telling myself stories."],
+        "evening": ["Sunset is when the shore gets quiet. Well, quiet until I start talking.", "Heading to the bar soon. I have a story that needs to get bigger."],
+        "rain": ["Rain is good fishing weather. Bad for staying dry, though.", "Fish do not mind getting wet. I am still deciding how I feel about it."],
+        "weekend": ["Day off! So, fishing. Same as a work day, but nobody counts.", "I have a quiet spot picked out. Want to know where? Too bad, it is a secret."],
+        "spring": ["Spring rivers run fast. The fish are hungry, and so am I."],
+        "summer": ["Summer brings the whole town to the shore. I miss the quiet a little."],
+        "fall": ["Fall fish are fat and lazy. Best season for a story worth telling."],
+        "winter": ["Winter fishing is cold, slow, and lonely. I love it more than I should."]
+      }
+    },
+    "cael": {
+      "name": "Cael",
+      "role": "alchemist",
+      "personality": "Cael is analytical, intense, and honest to a fault. He needs labels, evidence, and one trusted person willing to challenge his conclusions.",
+      "speech": "Precise and formal, with dry understatement. Says observe, evidence, and useful. Qualifies everything, then admits feelings in very small words.",
+      "likes": ["a clean label on every bottle", "an unexpected result that can be explained", "a long day with nothing exploding"],
+      "worries": ["that someone will rearrange the bottles and mix the wrong two", "that he cannot explain what he feels as well as what he finds"],
+      "history": "Cael trained at a strict academy and left when they valued speed over care. He set up his lab here, where nobody hurries him and only a few things have exploded.",
+      "relationships": {
+        "nyra": "Nyra calls it intuition. He calls it an undocumented method. Arguing with her is the best part of his week.",
+        "elowen": "Elowen checks her sources as carefully as he checks his notes. He trusts her footnotes more than most people.",
+        "dorian": "Dorian never touches his bottles and admires his labels. Cael finds this unexpectedly touching."
+      },
+      "topics": [
+        { "id": "stubborn-label", "summary": "A bottle in Cael's lab refuses to keep its label on", "lines": [
+          "One bottle in my lab will not keep its label on. I have relabeled it four times.",
+          "The glue holds on every other bottle. I tested it. Something inside this one keeps the glass slightly warm, and the label just slides off.",
+          "I will etch the label into the glass tonight. If it refuses that, I will be forced to admire it."],
+          "replies": [
+            "Four times and it still slides off? That bottle has opinions.",
+            "Warm glass and a slippery label. That bottle is hiding something.",
+            "Etch it in. And if that fails, give it a name instead of a label."] },
+        { "id": "blue-tonic", "summary": "Cael's clear tonic turned bright blue overnight", "lines": [
+          "A tonic that should be clear turned bright blue overnight. Nothing else changed.",
+          "Same recipe, same temperature, same bottle. I checked my notes three times. The only difference is that it rained.",
+          "I will brew two batches tomorrow, one by the window and one away from it. Unexpected results are useful, once they are labeled."],
+          "replies": [
+            "Bright blue overnight? That sounds both wonderful and worrying.",
+            "The rain changed it? Maybe the weather has a recipe of its own.",
+            "Two batches, then. Tell me which one turns blue."] },
+        { "id": "color-sorted-shelf", "summary": "Someone rearranged Cael's bottles by color", "lines": [
+          "Someone rearranged the bottles on my shelf by color. By color.",
+          "They meant well. It looks very pretty. It also put a sleeping draught beside a waking tonic, which is the opposite of pretty.",
+          "I will put a small sign on the shelf. Politely worded. Mostly politely worded."],
+          "replies": [
+            "By color? Someone wanted to help, I think.",
+            "A sleeping draught next to a waking tonic. That could ruin someone's morning.",
+            "A polite sign. Mostly polite is still polite."] },
+        { "id": "quiet-streak", "summary": "Cael has gone ten days without an explosion and feels uneasy", "lines": [
+          "Nothing has exploded in my lab for ten days. I find this deeply suspicious.",
+          "Either my methods have improved, or something is building up quietly. I have been listening to the bottles at night.",
+          "I will check every seal tomorrow and write it all down. If it is only improvement, I will allow myself to be pleased."],
+          "replies": [
+            "Ten days without an explosion? That does sound suspicious.",
+            "Listening to the bottles at night? Now I am worried too.",
+            "Check every seal. And if it is improvement, let yourself enjoy it."] }
+      ],
+      "reactions": {
+        "curious": ["Interesting. Walk me through it, step by step.", "What did you observe first? Be precise.", "Go on. I want the full sequence."],
+        "tease": ["So the result was unexpected. Again. I am shocked.", "You say that as if it were not entirely predictable.", "I would have bet on this outcome. Small stakes, but still."],
+        "warm": ["That is difficult. I am glad you trusted me with it.", "Your reasoning was sound. A bad outcome is not the same as a failure.", "I do not say this often. You handled that well."],
+        "advice": ["Write down what happened before you decide what it means.", "Change one thing at a time. Then you will know what helped.", "Rest, then look again. Tired eyes invent patterns."],
+        "close": ["I have something simmering that should not be left alone. Tell me the outcome.", "I need to get back before a label falls off. Report back later.", "A useful conversation. I mean that as a compliment."]
+      },
+      "talk": {
+        "morning": ["Good morning. Nothing has exploded yet. The day is young.", "Please do not touch the bottles. I have just finished labeling them."],
+        "afternoon": ["The afternoon batch is simmering. Stand back two paces, please.", "I am recording results. Ask your question quickly, and precisely."],
+        "evening": ["Evening is for writing up the day. It is quieter than it sounds.", "I have cleaned every flask. It is the most satisfying part of the day."],
+        "rain": ["Humidity changes every reaction. I am adjusting everything with great care.", "Rain is useful. I collect it for experiments that need very soft water."],
+        "weekend": ["No experiments today. I am reading about experiments instead.", "A day of rest. I am resting at my desk, which still counts."],
+        "spring": ["Spring herbs are the freshest ingredients of the year. My notes are already full."],
+        "summer": ["Summer heat makes the volatile mixtures more volatile. I keep a bucket of sand nearby."],
+        "fall": ["Fall mushrooms make wonderful tonics. Please do not eat the ones I have labeled."],
+        "winter": ["Winter cold slows every reaction. Patience becomes part of the recipe."]
+      }
+    },
+    "dorian": {
+      "name": "Dorian",
+      "role": "town tailor",
+      "personality": "Dorian is creative, dramatic, and deeply attentive. He notices every detail, protects tender feelings with flair, and cannot stand wasted potential.",
+      "speech": "Grand and playful, with sweeping phrases and the odd darling. Turns small things into drama, then says something sincere in a single quiet line.",
+      "likes": ["a coat that lets you raise your arms", "scraps that will become something someday", "a color that suits someone perfectly"],
+      "worries": ["that his best designs will stay in a drawer forever", "that people only see the flair and never the effort"],
+      "history": "Dorian apprenticed with a stern city tailor who threw away every scrap. He opened his studio here and kept every scrap since, partly out of thrift and partly out of spite.",
+      "relationships": {
+        "rhea": "He made the red lining for Rhea's work jacket. She acts like she did not care. She chose it immediately.",
+        "cael": "Cael is intense, precise, and dressed terribly. Dorian would love to fix the last part and keep the first two.",
+        "julian": "Julian is the only person in town who reads people as well as he does. They trade gossip like friendly rivals."
+      },
+      "topics": [
+        { "id": "scrap-basket", "summary": "Dorian's scrap basket is overflowing with tiny future ideas", "lines": [
+          "My scrap basket overflowed this morning. A ribbon escaped and made it all the way to the door.",
+          "People keep telling me to throw them out. They are not rubbish, darling. They are very small future ideas.",
+          "I will sort them by color tonight and make something marvelous. Probably a quilt. Possibly three."],
+          "replies": [
+            "A ribbon escaped to the door? It must have had somewhere to be.",
+            "Tiny future ideas. I will never look at scraps the same way.",
+            "A quilt sounds wonderful. Three quilts sounds even better."] },
+        { "id": "tight-sleeves", "summary": "A customer insisted on sleeves too tight to raise their arms", "lines": [
+          "A customer insisted on sleeves so tight they could not raise their arms. I begged. I pleaded.",
+          "They wanted to look splendid. I said looking splendid is no excuse for being trapped in your sleeves. They did not listen.",
+          "I will hide a little extra fabric in the seam. When they come back, I will let it out and say nothing. Mostly nothing."],
+          "replies": [
+            "Sleeves so tight they could not raise their arms? Oh no.",
+            "Splendid but trapped. That is a hard lesson to learn in a new coat.",
+            "Extra fabric in the seam. You are kinder than that customer deserves."] },
+        { "id": "lost-button", "summary": "Dorian lost one silver button that cannot be replaced", "lines": [
+          "I lost a single silver button. One. And it is the only one of its kind.",
+          "It came from a coat older than the town, and I was moving it to a new jacket. Now it hides somewhere in the studio, mocking me.",
+          "I will sweep every corner tomorrow with a lantern. If it stays lost, I will make the other buttons mismatch on purpose."],
+          "replies": [
+            "Only one of its kind? That is a hard thing to lose.",
+            "Older than the town and hiding in your studio. It wants to be found.",
+            "Sweep with a lantern. And if it stays lost, mismatched buttons sound fun."] },
+        { "id": "someday-coat", "summary": "Dorian has a coat design he keeps saving for someday", "lines": [
+          "I have a coat design I have been saving for someday. I looked at it again last night.",
+          "It is a long coat with a lining like a sunset. I keep thinking it needs the perfect occasion. I suspect that is an excuse.",
+          "Maybe I will simply start it. Someday is a terrible deadline, and I hate wasted potential."],
+          "replies": [
+            "A coat you have been saving? It must be special.",
+            "A lining like a sunset? That sounds beautiful. Start it.",
+            "Someday is a terrible deadline. I agree. Start it this week."] }
+      ],
+      "reactions": {
+        "curious": ["Oh, do go on. I need every detail, darling.", "Wait. Start again, slowly, and with feeling.", "And then? Do not stop at the dramatic part."],
+        "tease": ["Darling, this is the most exciting thing you have said all season.", "How very you. I mean that almost entirely as a compliment.", "You have the look of someone who chose boldly and regretted it."],
+        "warm": ["Oh, that is a lot. Thank you for trusting me with it.", "You did beautifully, even if it did not feel that way.", "I see you, you know. Not just the brave face."],
+        "advice": ["Give it room to breathe. Nothing good is ever stitched too tight.", "Take it apart and start again. Seams forgive more than people think.", "Sleep on it. Every choice looks better in morning light."],
+        "close": ["I left pins everywhere, and someone will sit on one. Tell me how it ends.", "Back to the studio before the fabric starts sulking. Find me later.", "Lovely talk. I shall think about it while I hem."]
+      },
+      "talk": {
+        "morning": ["Good morning. That color suits you. No, I will not pretend I did not notice.", "The studio is full of morning light. Everything looks better, even my mistakes."],
+        "afternoon": ["I am pinning a hem. Speak softly, the fabric startles easily.", "A good coat should let you raise your arms. Looking splendid is no excuse for being trapped."],
+        "evening": ["Evening light is unkind to seams. I am done judging fabric for today.", "I stayed late to finish a collar. It was worth every minute."],
+        "rain": ["Rain is dreadful for wool and wonderful for staying in to sew.", "Shake off the rain by the door, please. The silk is very sensitive."],
+        "weekend": ["A day off. I am sketching designs nobody ordered, which is the best kind.", "No customers today. I am wearing my most impractical coat, purely for joy."],
+        "spring": ["The spring colors are finally here. I want to make everything in pale green."],
+        "summer": ["Summer linen is my favorite fabric. It wrinkles beautifully, like a good story."],
+        "fall": ["Fall is the season for coats. Every coat I make in fall becomes my favorite."],
+        "winter": ["Winter wool is heavy and honest. I respect it, even when it makes me sneeze."]
+      }
+    }
+  }
+}

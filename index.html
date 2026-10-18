@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- iPad play: lock page zoom so pinches and double-taps reach the game, not Safari. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <!-- "Add to Home Screen" opens full-screen without Safari's address bar. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>Shopkeeper's Legacy</title>
     <style>
       /* Full-viewport dark backdrop; the Phaser canvas is centered and pixel-crisp. */
@@ -12,16 +16,27 @@
         height: 100%;
         background: #1a1420;
         overflow: hidden;
+        /* Touch: no rubber-band scroll, no text selection, no long-press callout, no grey tap flash. */
+        overscroll-behavior: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
       }
       #game {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100vw;
-        height: 100vh;
+        /* Fixed inset instead of 100vh: iOS Safari's 100vh includes the hidden toolbar area. */
+        position: fixed;
+        inset: 0;
+        /* Every finger gesture belongs to the game (joystick drags must not scroll or zoom the page). */
+        touch-action: none;
       }
       canvas {
         image-rendering: pixelated; /* keep pixel art crisp when scaled */
+        display: block;
+        touch-action: none;
       }
     </style>
   </head>

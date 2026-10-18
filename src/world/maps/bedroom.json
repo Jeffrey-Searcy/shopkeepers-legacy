@@ -1,0 +1,134 @@
+{
+  "key": "BedroomScene",
+  "w": 20,
+  "h": 14,
+  "ground": [
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"],
+    ["floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor","floor"]
+  ],
+  "solid": [
+    [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],
+    [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],
+    [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+    [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+    [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]
+  ],
+  "buildable": [
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+    [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+  ],
+  "spawns": [
+    {
+      "id": "entry",
+      "tx": 9,
+      "ty": 11
+    }
+  ],
+  "warps": [
+    {
+      "tx": 9,
+      "ty": 13,
+      "w": 2,
+      "h": 1,
+      "target": "TavernScene",
+      "spawn": "from_bedroom",
+      "doorFacing": "south"
+    }
+  ],
+  "objects": [
+    {
+      "kind": "bed",
+      "tx": 14,
+      "ty": 4
+    }
+  ],
+  "decor": [],
+  "buildings": [],
+  "reservedTiles": [
+    {
+      "tx": 9,
+      "ty": 11
+    },
+    {
+      "tx": 10,
+      "ty": 11
+    },
+    {
+      "tx": 9,
+      "ty": 12
+    },
+    {
+      "tx": 10,
+      "ty": 12
+    },
+    {
+      "tx": 9,
+      "ty": 13
+    },
+    {
+      "tx": 10,
+      "ty": 13
+    },
+    {
+      "tx": 14,
+      "ty": 5
+    },
+    {
+      "tx": 15,
+      "ty": 5
+    }
+  ],
+  "roomDetails": {
+    "windows": [
+      {
+        "tx": 4,
+        "ty": 0
+      },
+      {
+        "tx": 14,
+        "ty": 0
+      }
+    ],
+    "bedsideLamp": {
+      "tx": 17,
+      "ty": 1
+    }
+  },
+  "interior": {
+    "kind": "built",
+    "wallHeight": 48
+  }
+}

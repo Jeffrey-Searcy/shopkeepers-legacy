@@ -5,7 +5,7 @@
  * deterministic save/map setup and read-only inspection that would be prohibitively slow in play.
  */
 import { test, expect, type Page } from '@playwright/test';
-import { activeScene, getState, teleport, act } from './helpers/gameHarness';
+import { activeScene, getState, teleport, act, uiCanvasPoint } from './helpers/gameHarness';
 
 const MENU_URL = '/?test=1&seed=42&menu=1';
 
@@ -33,11 +33,10 @@ async function introVisible(page: Page): Promise<boolean> {
   });
 }
 
-/** Click a point expressed in the game's fixed 960x540 canvas coordinate system. */
+/** Click a logical UI point through the responsive camera rather than stretching canvas axes. */
 async function clickGame(page: Page, gameX: number, gameY: number): Promise<void> {
-  const box = await page.locator('canvas').boundingBox();
-  if (!box) throw new Error('M25: game canvas has no bounding box');
-  await page.mouse.click(box.x + (gameX / 960) * box.width, box.y + (gameY / 540) * box.height);
+  const point = await uiCanvasPoint(page, { x: gameX, y: gameY });
+  await page.mouse.click(point.x, point.y);
   await page.waitForTimeout(120);
 }
 
@@ -54,7 +53,7 @@ async function reachBusinessChoice(page: Page): Promise<void> {
 }
 
 test.describe('M25 inherited shop origin', () => {
-  test('origin: new slot shows the intro, Escape cancels, and Tavern starts at the named Farm doorstep', async ({ page }) => {
+  test('origin: new slot shows the intro, Escape cancels, and Tavern starts on the east road with the mayor', async ({ page }) => {
     await clearSaveSlots(page);
     await page.goto(MENU_URL);
     await waitForMenu(page);
@@ -87,8 +86,15 @@ test.describe('M25 inherited shop origin', () => {
     const state = await getState(page);
     expect(state.activeScene).toBe('FarmScene');
     expect(state.day).toBe(1);
-    expect(Math.floor(state.player.x / 16)).toBe(72);
-    expect(Math.floor(state.player.y / 16)).toBe(15);
+    // A new adventure begins on the east road, where Mayor Hollis greets the keeper (FarmScene.startMayorWalk).
+    const road = await page.evaluate(async () => {
+      // @ts-expect-error Vite serves runtime TS modules in browser tests.
+      const { getMapData } = await import('/src/world/MapDef.ts');
+      return getMapData('FarmScene').spawns.find((spawn: { id: string }) => spawn.id === 'from_town') as { tx: number; ty: number };
+    });
+    expect(Math.floor(state.player.x / 16)).toBe(road.tx);
+    expect(Math.floor(state.player.y / 16)).toBe(road.ty);
+    expect(state.dialogue?.name).toBe('Mayor Hollis');
     expect(
       await page.evaluate(async () => {
         // @ts-expect-error Vite serves runtime TS modules in browser tests.
@@ -143,7 +149,8 @@ test.describe('M25 inherited shop origin', () => {
     await page.goto(MENU_URL);
     await waitForMenu(page);
 
-    await clickGame(page, 205, 299); // selected SAVE 1 card
+    // New Game is the second painted title button (a disabled Continue fills the first) and selects an empty slot.
+    await clickGame(page, 480, 306);
     await expect.poll(() => introVisible(page)).toBe(true);
     await clickGame(page, 480, 468); // letter: TURN THE PAGE
     await page.waitForFunction(() => {
@@ -159,7 +166,10 @@ test.describe('M25 inherited shop origin', () => {
     await page.waitForFunction(() => window.__TEST__?.ready === true);
 
     expect(await activeScene(page)).toBe('FarmScene');
-    expect((await getState(page)).player).toMatchObject({ facing: 'down' });
+    // The keeper arrives on the east road facing west, toward Mayor Hollis.
+    const arrived = await getState(page);
+    expect(arrived.player).toMatchObject({ facing: 'left' });
+    expect(arrived.dialogue?.name).toBe('Mayor Hollis');
   });
 
   test('origin: ready saves bypass the intro and resume their exact scene and position', async ({ page }) => {
@@ -203,7 +213,7 @@ test.describe('M25 inherited shop origin', () => {
       };
     });
     expect(layout.homeWarps).toEqual([]);
-    expect(layout.redirect).toMatchObject({ id: 'from_home', tx: 72, ty: 15 });
+    expect(layout.redirect).toMatchObject({ id: 'from_home', tx: 82, ty: 28 });
 
     await page.evaluate(async () => {
       // @ts-expect-error Vite serves runtime TS modules in browser tests.
@@ -221,12 +231,13 @@ test.describe('M25 inherited shop origin', () => {
     await page.waitForFunction(() => window.__TEST__?.ready === true);
 
     expect(await activeScene(page)).toBe('FarmScene');
-    expect((await getState(page)).player).toMatchObject({ x: 1160, y: 248, facing: 'down', stamina: 64 });
+    expect((await getState(page)).player).toMatchObject({ x: 1320, y: 456, facing: 'down', stamina: 64 });
     expect(await page.evaluate(() => window.__GAME__!.scene.isActive('HomeInteriorScene'))).toBe(false);
     const dayBefore = (await getState(page)).day;
-    await teleport(page, 72, 13, 'up');
+    await teleport(page, 82, 26, 'up');
     await act(page, 'interact');
-    expect((await getState(page)).day).toBe(dayBefore + 1);
-    expect(await activeScene(page)).toBe('FarmScene');
+    await page.waitForFunction(() => window.__GAME__!.scene.isActive('TavernScene'));
+    expect((await getState(page)).day).toBe(dayBefore);
+    expect(await activeScene(page)).toBe('TavernScene');
   });
 });

@@ -30,9 +30,28 @@ export const RECIPES: Recipe[] = [
   { id: 'table', label: 'Table', cost: { wood: 12 }, yields: 'table', station: 'workbench' },
   { id: 'chair', label: 'Chair', cost: { wood: 6 }, yields: 'chair', station: 'workbench' },
   { id: 'rug', label: 'Rug', cost: { fiber: 8 }, yields: 'rug', station: 'workbench' },
+  // Player-built stations own the existing food-service loop.
+  { id: 'bar', label: 'Bar Counter', cost: { wood: 24, stone: 4 }, yields: 'bar', station: 'workbench' },
+  { id: 'register', label: 'Register Stand', cost: { wood: 10, stone: 4 }, yields: 'register', station: 'workbench' },
+  { id: 'stove', label: 'Cooking Stove', cost: { stone: 20, wood: 8 }, yields: 'stove', station: 'workbench' },
+  { id: 'broom', label: 'Broom', cost: { wood: 4, fiber: 8 }, yields: 'broom', station: 'workbench' },
 ];
 
 export const CraftingSystem = {
+  /** Check ingredient and final bag capacity using the same atomic transaction as craft, on copies. */
+  getCraftability(id: string): { ok: true } | { ok: false; reason: 'ingredients' | 'capacity' } {
+    const recipe = RECIPES.find(entry => entry.id === id);
+    if (!recipe) throw new Error(`CraftingSystem: unknown recipe "${id}"`);
+    if (!this.canCraft(id)) return { ok: false, reason: 'ingredients' };
+    const gs = GameState.instance;
+    const candidate = { inventory: { ...gs.inventory }, toolbeltSlots: [...gs.toolbeltSlots],
+      backpackSlots: [...gs.backpackSlots], hotbarIndex: gs.hotbarIndex, selectedSeed: gs.selectedSeed };
+    const deltas: Record<string, number> = { [recipe.yields]: 1 };
+    for (const [item, quantity] of Object.entries(recipe.cost)) {
+      deltas[item] = Object.prototype.hasOwnProperty.call(deltas, item) ? deltas[item] - quantity : -quantity;
+    }
+    return InventoryLayoutSystem.applyInventoryDelta(candidate, deltas) ? { ok: true } : { ok: false, reason: 'capacity' };
+  },
   /** Can the player afford this recipe right now? */
   canCraft(id: string): boolean {
     const r = RECIPES.find((x) => x.id === id);

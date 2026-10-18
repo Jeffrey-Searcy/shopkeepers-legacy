@@ -1,0 +1,8290 @@
+{
+  "version": 1,
+  "baseFingerprint": "farm-v1-af059b10",
+  "shop": {
+    "id": "shop",
+    "tx": 78,
+    "ty": 18
+  },
+  "objects": [
+    {
+      "id": "object:0000",
+      "kind": "tree",
+      "tx": 50,
+      "ty": 7
+    },
+    {
+      "id": "object:0001",
+      "kind": "tree",
+      "tx": 94,
+      "ty": 41
+    },
+    {
+      "id": "object:0002",
+      "kind": "tree",
+      "tx": 95,
+      "ty": 68
+    },
+    {
+      "id": "object:0003",
+      "kind": "tree",
+      "tx": 90,
+      "ty": 75
+    },
+    {
+      "id": "object:0004",
+      "kind": "tree",
+      "tx": 45,
+      "ty": 5
+    },
+    {
+      "id": "object:0005",
+      "kind": "tree",
+      "tx": 6,
+      "ty": 33
+    },
+    {
+      "id": "object:0006",
+      "kind": "tree",
+      "tx": 92,
+      "ty": 61
+    },
+    {
+      "id": "object:0007",
+      "kind": "tree",
+      "tx": 54,
+      "ty": 90
+    },
+    {
+      "id": "object:0008",
+      "kind": "tree",
+      "tx": 87,
+      "ty": 90
+    },
+    {
+      "id": "object:0009",
+      "kind": "tree",
+      "tx": 47,
+      "ty": 45
+    },
+    {
+      "id": "object:0010",
+      "kind": "tree",
+      "tx": 90,
+      "ty": 35
+    },
+    {
+      "id": "object:0011",
+      "kind": "tree",
+      "tx": 93,
+      "ty": 35
+    },
+    {
+      "id": "object:0012",
+      "kind": "tree",
+      "tx": 3,
+      "ty": 88
+    },
+    {
+      "id": "object:0013",
+      "kind": "tree",
+      "tx": 26,
+      "ty": 7
+    },
+    {
+      "id": "object:0014",
+      "kind": "tree",
+      "tx": 7,
+      "ty": 18
+    },
+    {
+      "id": "object:0015",
+      "kind": "tree",
+      "tx": 51,
+      "ty": 93
+    },
+    {
+      "id": "object:0016",
+      "kind": "tree",
+      "tx": 92,
+      "ty": 50
+    },
+    {
+      "id": "object:0017",
+      "kind": "tree",
+      "tx": 61,
+      "ty": 4
+    },
+    {
+      "id": "object:0018",
+      "kind": "tree",
+      "tx": 28,
+      "ty": 7
+    },
+    {
+      "id": "object:0019",
+      "kind": "tree",
+      "tx": 85,
+      "ty": 4
+    },
+    {
+      "id": "object:0020",
+      "kind": "tree",
+      "tx": 96,
+      "ty": 85
+    },
+    {
+      "id": "object:0021",
+      "kind": "tree",
+      "tx": 11,
+      "ty": 39
+    },
+    {
+      "id": "object:0022",
+      "kind": "tree",
+      "tx": 42,
+      "ty": 94
+    },
+    {
+      "id": "object:0023",
+      "kind": "tree",
+      "tx": 5,
+      "ty": 67
+    },
+    {
+      "id": "object:0024",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 89
+    },
+    {
+      "id": "object:0025",
+      "kind": "tree",
+      "tx": 11,
+      "ty": 80
+    },
+    {
+      "id": "object:0026",
+      "kind": "tree",
+      "tx": 4,
+      "ty": 74
+    },
+    {
+      "id": "object:0027",
+      "kind": "tree",
+      "tx": 83,
+      "ty": 5
+    },
+    {
+      "id": "object:0028",
+      "kind": "tree",
+      "tx": 96,
+      "ty": 48
+    },
+    {
+      "id": "object:0029",
+      "kind": "tree",
+      "tx": 84,
+      "ty": 92
+    },
+    {
+      "id": "object:0030",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 94
+    },
+    {
+      "id": "object:0031",
+      "kind": "tree",
+      "tx": 10,
+      "ty": 18
+    },
+    {
+      "id": "object:0032",
+      "kind": "tree",
+      "tx": 32,
+      "ty": 94
+    },
+    {
+      "id": "object:0033",
+      "kind": "tree",
+      "tx": 25,
+      "ty": 19
+    },
+    {
+      "id": "object:0034",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 63
+    },
+    {
+      "id": "object:0035",
+      "kind": "tree",
+      "tx": 63,
+      "ty": 94
+    },
+    {
+      "id": "object:0036",
+      "kind": "tree",
+      "tx": 91,
+      "ty": 39
+    },
+    {
+      "id": "object:0037",
+      "kind": "tree",
+      "tx": 94,
+      "ty": 50
+    },
+    {
+      "id": "object:0038",
+      "kind": "tree",
+      "tx": 7,
+      "ty": 66
+    },
+    {
+      "id": "object:0039",
+      "kind": "tree",
+      "tx": 43,
+      "ty": 92
+    },
+    {
+      "id": "object:0040",
+      "kind": "tree",
+      "tx": 89,
+      "ty": 55
+    },
+    {
+      "id": "object:0041",
+      "kind": "tree",
+      "tx": 95,
+      "ty": 38
+    },
+    {
+      "id": "object:0042",
+      "kind": "tree",
+      "tx": 95,
+      "ty": 87
+    },
+    {
+      "id": "object:0043",
+      "kind": "tree",
+      "tx": 4,
+      "ty": 40
+    },
+    {
+      "id": "object:0044",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 94
+    },
+    {
+      "id": "object:0045",
+      "kind": "tree",
+      "tx": 85,
+      "ty": 6
+    },
+    {
+      "id": "object:0046",
+      "kind": "tree",
+      "tx": 4,
+      "ty": 50
+    },
+    {
+      "id": "object:0047",
+      "kind": "tree",
+      "tx": 7,
+      "ty": 23
+    },
+    {
+      "id": "object:0048",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 81
+    },
+    {
+      "id": "object:0049",
+      "kind": "tree",
+      "tx": 20,
+      "ty": 31
+    },
+    {
+      "id": "object:0050",
+      "kind": "tree",
+      "tx": 7,
+      "ty": 60
+    },
+    {
+      "id": "object:0051",
+      "kind": "tree",
+      "tx": 6,
+      "ty": 73
+    },
+    {
+      "id": "object:0052",
+      "kind": "tree",
+      "tx": 90,
+      "ty": 78
+    },
+    {
+      "id": "object:0053",
+      "kind": "tree",
+      "tx": 5,
+      "ty": 30
+    },
+    {
+      "id": "object:0054",
+      "kind": "tree",
+      "tx": 11,
+      "ty": 20
+    },
+    {
+      "id": "object:0055",
+      "kind": "tree",
+      "tx": 90,
+      "ty": 83
+    },
+    {
+      "id": "object:0056",
+      "kind": "tree",
+      "tx": 3,
+      "ty": 3
+    },
+    {
+      "id": "object:0057",
+      "kind": "tree",
+      "tx": 41,
+      "ty": 90
+    },
+    {
+      "id": "object:0058",
+      "kind": "tree",
+      "tx": 5,
+      "ty": 45
+    },
+    {
+      "id": "object:0059",
+      "kind": "tree",
+      "tx": 13,
+      "ty": 92
+    },
+    {
+      "id": "object:0060",
+      "kind": "tree",
+      "tx": 39,
+      "ty": 89
+    },
+    {
+      "id": "object:0061",
+      "kind": "tree",
+      "tx": 80,
+      "ty": 89
+    },
+    {
+      "id": "object:0062",
+      "kind": "tree",
+      "tx": 92,
+      "ty": 71
+    },
+    {
+      "id": "object:0063",
+      "kind": "tree",
+      "tx": 87,
+      "ty": 4
+    },
+    {
+      "id": "object:0064",
+      "kind": "tree",
+      "tx": 87,
+      "ty": 10
+    },
+    {
+      "id": "object:0065",
+      "kind": "tree",
+      "tx": 7,
+      "ty": 43
+    },
+    {
+      "id": "object:0066",
+      "kind": "tree",
+      "tx": 94,
+      "ty": 80
+    },
+    {
+      "id": "object:0067",
+      "kind": "tree",
+      "tx": 25,
+      "ty": 4
+    },
+    {
+      "id": "object:0068",
+      "kind": "tree",
+      "tx": 3,
+      "ty": 12
+    },
+    {
+      "id": "object:0069",
+      "kind": "tree",
+      "tx": 8,
+      "ty": 8
+    },
+    {
+      "id": "object:0070",
+      "kind": "tree",
+      "tx": 74,
+      "ty": 3
+    },
+    {
+      "id": "object:0071",
+      "kind": "tree",
+      "tx": 76,
+      "ty": 90
+    },
+    {
+      "id": "object:0072",
+      "kind": "tree",
+      "tx": 96,
+      "ty": 44
+    },
+    {
+      "id": "object:0073",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 30
+    },
+    {
+      "id": "object:0074",
+      "kind": "tree",
+      "tx": 95,
+      "ty": 8
+    },
+    {
+      "id": "object:0075",
+      "kind": "tree",
+      "tx": 90,
+      "ty": 87
+    },
+    {
+      "id": "object:0076",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 83
+    },
+    {
+      "id": "object:0077",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 92
+    },
+    {
+      "id": "object:0078",
+      "kind": "tree",
+      "tx": 4,
+      "ty": 24
+    },
+    {
+      "id": "object:0079",
+      "kind": "tree",
+      "tx": 37,
+      "ty": 90
+    },
+    {
+      "id": "object:0080",
+      "kind": "tree",
+      "tx": 60,
+      "ty": 7
+    },
+    {
+      "id": "object:0081",
+      "kind": "tree",
+      "tx": 3,
+      "ty": 8
+    },
+    {
+      "id": "object:0082",
+      "kind": "tree",
+      "tx": 58,
+      "ty": 31
+    },
+    {
+      "id": "object:0083",
+      "kind": "tree",
+      "tx": 21,
+      "ty": 7
+    },
+    {
+      "id": "object:0084",
+      "kind": "tree",
+      "tx": 88,
+      "ty": 68
+    },
+    {
+      "id": "object:0085",
+      "kind": "tree",
+      "tx": 45,
+      "ty": 94
+    },
+    {
+      "id": "object:0086",
+      "kind": "tree",
+      "tx": 34,
+      "ty": 32
+    },
+    {
+      "id": "object:0087",
+      "kind": "tree",
+      "tx": 93,
+      "ty": 55
+    },
+    {
+      "id": "object:0088",
+      "kind": "tree",
+      "tx": 69,
+      "ty": 89
+    },
+    {
+      "id": "object:0089",
+      "kind": "tree",
+      "tx": 61,
+      "ty": 21
+    },
+    {
+      "id": "object:0090",
+      "kind": "tree",
+      "tx": 58,
+      "ty": 6
+    },
+    {
+      "id": "object:0091",
+      "kind": "tree",
+      "tx": 17,
+      "ty": 92
+    },
+    {
+      "id": "object:0092",
+      "kind": "tree",
+      "tx": 89,
+      "ty": 49
+    },
+    {
+      "id": "object:0093",
+      "kind": "tree",
+      "tx": 66,
+      "ty": 25
+    },
+    {
+      "id": "object:0094",
+      "kind": "tree",
+      "tx": 88,
+      "ty": 74
+    },
+    {
+      "id": "object:0095",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 5
+    },
+    {
+      "id": "object:0096",
+      "kind": "tree",
+      "tx": 47,
+      "ty": 12
+    },
+    {
+      "id": "object:0097",
+      "kind": "tree",
+      "tx": 42,
+      "ty": 9
+    },
+    {
+      "id": "object:0098",
+      "kind": "tree",
+      "tx": 7,
+      "ty": 3
+    },
+    {
+      "id": "object:0099",
+      "kind": "tree",
+      "tx": 64,
+      "ty": 89
+    },
+    {
+      "id": "object:0100",
+      "kind": "tree",
+      "tx": 15,
+      "ty": 92
+    },
+    {
+      "id": "object:0101",
+      "kind": "tree",
+      "tx": 11,
+      "ty": 36
+    },
+    {
+      "id": "object:0102",
+      "kind": "tree",
+      "tx": 48,
+      "ty": 41
+    },
+    {
+      "id": "object:0103",
+      "kind": "tree",
+      "tx": 10,
+      "ty": 8
+    },
+    {
+      "id": "object:0104",
+      "kind": "tree",
+      "tx": 24,
+      "ty": 7
+    },
+    {
+      "id": "object:0105",
+      "kind": "tree",
+      "tx": 7,
+      "ty": 54
+    },
+    {
+      "id": "object:0106",
+      "kind": "tree",
+      "tx": 25,
+      "ty": 94
+    },
+    {
+      "id": "object:0107",
+      "kind": "tree",
+      "tx": 28,
+      "ty": 92
+    },
+    {
+      "id": "object:0108",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 4
+    },
+    {
+      "id": "object:0109",
+      "kind": "tree",
+      "tx": 10,
+      "ty": 85
+    },
+    {
+      "id": "object:0110",
+      "kind": "tree",
+      "tx": 69,
+      "ty": 36
+    },
+    {
+      "id": "object:0111",
+      "kind": "tree",
+      "tx": 68,
+      "ty": 4
+    },
+    {
+      "id": "object:0112",
+      "kind": "tree",
+      "tx": 6,
+      "ty": 75
+    },
+    {
+      "id": "object:0113",
+      "kind": "tree",
+      "tx": 60,
+      "ty": 90
+    },
+    {
+      "id": "object:0114",
+      "kind": "tree",
+      "tx": 51,
+      "ty": 31
+    },
+    {
+      "id": "object:0115",
+      "kind": "tree",
+      "tx": 46,
+      "ty": 28
+    },
+    {
+      "id": "object:0116",
+      "kind": "tree",
+      "tx": 32,
+      "ty": 49
+    },
+    {
+      "id": "object:0117",
+      "kind": "tree",
+      "tx": 89,
+      "ty": 15
+    },
+    {
+      "id": "object:0118",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 48
+    },
+    {
+      "id": "object:0119",
+      "kind": "tree",
+      "tx": 27,
+      "ty": 45
+    },
+    {
+      "id": "object:0120",
+      "kind": "tree",
+      "tx": 84,
+      "ty": 15
+    },
+    {
+      "id": "object:0121",
+      "kind": "tree",
+      "tx": 31,
+      "ty": 45
+    },
+    {
+      "id": "object:0122",
+      "kind": "tree",
+      "tx": 78,
+      "ty": 9
+    },
+    {
+      "id": "object:0123",
+      "kind": "tree",
+      "tx": 43,
+      "ty": 22
+    },
+    {
+      "id": "object:0124",
+      "kind": "tree",
+      "tx": 37,
+      "ty": 21
+    },
+    {
+      "id": "object:0125",
+      "kind": "tree",
+      "tx": 40,
+      "ty": 21
+    },
+    {
+      "id": "object:0126",
+      "kind": "tree",
+      "tx": 73,
+      "ty": 11
+    },
+    {
+      "id": "object:0127",
+      "kind": "tree",
+      "tx": 37,
+      "ty": 23
+    },
+    {
+      "id": "object:0128",
+      "kind": "tree",
+      "tx": 11,
+      "ty": 12
+    },
+    {
+      "id": "object:0129",
+      "kind": "tree",
+      "tx": 15,
+      "ty": 11
+    },
+    {
+      "id": "object:0130",
+      "kind": "tree",
+      "tx": 16,
+      "ty": 14
+    },
+    {
+      "id": "object:0131",
+      "kind": "tree",
+      "tx": 18,
+      "ty": 20
+    },
+    {
+      "id": "object:0132",
+      "kind": "tree",
+      "tx": 16,
+      "ty": 20
+    },
+    {
+      "id": "object:0133",
+      "kind": "tree",
+      "tx": 21,
+      "ty": 21
+    },
+    {
+      "id": "object:0134",
+      "kind": "tree",
+      "tx": 20,
+      "ty": 19
+    },
+    {
+      "id": "object:0135",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 50
+    },
+    {
+      "id": "object:0136",
+      "kind": "tree",
+      "tx": 10,
+      "ty": 48
+    },
+    {
+      "id": "object:0137",
+      "kind": "tree",
+      "tx": 15,
+      "ty": 50
+    },
+    {
+      "id": "object:0138",
+      "kind": "tree",
+      "tx": 14,
+      "ty": 48
+    },
+    {
+      "id": "object:0139",
+      "kind": "tree",
+      "tx": 81,
+      "ty": 80
+    },
+    {
+      "id": "object:0140",
+      "kind": "tree",
+      "tx": 83,
+      "ty": 77
+    },
+    {
+      "id": "object:0141",
+      "kind": "tree",
+      "tx": 85,
+      "ty": 79
+    },
+    {
+      "id": "object:0142",
+      "kind": "tree",
+      "tx": 35,
+      "ty": 42
+    },
+    {
+      "id": "object:0143",
+      "kind": "tree",
+      "tx": 33,
+      "ty": 44
+    },
+    {
+      "id": "object:0144",
+      "kind": "tree",
+      "tx": 33,
+      "ty": 42
+    },
+    {
+      "id": "object:0145",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 46
+    },
+    {
+      "id": "object:0146",
+      "kind": "tree",
+      "tx": 70,
+      "ty": 61
+    },
+    {
+      "id": "object:0147",
+      "kind": "tree",
+      "tx": 73,
+      "ty": 61
+    },
+    {
+      "id": "object:0148",
+      "kind": "tree",
+      "tx": 76,
+      "ty": 58
+    },
+    {
+      "id": "object:0149",
+      "kind": "tree",
+      "tx": 77,
+      "ty": 20
+    },
+    {
+      "id": "object:0150",
+      "kind": "tree",
+      "tx": 76,
+      "ty": 61
+    },
+    {
+      "id": "object:0151",
+      "kind": "tree",
+      "tx": 70,
+      "ty": 59
+    },
+    {
+      "id": "object:0152",
+      "kind": "tree",
+      "tx": 87,
+      "ty": 80
+    },
+    {
+      "id": "object:0153",
+      "kind": "tree",
+      "tx": 84,
+      "ty": 83
+    },
+    {
+      "id": "object:0154",
+      "kind": "tree",
+      "tx": 88,
+      "ty": 84
+    },
+    {
+      "id": "object:0155",
+      "kind": "tree",
+      "tx": 64,
+      "ty": 17
+    },
+    {
+      "id": "object:0156",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 14
+    },
+    {
+      "id": "object:0157",
+      "kind": "tree",
+      "tx": 34,
+      "ty": 49
+    },
+    {
+      "id": "object:0158",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 48
+    },
+    {
+      "id": "object:0159",
+      "kind": "tree",
+      "tx": 75,
+      "ty": 83
+    },
+    {
+      "id": "object:0160",
+      "kind": "tree",
+      "tx": 74,
+      "ty": 81
+    },
+    {
+      "id": "object:0161",
+      "kind": "tree",
+      "tx": 78,
+      "ty": 81
+    },
+    {
+      "id": "object:0162",
+      "kind": "tree",
+      "tx": 4,
+      "ty": 21
+    },
+    {
+      "id": "object:0163",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 25
+    },
+    {
+      "id": "object:0164",
+      "kind": "tree",
+      "tx": 32,
+      "ty": 92
+    },
+    {
+      "id": "object:0165",
+      "kind": "tree",
+      "tx": 32,
+      "ty": 89
+    },
+    {
+      "id": "object:0166",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 89
+    },
+    {
+      "id": "object:0167",
+      "kind": "tree",
+      "tx": 34,
+      "ty": 92
+    },
+    {
+      "id": "object:0168",
+      "kind": "tree",
+      "tx": 26,
+      "ty": 85
+    },
+    {
+      "id": "object:0169",
+      "kind": "tree",
+      "tx": 28,
+      "ty": 85
+    },
+    {
+      "id": "object:0170",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 86
+    },
+    {
+      "id": "object:0171",
+      "kind": "tree",
+      "tx": 26,
+      "ty": 87
+    },
+    {
+      "id": "object:0172",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 84
+    },
+    {
+      "id": "object:0173",
+      "kind": "tree",
+      "tx": 38,
+      "ty": 13
+    },
+    {
+      "id": "object:0174",
+      "kind": "tree",
+      "tx": 40,
+      "ty": 10
+    },
+    {
+      "id": "object:0175",
+      "kind": "tree",
+      "tx": 41,
+      "ty": 12
+    },
+    {
+      "id": "object:0176",
+      "kind": "tree",
+      "tx": 38,
+      "ty": 11
+    },
+    {
+      "id": "object:0177",
+      "kind": "tree",
+      "tx": 45,
+      "ty": 32
+    },
+    {
+      "id": "object:0178",
+      "kind": "tree",
+      "tx": 55,
+      "ty": 16
+    },
+    {
+      "id": "object:0179",
+      "kind": "tree",
+      "tx": 70,
+      "ty": 67
+    },
+    {
+      "id": "object:0180",
+      "kind": "tree",
+      "tx": 70,
+      "ty": 63
+    },
+    {
+      "id": "object:0181",
+      "kind": "tree",
+      "tx": 47,
+      "ty": 18
+    },
+    {
+      "id": "object:0182",
+      "kind": "tree",
+      "tx": 35,
+      "ty": 15
+    },
+    {
+      "id": "object:0183",
+      "kind": "tree",
+      "tx": 24,
+      "ty": 50
+    },
+    {
+      "id": "object:0184",
+      "kind": "tree",
+      "tx": 94,
+      "ty": 12
+    },
+    {
+      "id": "object:0185",
+      "kind": "tree",
+      "tx": 14,
+      "ty": 90
+    },
+    {
+      "id": "object:0186",
+      "kind": "tree",
+      "tx": 18,
+      "ty": 88
+    },
+    {
+      "id": "object:0187",
+      "kind": "tree",
+      "tx": 58,
+      "ty": 88
+    },
+    {
+      "id": "object:0188",
+      "kind": "tree",
+      "tx": 55,
+      "ty": 92
+    },
+    {
+      "id": "object:0189",
+      "kind": "tree",
+      "tx": 57,
+      "ty": 91
+    },
+    {
+      "id": "object:0190",
+      "kind": "tree",
+      "tx": 38,
+      "ty": 58
+    },
+    {
+      "id": "object:0191",
+      "kind": "tree",
+      "tx": 35,
+      "ty": 60
+    },
+    {
+      "id": "object:0192",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 57
+    },
+    {
+      "id": "object:0193",
+      "kind": "tree",
+      "tx": 10,
+      "ty": 76
+    },
+    {
+      "id": "object:0194",
+      "kind": "tree",
+      "tx": 8,
+      "ty": 75
+    },
+    {
+      "id": "object:0195",
+      "kind": "tree",
+      "tx": 8,
+      "ty": 78
+    },
+    {
+      "id": "object:0196",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 32
+    },
+    {
+      "id": "object:0197",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 29
+    },
+    {
+      "id": "object:0198",
+      "kind": "tree",
+      "tx": 33,
+      "ty": 28
+    },
+    {
+      "id": "object:0199",
+      "kind": "tree",
+      "tx": 33,
+      "ty": 12
+    },
+    {
+      "id": "object:0200",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 12
+    },
+    {
+      "id": "object:0201",
+      "kind": "tree",
+      "tx": 28,
+      "ty": 11
+    },
+    {
+      "id": "object:0202",
+      "kind": "rock",
+      "tx": 68,
+      "ty": 71
+    },
+    {
+      "id": "object:0203",
+      "kind": "rock",
+      "tx": 72,
+      "ty": 69
+    },
+    {
+      "id": "object:0204",
+      "kind": "rock",
+      "tx": 60,
+      "ty": 52
+    },
+    {
+      "id": "object:0205",
+      "kind": "rock",
+      "tx": 56,
+      "ty": 53
+    },
+    {
+      "id": "object:0206",
+      "kind": "rock",
+      "tx": 58,
+      "ty": 55
+    },
+    {
+      "id": "object:0207",
+      "kind": "rock",
+      "tx": 60,
+      "ty": 54
+    },
+    {
+      "id": "object:0208",
+      "kind": "rock",
+      "tx": 69,
+      "ty": 69
+    },
+    {
+      "id": "object:0209",
+      "kind": "rock",
+      "tx": 65,
+      "ty": 72
+    },
+    {
+      "id": "object:0210",
+      "kind": "rock",
+      "tx": 71,
+      "ty": 74
+    },
+    {
+      "id": "object:0211",
+      "kind": "rock",
+      "tx": 80,
+      "ty": 75
+    },
+    {
+      "id": "object:0212",
+      "kind": "rock",
+      "tx": 78,
+      "ty": 72
+    },
+    {
+      "id": "object:0213",
+      "kind": "rock",
+      "tx": 76,
+      "ty": 73
+    },
+    {
+      "id": "object:0214",
+      "kind": "rock",
+      "tx": 76,
+      "ty": 75
+    },
+    {
+      "id": "object:0215",
+      "kind": "rock",
+      "tx": 47,
+      "ty": 73
+    },
+    {
+      "id": "object:0216",
+      "kind": "rock",
+      "tx": 45,
+      "ty": 73
+    },
+    {
+      "id": "object:0217",
+      "kind": "rock",
+      "tx": 45,
+      "ty": 71
+    },
+    {
+      "id": "object:0218",
+      "kind": "rock",
+      "tx": 17,
+      "ty": 71
+    },
+    {
+      "id": "object:0219",
+      "kind": "rock",
+      "tx": 18,
+      "ty": 69
+    },
+    {
+      "id": "object:0220",
+      "kind": "rock",
+      "tx": 47,
+      "ty": 8
+    },
+    {
+      "id": "object:0221",
+      "kind": "rock",
+      "tx": 46,
+      "ty": 10
+    },
+    {
+      "id": "object:0222",
+      "kind": "rock",
+      "tx": 45,
+      "ty": 8
+    },
+    {
+      "id": "object:0223",
+      "kind": "rock",
+      "tx": 52,
+      "ty": 7
+    },
+    {
+      "id": "object:0224",
+      "kind": "rock",
+      "tx": 55,
+      "ty": 9
+    },
+    {
+      "id": "object:0225",
+      "kind": "rock",
+      "tx": 65,
+      "ty": 29
+    },
+    {
+      "id": "object:0226",
+      "kind": "rock",
+      "tx": 74,
+      "ty": 74
+    },
+    {
+      "id": "object:0227",
+      "kind": "rock",
+      "tx": 72,
+      "ty": 72
+    },
+    {
+      "id": "object:0228",
+      "kind": "rock",
+      "tx": 12,
+      "ty": 78
+    },
+    {
+      "id": "object:0229",
+      "kind": "rock",
+      "tx": 14,
+      "ty": 79
+    },
+    {
+      "id": "object:0230",
+      "kind": "rock",
+      "tx": 15,
+      "ty": 77
+    },
+    {
+      "id": "object:0231",
+      "kind": "rock",
+      "tx": 51,
+      "ty": 66
+    },
+    {
+      "id": "object:0232",
+      "kind": "rock",
+      "tx": 51,
+      "ty": 68
+    },
+    {
+      "id": "object:0233",
+      "kind": "rock",
+      "tx": 72,
+      "ty": 19
+    },
+    {
+      "id": "object:0234",
+      "kind": "rock",
+      "tx": 87,
+      "ty": 72
+    },
+    {
+      "id": "object:0235",
+      "kind": "rock",
+      "tx": 89,
+      "ty": 71
+    },
+    {
+      "id": "object:0236",
+      "kind": "rock",
+      "tx": 90,
+      "ty": 73
+    },
+    {
+      "id": "object:0237",
+      "kind": "rock",
+      "tx": 24,
+      "ty": 59
+    },
+    {
+      "id": "object:0238",
+      "kind": "rock",
+      "tx": 27,
+      "ty": 60
+    },
+    {
+      "id": "object:0239",
+      "kind": "rock",
+      "tx": 12,
+      "ty": 73
+    },
+    {
+      "id": "object:0240",
+      "kind": "rock",
+      "tx": 60,
+      "ty": 64
+    },
+    {
+      "id": "object:0241",
+      "kind": "rock",
+      "tx": 62,
+      "ty": 65
+    },
+    {
+      "id": "object:0242",
+      "kind": "rock",
+      "tx": 60,
+      "ty": 66
+    },
+    {
+      "id": "object:0243",
+      "kind": "rock",
+      "tx": 23,
+      "ty": 27
+    },
+    {
+      "id": "object:0244",
+      "kind": "rock",
+      "tx": 63,
+      "ty": 23
+    },
+    {
+      "id": "object:0245",
+      "kind": "rock",
+      "tx": 66,
+      "ty": 22
+    },
+    {
+      "id": "object:0246",
+      "kind": "rock",
+      "tx": 81,
+      "ty": 13
+    },
+    {
+      "id": "object:0247",
+      "kind": "rock",
+      "tx": 13,
+      "ty": 46
+    },
+    {
+      "id": "object:0248",
+      "kind": "rock",
+      "tx": 11,
+      "ty": 44
+    },
+    {
+      "id": "object:0249",
+      "kind": "weed",
+      "tx": 78,
+      "ty": 38
+    },
+    {
+      "id": "object:0250",
+      "kind": "weed",
+      "tx": 50,
+      "ty": 33
+    },
+    {
+      "id": "object:0251",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 12
+    },
+    {
+      "id": "object:0252",
+      "kind": "weed",
+      "tx": 55,
+      "ty": 49
+    },
+    {
+      "id": "object:0253",
+      "kind": "weed",
+      "tx": 50,
+      "ty": 48
+    },
+    {
+      "id": "object:0254",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 18
+    },
+    {
+      "id": "object:0255",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 36
+    },
+    {
+      "id": "object:0256",
+      "kind": "weed",
+      "tx": 83,
+      "ty": 55
+    },
+    {
+      "id": "object:0257",
+      "kind": "weed",
+      "tx": 84,
+      "ty": 59
+    },
+    {
+      "id": "object:0258",
+      "kind": "weed",
+      "tx": 54,
+      "ty": 38
+    },
+    {
+      "id": "object:0259",
+      "kind": "weed",
+      "tx": 48,
+      "ty": 19
+    },
+    {
+      "id": "object:0260",
+      "kind": "weed",
+      "tx": 39,
+      "ty": 32
+    },
+    {
+      "id": "object:0261",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 36
+    },
+    {
+      "id": "object:0262",
+      "kind": "weed",
+      "tx": 55,
+      "ty": 5
+    },
+    {
+      "id": "object:0263",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 82
+    },
+    {
+      "id": "object:0264",
+      "kind": "weed",
+      "tx": 82,
+      "ty": 41
+    },
+    {
+      "id": "object:0265",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 84
+    },
+    {
+      "id": "object:0266",
+      "kind": "weed",
+      "tx": 25,
+      "ty": 56
+    },
+    {
+      "id": "object:0267",
+      "kind": "weed",
+      "tx": 71,
+      "ty": 54
+    },
+    {
+      "id": "object:0268",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 29
+    },
+    {
+      "id": "object:0269",
+      "kind": "weed",
+      "tx": 75,
+      "ty": 79
+    },
+    {
+      "id": "object:0270",
+      "kind": "weed",
+      "tx": 11,
+      "ty": 59
+    },
+    {
+      "id": "object:0271",
+      "kind": "weed",
+      "tx": 82,
+      "ty": 66
+    },
+    {
+      "id": "object:0272",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 92
+    },
+    {
+      "id": "object:0273",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 50
+    },
+    {
+      "id": "object:0274",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 55
+    },
+    {
+      "id": "object:0275",
+      "kind": "weed",
+      "tx": 83,
+      "ty": 72
+    },
+    {
+      "id": "object:0276",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 26
+    },
+    {
+      "id": "object:0277",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 33
+    },
+    {
+      "id": "object:0278",
+      "kind": "weed",
+      "tx": 87,
+      "ty": 45
+    },
+    {
+      "id": "object:0279",
+      "kind": "weed",
+      "tx": 94,
+      "ty": 44
+    },
+    {
+      "id": "object:0280",
+      "kind": "weed",
+      "tx": 7,
+      "ty": 85
+    },
+    {
+      "id": "object:0281",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 76
+    },
+    {
+      "id": "object:0282",
+      "kind": "weed",
+      "tx": 34,
+      "ty": 55
+    },
+    {
+      "id": "object:0283",
+      "kind": "weed",
+      "tx": 32,
+      "ty": 14
+    },
+    {
+      "id": "object:0284",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 19
+    },
+    {
+      "id": "object:0285",
+      "kind": "weed",
+      "tx": 81,
+      "ty": 78
+    },
+    {
+      "id": "object:0286",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 92
+    },
+    {
+      "id": "object:0287",
+      "kind": "weed",
+      "tx": 37,
+      "ty": 15
+    },
+    {
+      "id": "object:0288",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 10
+    },
+    {
+      "id": "object:0289",
+      "kind": "weed",
+      "tx": 73,
+      "ty": 90
+    },
+    {
+      "id": "object:0290",
+      "kind": "weed",
+      "tx": 94,
+      "ty": 76
+    },
+    {
+      "id": "object:0291",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 65
+    },
+    {
+      "id": "object:0292",
+      "kind": "weed",
+      "tx": 92,
+      "ty": 89
+    },
+    {
+      "id": "object:0293",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 75
+    },
+    {
+      "id": "object:0294",
+      "kind": "weed",
+      "tx": 7,
+      "ty": 92
+    },
+    {
+      "id": "object:0295",
+      "kind": "weed",
+      "tx": 29,
+      "ty": 22
+    },
+    {
+      "id": "object:0296",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 58
+    },
+    {
+      "id": "object:0297",
+      "kind": "weed",
+      "tx": 82,
+      "ty": 32
+    },
+    {
+      "id": "object:0298",
+      "kind": "weed",
+      "tx": 69,
+      "ty": 80
+    },
+    {
+      "id": "object:0299",
+      "kind": "weed",
+      "tx": 83,
+      "ty": 68
+    },
+    {
+      "id": "object:0300",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 54
+    },
+    {
+      "id": "object:0301",
+      "kind": "weed",
+      "tx": 6,
+      "ty": 6
+    },
+    {
+      "id": "object:0302",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 63
+    },
+    {
+      "id": "object:0303",
+      "kind": "weed",
+      "tx": 50,
+      "ty": 41
+    },
+    {
+      "id": "object:0304",
+      "kind": "weed",
+      "tx": 67,
+      "ty": 90
+    },
+    {
+      "id": "object:0305",
+      "kind": "weed",
+      "tx": 56,
+      "ty": 36
+    },
+    {
+      "id": "object:0306",
+      "kind": "weed",
+      "tx": 41,
+      "ty": 29
+    },
+    {
+      "id": "object:0307",
+      "kind": "weed",
+      "tx": 87,
+      "ty": 13
+    },
+    {
+      "id": "object:0308",
+      "kind": "weed",
+      "tx": 37,
+      "ty": 82
+    },
+    {
+      "id": "object:0309",
+      "kind": "weed",
+      "tx": 60,
+      "ty": 36
+    },
+    {
+      "id": "object:0310",
+      "kind": "weed",
+      "tx": 95,
+      "ty": 59
+    },
+    {
+      "id": "object:0311",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 46
+    },
+    {
+      "id": "object:0312",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 28
+    },
+    {
+      "id": "object:0313",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 56
+    },
+    {
+      "id": "object:0314",
+      "kind": "weed",
+      "tx": 45,
+      "ty": 24
+    },
+    {
+      "id": "object:0315",
+      "kind": "weed",
+      "tx": 31,
+      "ty": 57
+    },
+    {
+      "id": "object:0316",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 31
+    },
+    {
+      "id": "object:0317",
+      "kind": "weed",
+      "tx": 11,
+      "ty": 83
+    },
+    {
+      "id": "object:0318",
+      "kind": "weed",
+      "tx": 28,
+      "ty": 33
+    },
+    {
+      "id": "object:0319",
+      "kind": "weed",
+      "tx": 90,
+      "ty": 62
+    },
+    {
+      "id": "object:0320",
+      "kind": "weed",
+      "tx": 65,
+      "ty": 54
+    },
+    {
+      "id": "object:0321",
+      "kind": "weed",
+      "tx": 72,
+      "ty": 3
+    },
+    {
+      "id": "object:0322",
+      "kind": "weed",
+      "tx": 77,
+      "ty": 21
+    },
+    {
+      "id": "object:0323",
+      "kind": "weed",
+      "tx": 75,
+      "ty": 21
+    },
+    {
+      "id": "object:0324",
+      "kind": "weed",
+      "tx": 69,
+      "ty": 23
+    },
+    {
+      "id": "object:0325",
+      "kind": "weed",
+      "tx": 19,
+      "ty": 81
+    },
+    {
+      "id": "object:0326",
+      "kind": "weed",
+      "tx": 56,
+      "ty": 71
+    },
+    {
+      "id": "object:0327",
+      "kind": "weed",
+      "tx": 19,
+      "ty": 78
+    },
+    {
+      "id": "object:0328",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 58
+    },
+    {
+      "id": "object:0329",
+      "kind": "weed",
+      "tx": 21,
+      "ty": 25
+    },
+    {
+      "id": "object:0330",
+      "kind": "weed",
+      "tx": 35,
+      "ty": 7
+    },
+    {
+      "id": "object:0331",
+      "kind": "weed",
+      "tx": 17,
+      "ty": 42
+    },
+    {
+      "id": "object:0332",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 81
+    },
+    {
+      "id": "object:0333",
+      "kind": "weed",
+      "tx": 10,
+      "ty": 14
+    },
+    {
+      "id": "object:0334",
+      "kind": "weed",
+      "tx": 33,
+      "ty": 53
+    },
+    {
+      "id": "object:0335",
+      "kind": "weed",
+      "tx": 44,
+      "ty": 17
+    },
+    {
+      "id": "object:0336",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 44
+    },
+    {
+      "id": "object:0337",
+      "kind": "weed",
+      "tx": 93,
+      "ty": 87
+    },
+    {
+      "id": "object:0338",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 8
+    },
+    {
+      "id": "object:0339",
+      "kind": "weed",
+      "tx": 96,
+      "ty": 62
+    },
+    {
+      "id": "object:0340",
+      "kind": "weed",
+      "tx": 80,
+      "ty": 42
+    },
+    {
+      "id": "object:0341",
+      "kind": "weed",
+      "tx": 49,
+      "ty": 28
+    },
+    {
+      "id": "object:0342",
+      "kind": "weed",
+      "tx": 95,
+      "ty": 71
+    },
+    {
+      "id": "object:0343",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 52
+    },
+    {
+      "id": "object:0344",
+      "kind": "weed",
+      "tx": 65,
+      "ty": 85
+    },
+    {
+      "id": "object:0345",
+      "kind": "weed",
+      "tx": 90,
+      "ty": 15
+    },
+    {
+      "id": "object:0346",
+      "kind": "weed",
+      "tx": 55,
+      "ty": 56
+    },
+    {
+      "id": "object:0347",
+      "kind": "weed",
+      "tx": 48,
+      "ty": 4
+    },
+    {
+      "id": "object:0348",
+      "kind": "weed",
+      "tx": 27,
+      "ty": 73
+    },
+    {
+      "id": "object:0349",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 30
+    },
+    {
+      "id": "object:0350",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 27
+    },
+    {
+      "id": "object:0351",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 49
+    },
+    {
+      "id": "object:0352",
+      "kind": "weed",
+      "tx": 57,
+      "ty": 93
+    },
+    {
+      "id": "object:0353",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 69
+    },
+    {
+      "id": "object:0354",
+      "kind": "weed",
+      "tx": 91,
+      "ty": 9
+    },
+    {
+      "id": "object:0355",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 60
+    },
+    {
+      "id": "object:0356",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 38
+    },
+    {
+      "id": "object:0357",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 17
+    },
+    {
+      "id": "object:0358",
+      "kind": "weed",
+      "tx": 86,
+      "ty": 86
+    },
+    {
+      "id": "object:0359",
+      "kind": "weed",
+      "tx": 87,
+      "ty": 32
+    },
+    {
+      "id": "object:0360",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 28
+    },
+    {
+      "id": "object:0361",
+      "kind": "weed",
+      "tx": 90,
+      "ty": 3
+    },
+    {
+      "id": "object:0362",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 57
+    },
+    {
+      "id": "object:0363",
+      "kind": "weed",
+      "tx": 86,
+      "ty": 43
+    },
+    {
+      "id": "object:0364",
+      "kind": "weed",
+      "tx": 83,
+      "ty": 7
+    },
+    {
+      "id": "object:0365",
+      "kind": "weed",
+      "tx": 25,
+      "ty": 63
+    },
+    {
+      "id": "object:0366",
+      "kind": "weed",
+      "tx": 14,
+      "ty": 71
+    },
+    {
+      "id": "object:0367",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 77
+    },
+    {
+      "id": "object:0368",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 33
+    },
+    {
+      "id": "object:0369",
+      "kind": "weed",
+      "tx": 31,
+      "ty": 69
+    },
+    {
+      "id": "object:0370",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 83
+    },
+    {
+      "id": "object:0371",
+      "kind": "weed",
+      "tx": 27,
+      "ty": 82
+    },
+    {
+      "id": "object:0372",
+      "kind": "weed",
+      "tx": 51,
+      "ty": 72
+    },
+    {
+      "id": "object:0373",
+      "kind": "weed",
+      "tx": 28,
+      "ty": 5
+    },
+    {
+      "id": "object:0374",
+      "kind": "weed",
+      "tx": 7,
+      "ty": 48
+    },
+    {
+      "id": "object:0375",
+      "kind": "weed",
+      "tx": 19,
+      "ty": 12
+    },
+    {
+      "id": "object:0376",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 46
+    },
+    {
+      "id": "object:0377",
+      "kind": "weed",
+      "tx": 58,
+      "ty": 36
+    },
+    {
+      "id": "object:0378",
+      "kind": "weed",
+      "tx": 79,
+      "ty": 17
+    },
+    {
+      "id": "object:0379",
+      "kind": "weed",
+      "tx": 23,
+      "ty": 78
+    },
+    {
+      "id": "object:0380",
+      "kind": "weed",
+      "tx": 93,
+      "ty": 93
+    },
+    {
+      "id": "object:0381",
+      "kind": "weed",
+      "tx": 74,
+      "ty": 48
+    },
+    {
+      "id": "object:0382",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 44
+    },
+    {
+      "id": "object:0383",
+      "kind": "weed",
+      "tx": 78,
+      "ty": 78
+    },
+    {
+      "id": "object:0384",
+      "kind": "weed",
+      "tx": 23,
+      "ty": 71
+    },
+    {
+      "id": "object:0385",
+      "kind": "weed",
+      "tx": 34,
+      "ty": 72
+    },
+    {
+      "id": "object:0386",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 16
+    },
+    {
+      "id": "object:0387",
+      "kind": "weed",
+      "tx": 71,
+      "ty": 38
+    },
+    {
+      "id": "object:0388",
+      "kind": "weed",
+      "tx": 55,
+      "ty": 19
+    },
+    {
+      "id": "object:0389",
+      "kind": "weed",
+      "tx": 65,
+      "ty": 50
+    },
+    {
+      "id": "object:0390",
+      "kind": "weed",
+      "tx": 41,
+      "ty": 55
+    },
+    {
+      "id": "object:0391",
+      "kind": "weed",
+      "tx": 60,
+      "ty": 73
+    },
+    {
+      "id": "object:0392",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 74
+    },
+    {
+      "id": "object:0393",
+      "kind": "weed",
+      "tx": 6,
+      "ty": 62
+    },
+    {
+      "id": "object:0394",
+      "kind": "weed",
+      "tx": 90,
+      "ty": 5
+    },
+    {
+      "id": "object:0395",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 71
+    },
+    {
+      "id": "object:0396",
+      "kind": "weed",
+      "tx": 33,
+      "ty": 22
+    },
+    {
+      "id": "object:0397",
+      "kind": "weed",
+      "tx": 19,
+      "ty": 63
+    },
+    {
+      "id": "object:0398",
+      "kind": "weed",
+      "tx": 31,
+      "ty": 43
+    },
+    {
+      "id": "object:0399",
+      "kind": "weed",
+      "tx": 79,
+      "ty": 60
+    },
+    {
+      "id": "object:0400",
+      "kind": "weed",
+      "tx": 57,
+      "ty": 86
+    },
+    {
+      "id": "object:0401",
+      "kind": "weed",
+      "tx": 6,
+      "ty": 82
+    },
+    {
+      "id": "object:0402",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 10
+    },
+    {
+      "id": "object:0403",
+      "kind": "weed",
+      "tx": 54,
+      "ty": 53
+    },
+    {
+      "id": "object:0404",
+      "kind": "weed",
+      "tx": 58,
+      "ty": 64
+    },
+    {
+      "id": "object:0405",
+      "kind": "weed",
+      "tx": 31,
+      "ty": 5
+    },
+    {
+      "id": "object:0406",
+      "kind": "weed",
+      "tx": 76,
+      "ty": 70
+    },
+    {
+      "id": "object:0407",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 40
+    },
+    {
+      "id": "object:0408",
+      "kind": "weed",
+      "tx": 94,
+      "ty": 85
+    },
+    {
+      "id": "object:0409",
+      "kind": "weed",
+      "tx": 51,
+      "ty": 91
+    },
+    {
+      "id": "object:0410",
+      "kind": "weed",
+      "tx": 86,
+      "ty": 56
+    },
+    {
+      "id": "object:0411",
+      "kind": "weed",
+      "tx": 4,
+      "ty": 42
+    },
+    {
+      "id": "object:0412",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 33
+    },
+    {
+      "id": "object:0413",
+      "kind": "weed",
+      "tx": 22,
+      "ty": 14
+    },
+    {
+      "id": "object:0414",
+      "kind": "weed",
+      "tx": 19,
+      "ty": 4
+    },
+    {
+      "id": "object:0415",
+      "kind": "weed",
+      "tx": 79,
+      "ty": 46
+    },
+    {
+      "id": "object:0416",
+      "kind": "weed",
+      "tx": 32,
+      "ty": 7
+    },
+    {
+      "id": "object:0417",
+      "kind": "weed",
+      "tx": 87,
+      "ty": 50
+    },
+    {
+      "id": "object:0418",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 85
+    },
+    {
+      "id": "object:0419",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 72
+    },
+    {
+      "id": "object:0420",
+      "kind": "weed",
+      "tx": 11,
+      "ty": 70
+    },
+    {
+      "id": "object:0421",
+      "kind": "weed",
+      "tx": 64,
+      "ty": 26
+    },
+    {
+      "id": "object:0422",
+      "kind": "weed",
+      "tx": 79,
+      "ty": 83
+    },
+    {
+      "id": "object:0423",
+      "kind": "weed",
+      "tx": 25,
+      "ty": 54
+    },
+    {
+      "id": "object:0424",
+      "kind": "weed",
+      "tx": 85,
+      "ty": 63
+    },
+    {
+      "id": "object:0425",
+      "kind": "weed",
+      "tx": 92,
+      "ty": 66
+    },
+    {
+      "id": "object:0426",
+      "kind": "weed",
+      "tx": 55,
+      "ty": 86
+    },
+    {
+      "id": "object:0427",
+      "kind": "weed",
+      "tx": 94,
+      "ty": 4
+    },
+    {
+      "id": "object:0428",
+      "kind": "weed",
+      "tx": 37,
+      "ty": 3
+    },
+    {
+      "id": "object:0429",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 26
+    },
+    {
+      "id": "object:0430",
+      "kind": "weed",
+      "tx": 60,
+      "ty": 22
+    },
+    {
+      "id": "object:0431",
+      "kind": "weed",
+      "tx": 64,
+      "ty": 61
+    },
+    {
+      "id": "object:0432",
+      "kind": "weed",
+      "tx": 75,
+      "ty": 85
+    },
+    {
+      "id": "object:0433",
+      "kind": "weed",
+      "tx": 50,
+      "ty": 25
+    },
+    {
+      "id": "object:0434",
+      "kind": "weed",
+      "tx": 32,
+      "ty": 67
+    },
+    {
+      "id": "object:0435",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 40
+    },
+    {
+      "id": "object:0436",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 28
+    },
+    {
+      "id": "object:0437",
+      "kind": "weed",
+      "tx": 95,
+      "ty": 56
+    },
+    {
+      "id": "object:0438",
+      "kind": "weed",
+      "tx": 69,
+      "ty": 38
+    },
+    {
+      "id": "object:0439",
+      "kind": "weed",
+      "tx": 92,
+      "ty": 57
+    },
+    {
+      "id": "object:0440",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 16
+    },
+    {
+      "id": "object:0441",
+      "kind": "weed",
+      "tx": 25,
+      "ty": 36
+    },
+    {
+      "id": "object:0442",
+      "kind": "weed",
+      "tx": 31,
+      "ty": 29
+    },
+    {
+      "id": "object:0443",
+      "kind": "weed",
+      "tx": 96,
+      "ty": 41
+    },
+    {
+      "id": "object:0444",
+      "kind": "weed",
+      "tx": 11,
+      "ty": 33
+    },
+    {
+      "id": "object:0445",
+      "kind": "weed",
+      "tx": 86,
+      "ty": 74
+    },
+    {
+      "id": "object:0446",
+      "kind": "weed",
+      "tx": 75,
+      "ty": 65
+    },
+    {
+      "id": "object:0447",
+      "kind": "weed",
+      "tx": 36,
+      "ty": 93
+    },
+    {
+      "id": "object:0448",
+      "kind": "weed",
+      "tx": 89,
+      "ty": 81
+    },
+    {
+      "id": "object:0449",
+      "kind": "weed",
+      "tx": 9,
+      "ty": 73
+    },
+    {
+      "id": "object:0450",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 39
+    },
+    {
+      "id": "object:0451",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 27
+    },
+    {
+      "id": "object:0452",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 59
+    },
+    {
+      "id": "object:0453",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 88
+    },
+    {
+      "id": "object:0454",
+      "kind": "weed",
+      "tx": 64,
+      "ty": 38
+    },
+    {
+      "id": "object:0455",
+      "kind": "weed",
+      "tx": 29,
+      "ty": 80
+    },
+    {
+      "id": "object:0456",
+      "kind": "weed",
+      "tx": 72,
+      "ty": 58
+    },
+    {
+      "id": "object:0457",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 23
+    },
+    {
+      "id": "object:0458",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 36
+    },
+    {
+      "id": "object:0459",
+      "kind": "weed",
+      "tx": 84,
+      "ty": 90
+    },
+    {
+      "id": "object:0460",
+      "kind": "weed",
+      "tx": 7,
+      "ty": 94
+    },
+    {
+      "id": "object:0461",
+      "kind": "weed",
+      "tx": 47,
+      "ty": 55
+    },
+    {
+      "id": "object:0462",
+      "kind": "weed",
+      "tx": 18,
+      "ty": 74
+    },
+    {
+      "id": "object:0463",
+      "kind": "weed",
+      "tx": 69,
+      "ty": 22
+    },
+    {
+      "id": "object:0464",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 3
+    },
+    {
+      "id": "object:0465",
+      "kind": "weed",
+      "tx": 48,
+      "ty": 63
+    },
+    {
+      "id": "object:0466",
+      "kind": "weed",
+      "tx": 51,
+      "ty": 43
+    },
+    {
+      "id": "object:0467",
+      "kind": "weed",
+      "tx": 83,
+      "ty": 87
+    },
+    {
+      "id": "object:0468",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 71
+    },
+    {
+      "id": "object:0469",
+      "kind": "weed",
+      "tx": 39,
+      "ty": 76
+    },
+    {
+      "id": "object:0470",
+      "kind": "weed",
+      "tx": 17,
+      "ty": 78
+    },
+    {
+      "id": "object:0471",
+      "kind": "weed",
+      "tx": 51,
+      "ty": 57
+    },
+    {
+      "id": "object:0472",
+      "kind": "weed",
+      "tx": 28,
+      "ty": 52
+    },
+    {
+      "id": "object:0473",
+      "kind": "weed",
+      "tx": 4,
+      "ty": 91
+    },
+    {
+      "id": "object:0474",
+      "kind": "weed",
+      "tx": 39,
+      "ty": 50
+    },
+    {
+      "id": "object:0475",
+      "kind": "weed",
+      "tx": 86,
+      "ty": 70
+    },
+    {
+      "id": "object:0476",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 18
+    },
+    {
+      "id": "object:0477",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 60
+    },
+    {
+      "id": "object:0478",
+      "kind": "weed",
+      "tx": 78,
+      "ty": 89
+    },
+    {
+      "id": "object:0479",
+      "kind": "weed",
+      "tx": 67,
+      "ty": 59
+    },
+    {
+      "id": "object:0480",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 15
+    },
+    {
+      "id": "object:0481",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 18
+    },
+    {
+      "id": "object:0482",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 69
+    },
+    {
+      "id": "object:0483",
+      "kind": "weed",
+      "tx": 58,
+      "ty": 57
+    },
+    {
+      "id": "object:0484",
+      "kind": "weed",
+      "tx": 6,
+      "ty": 20
+    },
+    {
+      "id": "object:0485",
+      "kind": "weed",
+      "tx": 95,
+      "ty": 14
+    },
+    {
+      "id": "object:0486",
+      "kind": "weed",
+      "tx": 90,
+      "ty": 46
+    },
+    {
+      "id": "object:0487",
+      "kind": "weed",
+      "tx": 48,
+      "ty": 71
+    },
+    {
+      "id": "object:0488",
+      "kind": "weed",
+      "tx": 60,
+      "ty": 25
+    },
+    {
+      "id": "object:0489",
+      "kind": "weed",
+      "tx": 15,
+      "ty": 58
+    },
+    {
+      "id": "object:0490",
+      "kind": "weed",
+      "tx": 34,
+      "ty": 70
+    },
+    {
+      "id": "object:0491",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 20
+    },
+    {
+      "id": "object:0492",
+      "kind": "weed",
+      "tx": 11,
+      "ty": 88
+    },
+    {
+      "id": "object:0493",
+      "kind": "weed",
+      "tx": 57,
+      "ty": 27
+    },
+    {
+      "id": "object:0494",
+      "kind": "weed",
+      "tx": 64,
+      "ty": 92
+    },
+    {
+      "id": "object:0495",
+      "kind": "weed",
+      "tx": 29,
+      "ty": 78
+    },
+    {
+      "id": "object:0496",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 70
+    },
+    {
+      "id": "object:0497",
+      "kind": "weed",
+      "tx": 13,
+      "ty": 59
+    },
+    {
+      "id": "object:0498",
+      "kind": "weed",
+      "tx": 15,
+      "ty": 64
+    },
+    {
+      "id": "object:0499",
+      "kind": "weed",
+      "tx": 19,
+      "ty": 6
+    },
+    {
+      "id": "object:0500",
+      "kind": "weed",
+      "tx": 6,
+      "ty": 51
+    },
+    {
+      "id": "object:0501",
+      "kind": "weed",
+      "tx": 88,
+      "ty": 66
+    },
+    {
+      "id": "object:0502",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 9
+    },
+    {
+      "id": "object:0503",
+      "kind": "weed",
+      "tx": 61,
+      "ty": 36
+    },
+    {
+      "id": "object:0504",
+      "kind": "weed",
+      "tx": 80,
+      "ty": 93
+    },
+    {
+      "id": "object:0505",
+      "kind": "weed",
+      "tx": 29,
+      "ty": 38
+    },
+    {
+      "id": "object:0506",
+      "kind": "weed",
+      "tx": 80,
+      "ty": 85
+    },
+    {
+      "id": "object:0507",
+      "kind": "weed",
+      "tx": 58,
+      "ty": 42
+    },
+    {
+      "id": "object:0508",
+      "kind": "weed",
+      "tx": 15,
+      "ty": 84
+    },
+    {
+      "id": "object:0509",
+      "kind": "weed",
+      "tx": 69,
+      "ty": 42
+    },
+    {
+      "id": "object:0510",
+      "kind": "weed",
+      "tx": 87,
+      "ty": 52
+    },
+    {
+      "id": "object:0511",
+      "kind": "weed",
+      "tx": 59,
+      "ty": 44
+    },
+    {
+      "id": "object:0512",
+      "kind": "weed",
+      "tx": 44,
+      "ty": 63
+    },
+    {
+      "id": "object:0513",
+      "kind": "weed",
+      "tx": 12,
+      "ty": 14
+    },
+    {
+      "id": "object:0514",
+      "kind": "weed",
+      "tx": 34,
+      "ty": 84
+    },
+    {
+      "id": "object:0515",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 38
+    },
+    {
+      "id": "object:0516",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 32
+    },
+    {
+      "id": "object:0517",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 41
+    },
+    {
+      "id": "object:0518",
+      "kind": "weed",
+      "tx": 96,
+      "ty": 73
+    },
+    {
+      "id": "object:0519",
+      "kind": "weed",
+      "tx": 59,
+      "ty": 78
+    },
+    {
+      "id": "object:0520",
+      "kind": "weed",
+      "tx": 82,
+      "ty": 46
+    },
+    {
+      "id": "object:0521",
+      "kind": "weed",
+      "tx": 73,
+      "ty": 53
+    },
+    {
+      "id": "object:0522",
+      "kind": "weed",
+      "tx": 75,
+      "ty": 54
+    },
+    {
+      "id": "object:0523",
+      "kind": "weed",
+      "tx": 65,
+      "ty": 20
+    },
+    {
+      "id": "object:0524",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 26
+    },
+    {
+      "id": "object:0525",
+      "kind": "weed",
+      "tx": 37,
+      "ty": 60
+    },
+    {
+      "id": "object:0526",
+      "kind": "weed",
+      "tx": 23,
+      "ty": 89
+    },
+    {
+      "id": "object:0527",
+      "kind": "weed",
+      "tx": 59,
+      "ty": 34
+    },
+    {
+      "id": "object:0528",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 5
+    },
+    {
+      "id": "object:0529",
+      "kind": "weed",
+      "tx": 34,
+      "ty": 3
+    },
+    {
+      "id": "object:0530",
+      "kind": "weed",
+      "tx": 93,
+      "ty": 8
+    },
+    {
+      "id": "object:0531",
+      "kind": "weed",
+      "tx": 87,
+      "ty": 34
+    },
+    {
+      "id": "object:0532",
+      "kind": "weed",
+      "tx": 32,
+      "ty": 78
+    },
+    {
+      "id": "object:0533",
+      "kind": "weed",
+      "tx": 57,
+      "ty": 61
+    },
+    {
+      "id": "object:0534",
+      "kind": "weed",
+      "tx": 12,
+      "ty": 23
+    },
+    {
+      "id": "object:0535",
+      "kind": "weed",
+      "tx": 15,
+      "ty": 52
+    },
+    {
+      "id": "object:0536",
+      "kind": "weed",
+      "tx": 55,
+      "ty": 25
+    },
+    {
+      "id": "object:0537",
+      "kind": "weed",
+      "tx": 60,
+      "ty": 41
+    },
+    {
+      "id": "object:0538",
+      "kind": "weed",
+      "tx": 85,
+      "ty": 49
+    },
+    {
+      "id": "object:0539",
+      "kind": "weed",
+      "tx": 79,
+      "ty": 50
+    },
+    {
+      "id": "object:0540",
+      "kind": "weed",
+      "tx": 18,
+      "ty": 36
+    },
+    {
+      "id": "object:0541",
+      "kind": "rock",
+      "tx": 73,
+      "ty": 37
+    },
+    {
+      "id": "object:0542",
+      "kind": "rock",
+      "tx": 57,
+      "ty": 19
+    },
+    {
+      "id": "object:0543",
+      "kind": "weed",
+      "tx": 46,
+      "ty": 14
+    },
+    {
+      "id": "object:0544",
+      "kind": "tree",
+      "tx": 67,
+      "ty": 75
+    },
+    {
+      "id": "object:0545",
+      "kind": "rock",
+      "tx": 32,
+      "ty": 25
+    },
+    {
+      "id": "object:0546",
+      "kind": "rock",
+      "tx": 77,
+      "ty": 49
+    },
+    {
+      "id": "object:0547",
+      "kind": "weed",
+      "tx": 55,
+      "ty": 68
+    },
+    {
+      "id": "object:0548",
+      "kind": "tree",
+      "tx": 37,
+      "ty": 73
+    },
+    {
+      "id": "object:0549",
+      "kind": "weed",
+      "tx": 34,
+      "ty": 38
+    },
+    {
+      "id": "object:0550",
+      "kind": "weed",
+      "tx": 88,
+      "ty": 63
+    },
+    {
+      "id": "object:0551",
+      "kind": "weed",
+      "tx": 77,
+      "ty": 35
+    },
+    {
+      "id": "object:0552",
+      "kind": "tree",
+      "tx": 38,
+      "ty": 54
+    },
+    {
+      "id": "object:0553",
+      "kind": "tree",
+      "tx": 68,
+      "ty": 50
+    },
+    {
+      "id": "object:0554",
+      "kind": "tree",
+      "tx": 13,
+      "ty": 54
+    },
+    {
+      "id": "object:0555",
+      "kind": "rock",
+      "tx": 87,
+      "ty": 92
+    },
+    {
+      "id": "object:0556",
+      "kind": "weed",
+      "tx": 11,
+      "ty": 51
+    },
+    {
+      "id": "object:0557",
+      "kind": "rock",
+      "tx": 18,
+      "ty": 51
+    },
+    {
+      "id": "object:0558",
+      "kind": "weed",
+      "tx": 18,
+      "ty": 61
+    },
+    {
+      "id": "object:0559",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 56
+    },
+    {
+      "id": "object:0560",
+      "kind": "tree",
+      "tx": 41,
+      "ty": 70
+    },
+    {
+      "id": "object:0561",
+      "kind": "weed",
+      "tx": 91,
+      "ty": 53
+    },
+    {
+      "id": "object:0562",
+      "kind": "weed",
+      "tx": 49,
+      "ty": 65
+    },
+    {
+      "id": "object:0563",
+      "kind": "rock",
+      "tx": 60,
+      "ty": 80
+    },
+    {
+      "id": "object:0564",
+      "kind": "weed",
+      "tx": 71,
+      "ty": 22
+    },
+    {
+      "id": "object:0565",
+      "kind": "tree",
+      "tx": 42,
+      "ty": 68
+    },
+    {
+      "id": "object:0566",
+      "kind": "rock",
+      "tx": 28,
+      "ty": 24
+    },
+    {
+      "id": "object:0567",
+      "kind": "rock",
+      "tx": 13,
+      "ty": 75
+    },
+    {
+      "id": "object:0568",
+      "kind": "weed",
+      "tx": 61,
+      "ty": 39
+    },
+    {
+      "id": "object:0569",
+      "kind": "weed",
+      "tx": 63,
+      "ty": 35
+    },
+    {
+      "id": "object:0570",
+      "kind": "rock",
+      "tx": 25,
+      "ty": 12
+    },
+    {
+      "id": "object:0571",
+      "kind": "rock",
+      "tx": 39,
+      "ty": 94
+    },
+    {
+      "id": "object:0572",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 21
+    },
+    {
+      "id": "object:0573",
+      "kind": "weed",
+      "tx": 67,
+      "ty": 21
+    },
+    {
+      "id": "object:0574",
+      "kind": "weed",
+      "tx": 58,
+      "ty": 48
+    },
+    {
+      "id": "object:0575",
+      "kind": "rock",
+      "tx": 35,
+      "ty": 26
+    },
+    {
+      "id": "object:0576",
+      "kind": "tree",
+      "tx": 25,
+      "ty": 92
+    },
+    {
+      "id": "object:0577",
+      "kind": "rock",
+      "tx": 84,
+      "ty": 70
+    },
+    {
+      "id": "object:0578",
+      "kind": "weed",
+      "tx": 18,
+      "ty": 65
+    },
+    {
+      "id": "object:0579",
+      "kind": "tree",
+      "tx": 55,
+      "ty": 41
+    },
+    {
+      "id": "object:0580",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 41
+    },
+    {
+      "id": "object:0581",
+      "kind": "weed",
+      "tx": 64,
+      "ty": 75
+    },
+    {
+      "id": "object:0582",
+      "kind": "weed",
+      "tx": 41,
+      "ty": 84
+    },
+    {
+      "id": "object:0583",
+      "kind": "weed",
+      "tx": 32,
+      "ty": 17
+    },
+    {
+      "id": "object:0584",
+      "kind": "rock",
+      "tx": 18,
+      "ty": 40
+    },
+    {
+      "id": "object:0585",
+      "kind": "weed",
+      "tx": 94,
+      "ty": 65
+    },
+    {
+      "id": "object:0586",
+      "kind": "tree",
+      "tx": 18,
+      "ty": 49
+    },
+    {
+      "id": "object:0587",
+      "kind": "tree",
+      "tx": 40,
+      "ty": 60
+    },
+    {
+      "id": "object:0588",
+      "kind": "tree",
+      "tx": 13,
+      "ty": 27
+    },
+    {
+      "id": "object:0589",
+      "kind": "rock",
+      "tx": 13,
+      "ty": 33
+    },
+    {
+      "id": "object:0590",
+      "kind": "weed",
+      "tx": 21,
+      "ty": 28
+    },
+    {
+      "id": "object:0591",
+      "kind": "tree",
+      "tx": 14,
+      "ty": 18
+    },
+    {
+      "id": "object:0592",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 38
+    },
+    {
+      "id": "object:0593",
+      "kind": "weed",
+      "tx": 89,
+      "ty": 93
+    },
+    {
+      "id": "object:0594",
+      "kind": "rock",
+      "tx": 80,
+      "ty": 64
+    },
+    {
+      "id": "object:0595",
+      "kind": "weed",
+      "tx": 50,
+      "ty": 11
+    },
+    {
+      "id": "object:0596",
+      "kind": "rock",
+      "tx": 66,
+      "ty": 64
+    },
+    {
+      "id": "object:0597",
+      "kind": "tree",
+      "tx": 24,
+      "ty": 32
+    },
+    {
+      "id": "object:0598",
+      "kind": "tree",
+      "tx": 40,
+      "ty": 62
+    },
+    {
+      "id": "object:0599",
+      "kind": "weed",
+      "tx": 57,
+      "ty": 12
+    },
+    {
+      "id": "object:0600",
+      "kind": "weed",
+      "tx": 13,
+      "ty": 52
+    },
+    {
+      "id": "object:0601",
+      "kind": "weed",
+      "tx": 60,
+      "ty": 92
+    },
+    {
+      "id": "object:0602",
+      "kind": "rock",
+      "tx": 11,
+      "ty": 5
+    },
+    {
+      "id": "object:0603",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 51
+    },
+    {
+      "id": "object:0604",
+      "kind": "tree",
+      "tx": 20,
+      "ty": 90
+    },
+    {
+      "id": "object:0605",
+      "kind": "weed",
+      "tx": 92,
+      "ty": 43
+    },
+    {
+      "id": "object:0606",
+      "kind": "rock",
+      "tx": 14,
+      "ty": 30
+    },
+    {
+      "id": "object:0607",
+      "kind": "weed",
+      "tx": 63,
+      "ty": 82
+    },
+    {
+      "id": "object:0608",
+      "kind": "weed",
+      "tx": 45,
+      "ty": 52
+    },
+    {
+      "id": "object:0609",
+      "kind": "rock",
+      "tx": 89,
+      "ty": 90
+    },
+    {
+      "id": "object:0610",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 65
+    },
+    {
+      "id": "object:0611",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 14
+    },
+    {
+      "id": "object:0612",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 20
+    },
+    {
+      "id": "object:0613",
+      "kind": "tree",
+      "tx": 3,
+      "ty": 55
+    },
+    {
+      "id": "object:0614",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 87
+    },
+    {
+      "id": "object:0615",
+      "kind": "tree",
+      "tx": 55,
+      "ty": 23
+    },
+    {
+      "id": "object:0616",
+      "kind": "tree",
+      "tx": 43,
+      "ty": 29
+    },
+    {
+      "id": "object:0617",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 73
+    },
+    {
+      "id": "object:0618",
+      "kind": "weed",
+      "tx": 79,
+      "ty": 48
+    },
+    {
+      "id": "object:0619",
+      "kind": "weed",
+      "tx": 57,
+      "ty": 40
+    },
+    {
+      "id": "object:0620",
+      "kind": "rock",
+      "tx": 28,
+      "ty": 35
+    },
+    {
+      "id": "object:0621",
+      "kind": "rock",
+      "tx": 67,
+      "ty": 81
+    },
+    {
+      "id": "object:0622",
+      "kind": "tree",
+      "tx": 84,
+      "ty": 81
+    },
+    {
+      "id": "object:0623",
+      "kind": "weed",
+      "tx": 33,
+      "ty": 62
+    },
+    {
+      "id": "object:0624",
+      "kind": "weed",
+      "tx": 29,
+      "ty": 27
+    },
+    {
+      "id": "object:0625",
+      "kind": "rock",
+      "tx": 32,
+      "ty": 40
+    },
+    {
+      "id": "object:0626",
+      "kind": "tree",
+      "tx": 29,
+      "ty": 72
+    },
+    {
+      "id": "object:0627",
+      "kind": "rock",
+      "tx": 94,
+      "ty": 62
+    },
+    {
+      "id": "object:0628",
+      "kind": "tree",
+      "tx": 68,
+      "ty": 94
+    },
+    {
+      "id": "object:0629",
+      "kind": "rock",
+      "tx": 74,
+      "ty": 77
+    },
+    {
+      "id": "object:0630",
+      "kind": "tree",
+      "tx": 48,
+      "ty": 67
+    },
+    {
+      "id": "object:0631",
+      "kind": "tree",
+      "tx": 47,
+      "ty": 94
+    },
+    {
+      "id": "object:0632",
+      "kind": "weed",
+      "tx": 31,
+      "ty": 62
+    },
+    {
+      "id": "object:0633",
+      "kind": "tree",
+      "tx": 3,
+      "ty": 77
+    },
+    {
+      "id": "object:0634",
+      "kind": "weed",
+      "tx": 88,
+      "ty": 33
+    },
+    {
+      "id": "object:0635",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 36
+    },
+    {
+      "id": "object:0636",
+      "kind": "rock",
+      "tx": 22,
+      "ty": 12
+    },
+    {
+      "id": "object:0637",
+      "kind": "weed",
+      "tx": 58,
+      "ty": 10
+    },
+    {
+      "id": "object:0638",
+      "kind": "tree",
+      "tx": 91,
+      "ty": 7
+    },
+    {
+      "id": "object:0639",
+      "kind": "rock",
+      "tx": 73,
+      "ty": 32
+    },
+    {
+      "id": "object:0640",
+      "kind": "rock",
+      "tx": 90,
+      "ty": 57
+    },
+    {
+      "id": "object:0641",
+      "kind": "rock",
+      "tx": 25,
+      "ty": 89
+    },
+    {
+      "id": "object:0642",
+      "kind": "tree",
+      "tx": 39,
+      "ty": 6
+    },
+    {
+      "id": "object:0643",
+      "kind": "rock",
+      "tx": 22,
+      "ty": 18
+    },
+    {
+      "id": "object:0644",
+      "kind": "rock",
+      "tx": 70,
+      "ty": 91
+    },
+    {
+      "id": "object:0645",
+      "kind": "tree",
+      "tx": 96,
+      "ty": 65
+    },
+    {
+      "id": "object:0646",
+      "kind": "rock",
+      "tx": 69,
+      "ty": 87
+    },
+    {
+      "id": "object:0647",
+      "kind": "tree",
+      "tx": 40,
+      "ty": 40
+    },
+    {
+      "id": "object:0648",
+      "kind": "tree",
+      "tx": 28,
+      "ty": 94
+    },
+    {
+      "id": "object:0649",
+      "kind": "weed",
+      "tx": 4,
+      "ty": 72
+    },
+    {
+      "id": "object:0650",
+      "kind": "rock",
+      "tx": 29,
+      "ty": 54
+    },
+    {
+      "id": "object:0651",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 71
+    },
+    {
+      "id": "object:0652",
+      "kind": "rock",
+      "tx": 18,
+      "ty": 26
+    },
+    {
+      "id": "object:0653",
+      "kind": "rock",
+      "tx": 29,
+      "ty": 56
+    },
+    {
+      "id": "object:0654",
+      "kind": "weed",
+      "tx": 28,
+      "ty": 65
+    },
+    {
+      "id": "object:0655",
+      "kind": "tree",
+      "tx": 62,
+      "ty": 52
+    },
+    {
+      "id": "object:0656",
+      "kind": "weed",
+      "tx": 4,
+      "ty": 14
+    },
+    {
+      "id": "object:0657",
+      "kind": "weed",
+      "tx": 57,
+      "ty": 24
+    },
+    {
+      "id": "object:0658",
+      "kind": "weed",
+      "tx": 14,
+      "ty": 61
+    },
+    {
+      "id": "object:0659",
+      "kind": "tree",
+      "tx": 13,
+      "ty": 11
+    },
+    {
+      "id": "object:0660",
+      "kind": "weed",
+      "tx": 23,
+      "ty": 55
+    },
+    {
+      "id": "object:0661",
+      "kind": "tree",
+      "tx": 60,
+      "ty": 48
+    },
+    {
+      "id": "object:0662",
+      "kind": "tree",
+      "tx": 89,
+      "ty": 53
+    },
+    {
+      "id": "object:0663",
+      "kind": "weed",
+      "tx": 81,
+      "ty": 61
+    },
+    {
+      "id": "object:0664",
+      "kind": "weed",
+      "tx": 66,
+      "ty": 52
+    },
+    {
+      "id": "object:0665",
+      "kind": "rock",
+      "tx": 39,
+      "ty": 91
+    },
+    {
+      "id": "object:0666",
+      "kind": "weed",
+      "tx": 32,
+      "ty": 83
+    },
+    {
+      "id": "object:0667",
+      "kind": "rock",
+      "tx": 23,
+      "ty": 69
+    },
+    {
+      "id": "object:0668",
+      "kind": "tree",
+      "tx": 84,
+      "ty": 41
+    },
+    {
+      "id": "object:0669",
+      "kind": "rock",
+      "tx": 92,
+      "ty": 47
+    },
+    {
+      "id": "object:0670",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 79
+    },
+    {
+      "id": "object:0671",
+      "kind": "rock",
+      "tx": 49,
+      "ty": 54
+    },
+    {
+      "id": "object:0672",
+      "kind": "tree",
+      "tx": 76,
+      "ty": 94
+    },
+    {
+      "id": "object:0673",
+      "kind": "weed",
+      "tx": 67,
+      "ty": 36
+    },
+    {
+      "id": "object:0674",
+      "kind": "weed",
+      "tx": 10,
+      "ty": 28
+    },
+    {
+      "id": "object:0675",
+      "kind": "rock",
+      "tx": 33,
+      "ty": 64
+    },
+    {
+      "id": "object:0676",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 84
+    },
+    {
+      "id": "object:0677",
+      "kind": "weed",
+      "tx": 64,
+      "ty": 52
+    },
+    {
+      "id": "object:0678",
+      "kind": "weed",
+      "tx": 54,
+      "ty": 7
+    },
+    {
+      "id": "object:0679",
+      "kind": "tree",
+      "tx": 54,
+      "ty": 63
+    },
+    {
+      "id": "object:0680",
+      "kind": "weed",
+      "tx": 44,
+      "ty": 67
+    },
+    {
+      "id": "object:0681",
+      "kind": "weed",
+      "tx": 39,
+      "ty": 36
+    },
+    {
+      "id": "object:0682",
+      "kind": "tree",
+      "tx": 50,
+      "ty": 47
+    },
+    {
+      "id": "object:0683",
+      "kind": "rock",
+      "tx": 35,
+      "ty": 10
+    },
+    {
+      "id": "object:0684",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 59
+    },
+    {
+      "id": "object:0685",
+      "kind": "weed",
+      "tx": 32,
+      "ty": 20
+    },
+    {
+      "id": "object:0686",
+      "kind": "rock",
+      "tx": 55,
+      "ty": 28
+    },
+    {
+      "id": "object:0687",
+      "kind": "tree",
+      "tx": 62,
+      "ty": 91
+    },
+    {
+      "id": "object:0688",
+      "kind": "rock",
+      "tx": 78,
+      "ty": 65
+    },
+    {
+      "id": "object:0689",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 6
+    },
+    {
+      "id": "object:0690",
+      "kind": "weed",
+      "tx": 28,
+      "ty": 16
+    },
+    {
+      "id": "object:0691",
+      "kind": "weed",
+      "tx": 15,
+      "ty": 66
+    },
+    {
+      "id": "object:0692",
+      "kind": "tree",
+      "tx": 47,
+      "ty": 26
+    },
+    {
+      "id": "object:0693",
+      "kind": "tree",
+      "tx": 85,
+      "ty": 37
+    },
+    {
+      "id": "object:0694",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 25
+    },
+    {
+      "id": "object:0695",
+      "kind": "tree",
+      "tx": 41,
+      "ty": 74
+    },
+    {
+      "id": "object:0696",
+      "kind": "tree",
+      "tx": 56,
+      "ty": 45
+    },
+    {
+      "id": "object:0697",
+      "kind": "weed",
+      "tx": 75,
+      "ty": 35
+    },
+    {
+      "id": "object:0698",
+      "kind": "rock",
+      "tx": 92,
+      "ty": 91
+    },
+    {
+      "id": "object:0699",
+      "kind": "weed",
+      "tx": 59,
+      "ty": 76
+    },
+    {
+      "id": "object:0700",
+      "kind": "tree",
+      "tx": 93,
+      "ty": 69
+    },
+    {
+      "id": "object:0701",
+      "kind": "tree",
+      "tx": 78,
+      "ty": 58
+    },
+    {
+      "id": "object:0702",
+      "kind": "weed",
+      "tx": 67,
+      "ty": 55
+    },
+    {
+      "id": "object:0703",
+      "kind": "tree",
+      "tx": 39,
+      "ty": 86
+    },
+    {
+      "id": "object:0704",
+      "kind": "tree",
+      "tx": 48,
+      "ty": 33
+    },
+    {
+      "id": "object:0705",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 21
+    },
+    {
+      "id": "object:0706",
+      "kind": "weed",
+      "tx": 18,
+      "ty": 8
+    },
+    {
+      "id": "object:0707",
+      "kind": "tree",
+      "tx": 62,
+      "ty": 84
+    },
+    {
+      "id": "object:0708",
+      "kind": "tree",
+      "tx": 16,
+      "ty": 39
+    },
+    {
+      "id": "object:0709",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 68
+    },
+    {
+      "id": "object:0710",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 94
+    },
+    {
+      "id": "object:0711",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 4
+    },
+    {
+      "id": "object:0712",
+      "kind": "rock",
+      "tx": 36,
+      "ty": 80
+    },
+    {
+      "id": "object:0713",
+      "kind": "rock",
+      "tx": 14,
+      "ty": 88
+    },
+    {
+      "id": "object:0714",
+      "kind": "rock",
+      "tx": 93,
+      "ty": 16
+    },
+    {
+      "id": "object:0715",
+      "kind": "rock",
+      "tx": 8,
+      "ty": 87
+    },
+    {
+      "id": "object:0716",
+      "kind": "rock",
+      "tx": 58,
+      "ty": 38
+    },
+    {
+      "id": "object:0717",
+      "kind": "rock",
+      "tx": 34,
+      "ty": 35
+    },
+    {
+      "id": "object:0718",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 85
+    },
+    {
+      "id": "object:0719",
+      "kind": "rock",
+      "tx": 58,
+      "ty": 52
+    },
+    {
+      "id": "object:0720",
+      "kind": "rock",
+      "tx": 20,
+      "ty": 72
+    },
+    {
+      "id": "object:0721",
+      "kind": "tree",
+      "tx": 59,
+      "ty": 25
+    },
+    {
+      "id": "object:0722",
+      "kind": "tree",
+      "tx": 4,
+      "ty": 79
+    },
+    {
+      "id": "object:0723",
+      "kind": "weed",
+      "tx": 7,
+      "ty": 31
+    },
+    {
+      "id": "object:0724",
+      "kind": "weed",
+      "tx": 80,
+      "ty": 56
+    },
+    {
+      "id": "object:0725",
+      "kind": "tree",
+      "tx": 17,
+      "ty": 6
+    },
+    {
+      "id": "object:0726",
+      "kind": "rock",
+      "tx": 76,
+      "ty": 52
+    },
+    {
+      "id": "object:0727",
+      "kind": "rock",
+      "tx": 31,
+      "ty": 53
+    },
+    {
+      "id": "object:0728",
+      "kind": "weed",
+      "tx": 69,
+      "ty": 26
+    },
+    {
+      "id": "object:0729",
+      "kind": "tree",
+      "tx": 31,
+      "ty": 71
+    },
+    {
+      "id": "object:0730",
+      "kind": "weed",
+      "tx": 73,
+      "ty": 83
+    },
+    {
+      "id": "object:0731",
+      "kind": "weed",
+      "tx": 32,
+      "ty": 55
+    },
+    {
+      "id": "object:0732",
+      "kind": "tree",
+      "tx": 58,
+      "ty": 81
+    },
+    {
+      "id": "object:0733",
+      "kind": "rock",
+      "tx": 51,
+      "ty": 13
+    },
+    {
+      "id": "object:0734",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 36
+    },
+    {
+      "id": "object:0735",
+      "kind": "weed",
+      "tx": 92,
+      "ty": 76
+    },
+    {
+      "id": "object:0736",
+      "kind": "rock",
+      "tx": 67,
+      "ty": 46
+    },
+    {
+      "id": "object:0737",
+      "kind": "tree",
+      "tx": 18,
+      "ty": 23
+    },
+    {
+      "id": "object:0738",
+      "kind": "rock",
+      "tx": 62,
+      "ty": 27
+    },
+    {
+      "id": "object:0739",
+      "kind": "weed",
+      "tx": 54,
+      "ty": 32
+    },
+    {
+      "id": "object:0740",
+      "kind": "tree",
+      "tx": 81,
+      "ty": 37
+    },
+    {
+      "id": "object:0741",
+      "kind": "rock",
+      "tx": 10,
+      "ty": 91
+    },
+    {
+      "id": "object:0742",
+      "kind": "tree",
+      "tx": 79,
+      "ty": 4
+    },
+    {
+      "id": "object:0743",
+      "kind": "rock",
+      "tx": 77,
+      "ty": 86
+    },
+    {
+      "id": "object:0744",
+      "kind": "weed",
+      "tx": 67,
+      "ty": 88
+    },
+    {
+      "id": "object:0745",
+      "kind": "weed",
+      "tx": 6,
+      "ty": 13
+    },
+    {
+      "id": "object:0746",
+      "kind": "rock",
+      "tx": 25,
+      "ty": 41
+    },
+    {
+      "id": "object:0747",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 65
+    },
+    {
+      "id": "object:0748",
+      "kind": "tree",
+      "tx": 15,
+      "ty": 26
+    },
+    {
+      "id": "object:0749",
+      "kind": "tree",
+      "tx": 23,
+      "ty": 42
+    },
+    {
+      "id": "object:0750",
+      "kind": "weed",
+      "tx": 33,
+      "ty": 76
+    },
+    {
+      "id": "object:0751",
+      "kind": "rock",
+      "tx": 92,
+      "ty": 64
+    },
+    {
+      "id": "object:0752",
+      "kind": "rock",
+      "tx": 36,
+      "ty": 33
+    },
+    {
+      "id": "object:0753",
+      "kind": "weed",
+      "tx": 84,
+      "ty": 38
+    },
+    {
+      "id": "object:0754",
+      "kind": "weed",
+      "tx": 60,
+      "ty": 17
+    },
+    {
+      "id": "object:0755",
+      "kind": "weed",
+      "tx": 67,
+      "ty": 67
+    },
+    {
+      "id": "object:0756",
+      "kind": "tree",
+      "tx": 66,
+      "ty": 19
+    },
+    {
+      "id": "object:0757",
+      "kind": "rock",
+      "tx": 81,
+      "ty": 72
+    },
+    {
+      "id": "object:0758",
+      "kind": "weed",
+      "tx": 64,
+      "ty": 67
+    },
+    {
+      "id": "object:0759",
+      "kind": "tree",
+      "tx": 90,
+      "ty": 37
+    },
+    {
+      "id": "object:0760",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 67
+    },
+    {
+      "id": "object:0761",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 68
+    },
+    {
+      "id": "object:0762",
+      "kind": "tree",
+      "tx": 31,
+      "ty": 23
+    },
+    {
+      "id": "object:0763",
+      "kind": "weed",
+      "tx": 14,
+      "ty": 9
+    },
+    {
+      "id": "object:0764",
+      "kind": "weed",
+      "tx": 96,
+      "ty": 90
+    },
+    {
+      "id": "object:0765",
+      "kind": "tree",
+      "tx": 92,
+      "ty": 15
+    },
+    {
+      "id": "object:0766",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 18
+    },
+    {
+      "id": "object:0767",
+      "kind": "rock",
+      "tx": 70,
+      "ty": 4
+    },
+    {
+      "id": "object:0768",
+      "kind": "rock",
+      "tx": 28,
+      "ty": 76
+    },
+    {
+      "id": "object:0769",
+      "kind": "weed",
+      "tx": 91,
+      "ty": 93
+    },
+    {
+      "id": "object:0770",
+      "kind": "weed",
+      "tx": 95,
+      "ty": 17
+    },
+    {
+      "id": "object:0771",
+      "kind": "rock",
+      "tx": 50,
+      "ty": 18
+    },
+    {
+      "id": "object:0772",
+      "kind": "rock",
+      "tx": 48,
+      "ty": 59
+    },
+    {
+      "id": "object:0773",
+      "kind": "tree",
+      "tx": 42,
+      "ty": 57
+    },
+    {
+      "id": "object:0774",
+      "kind": "tree",
+      "tx": 17,
+      "ty": 63
+    },
+    {
+      "id": "object:0775",
+      "kind": "tree",
+      "tx": 35,
+      "ty": 12
+    },
+    {
+      "id": "object:0776",
+      "kind": "rock",
+      "tx": 38,
+      "ty": 28
+    },
+    {
+      "id": "object:0777",
+      "kind": "tree",
+      "tx": 55,
+      "ty": 27
+    },
+    {
+      "id": "object:0778",
+      "kind": "weed",
+      "tx": 18,
+      "ty": 14
+    },
+    {
+      "id": "object:0779",
+      "kind": "tree",
+      "tx": 87,
+      "ty": 61
+    },
+    {
+      "id": "object:0780",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 65
+    },
+    {
+      "id": "object:0781",
+      "kind": "weed",
+      "tx": 58,
+      "ty": 69
+    },
+    {
+      "id": "object:0782",
+      "kind": "rock",
+      "tx": 46,
+      "ty": 22
+    },
+    {
+      "id": "object:0783",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 86
+    },
+    {
+      "id": "object:0784",
+      "kind": "weed",
+      "tx": 82,
+      "ty": 70
+    },
+    {
+      "id": "object:0785",
+      "kind": "weed",
+      "tx": 64,
+      "ty": 69
+    },
+    {
+      "id": "object:0786",
+      "kind": "rock",
+      "tx": 69,
+      "ty": 47
+    },
+    {
+      "id": "object:0787",
+      "kind": "rock",
+      "tx": 89,
+      "ty": 44
+    },
+    {
+      "id": "object:0788",
+      "kind": "weed",
+      "tx": 47,
+      "ty": 87
+    },
+    {
+      "id": "object:0789",
+      "kind": "tree",
+      "tx": 33,
+      "ty": 60
+    },
+    {
+      "id": "object:0790",
+      "kind": "tree",
+      "tx": 82,
+      "ty": 84
+    },
+    {
+      "id": "object:0791",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 70
+    },
+    {
+      "id": "object:0792",
+      "kind": "rock",
+      "tx": 61,
+      "ty": 69
+    },
+    {
+      "id": "object:0793",
+      "kind": "rock",
+      "tx": 95,
+      "ty": 46
+    },
+    {
+      "id": "object:0794",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 19
+    },
+    {
+      "id": "object:0795",
+      "kind": "tree",
+      "tx": 73,
+      "ty": 16
+    },
+    {
+      "id": "object:0796",
+      "kind": "rock",
+      "tx": 32,
+      "ty": 35
+    },
+    {
+      "id": "object:0797",
+      "kind": "weed",
+      "tx": 49,
+      "ty": 16
+    },
+    {
+      "id": "object:0798",
+      "kind": "weed",
+      "tx": 45,
+      "ty": 33
+    },
+    {
+      "id": "object:0799",
+      "kind": "tree",
+      "tx": 18,
+      "ty": 17
+    },
+    {
+      "id": "object:0800",
+      "kind": "weed",
+      "tx": 44,
+      "ty": 88
+    },
+    {
+      "id": "object:0801",
+      "kind": "tree",
+      "tx": 87,
+      "ty": 76
+    },
+    {
+      "id": "object:0802",
+      "kind": "weed",
+      "tx": 46,
+      "ty": 19
+    },
+    {
+      "id": "object:0803",
+      "kind": "weed",
+      "tx": 19,
+      "ty": 85
+    },
+    {
+      "id": "object:0804",
+      "kind": "rock",
+      "tx": 56,
+      "ty": 88
+    },
+    {
+      "id": "object:0805",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 27
+    },
+    {
+      "id": "object:0806",
+      "kind": "weed",
+      "tx": 29,
+      "ty": 50
+    },
+    {
+      "id": "object:0807",
+      "kind": "tree",
+      "tx": 52,
+      "ty": 38
+    },
+    {
+      "id": "object:0808",
+      "kind": "tree",
+      "tx": 61,
+      "ty": 43
+    },
+    {
+      "id": "object:0809",
+      "kind": "tree",
+      "tx": 31,
+      "ty": 38
+    },
+    {
+      "id": "object:0810",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 52
+    },
+    {
+      "id": "object:0811",
+      "kind": "rock",
+      "tx": 73,
+      "ty": 87
+    },
+    {
+      "id": "object:0812",
+      "kind": "tree",
+      "tx": 33,
+      "ty": 87
+    },
+    {
+      "id": "object:0813",
+      "kind": "rock",
+      "tx": 92,
+      "ty": 33
+    },
+    {
+      "id": "object:0814",
+      "kind": "tree",
+      "tx": 73,
+      "ty": 51
+    },
+    {
+      "id": "object:0815",
+      "kind": "weed",
+      "tx": 93,
+      "ty": 52
+    },
+    {
+      "id": "object:0816",
+      "kind": "tree",
+      "tx": 53,
+      "ty": 18
+    },
+    {
+      "id": "object:0817",
+      "kind": "tree",
+      "tx": 14,
+      "ty": 36
+    },
+    {
+      "id": "object:0818",
+      "kind": "rock",
+      "tx": 70,
+      "ty": 82
+    },
+    {
+      "id": "object:0819",
+      "kind": "weed",
+      "tx": 42,
+      "ty": 72
+    },
+    {
+      "id": "object:0820",
+      "kind": "tree",
+      "tx": 81,
+      "ty": 17
+    },
+    {
+      "id": "object:0821",
+      "kind": "rock",
+      "tx": 59,
+      "ty": 71
+    },
+    {
+      "id": "object:0822",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 25
+    },
+    {
+      "id": "object:0823",
+      "kind": "rock",
+      "tx": 13,
+      "ty": 64
+    },
+    {
+      "id": "object:0824",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 28
+    },
+    {
+      "id": "object:0825",
+      "kind": "tree",
+      "tx": 62,
+      "ty": 38
+    },
+    {
+      "id": "object:0826",
+      "kind": "weed",
+      "tx": 63,
+      "ty": 54
+    },
+    {
+      "id": "object:0827",
+      "kind": "tree",
+      "tx": 76,
+      "ty": 88
+    },
+    {
+      "id": "object:0828",
+      "kind": "rock",
+      "tx": 92,
+      "ty": 81
+    },
+    {
+      "id": "object:0829",
+      "kind": "rock",
+      "tx": 46,
+      "ty": 36
+    },
+    {
+      "id": "object:0830",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 60
+    },
+    {
+      "id": "object:0831",
+      "kind": "rock",
+      "tx": 42,
+      "ty": 50
+    },
+    {
+      "id": "object:0832",
+      "kind": "rock",
+      "tx": 66,
+      "ty": 61
+    },
+    {
+      "id": "object:0833",
+      "kind": "weed",
+      "tx": 47,
+      "ty": 24
+    },
+    {
+      "id": "object:0834",
+      "kind": "weed",
+      "tx": 10,
+      "ty": 10
+    },
+    {
+      "id": "object:0835",
+      "kind": "tree",
+      "tx": 44,
+      "ty": 75
+    },
+    {
+      "id": "object:0836",
+      "kind": "rock",
+      "tx": 60,
+      "ty": 94
+    },
+    {
+      "id": "object:0837",
+      "kind": "rock",
+      "tx": 54,
+      "ty": 65
+    },
+    {
+      "id": "object:0838",
+      "kind": "tree",
+      "tx": 37,
+      "ty": 87
+    },
+    {
+      "id": "object:0839",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 59
+    },
+    {
+      "id": "object:0840",
+      "kind": "weed",
+      "tx": 47,
+      "ty": 51
+    },
+    {
+      "id": "object:0841",
+      "kind": "weed",
+      "tx": 57,
+      "ty": 32
+    },
+    {
+      "id": "object:0842",
+      "kind": "rock",
+      "tx": 77,
+      "ty": 4
+    },
+    {
+      "id": "object:0843",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 33
+    },
+    {
+      "id": "object:0844",
+      "kind": "weed",
+      "tx": 87,
+      "ty": 11
+    },
+    {
+      "id": "object:0845",
+      "kind": "tree",
+      "tx": 12,
+      "ty": 9
+    },
+    {
+      "id": "object:0846",
+      "kind": "tree",
+      "tx": 50,
+      "ty": 23
+    },
+    {
+      "id": "object:0847",
+      "kind": "tree",
+      "tx": 39,
+      "ty": 82
+    },
+    {
+      "id": "object:0848",
+      "kind": "rock",
+      "tx": 56,
+      "ty": 34
+    },
+    {
+      "id": "object:0849",
+      "kind": "rock",
+      "tx": 73,
+      "ty": 21
+    },
+    {
+      "id": "object:0850",
+      "kind": "rock",
+      "tx": 24,
+      "ty": 87
+    },
+    {
+      "id": "object:0851",
+      "kind": "rock",
+      "tx": 44,
+      "ty": 55
+    },
+    {
+      "id": "object:0852",
+      "kind": "weed",
+      "tx": 49,
+      "ty": 69
+    },
+    {
+      "id": "object:0853",
+      "kind": "tree",
+      "tx": 6,
+      "ty": 8
+    },
+    {
+      "id": "object:0854",
+      "kind": "tree",
+      "tx": 85,
+      "ty": 34
+    },
+    {
+      "id": "object:0855",
+      "kind": "tree",
+      "tx": 5,
+      "ty": 3
+    },
+    {
+      "id": "object:0856",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 35
+    },
+    {
+      "id": "object:0857",
+      "kind": "weed",
+      "tx": 24,
+      "ty": 24
+    },
+    {
+      "id": "object:0858",
+      "kind": "tree",
+      "tx": 69,
+      "ty": 74
+    },
+    {
+      "id": "object:0859",
+      "kind": "weed",
+      "tx": 54,
+      "ty": 29
+    },
+    {
+      "id": "object:0860",
+      "kind": "tree",
+      "tx": 3,
+      "ty": 61
+    },
+    {
+      "id": "object:0861",
+      "kind": "weed",
+      "tx": 92,
+      "ty": 16
+    },
+    {
+      "id": "object:0862",
+      "kind": "weed",
+      "tx": 60,
+      "ty": 57
+    },
+    {
+      "id": "object:0863",
+      "kind": "tree",
+      "tx": 19,
+      "ty": 54
+    },
+    {
+      "id": "object:0864",
+      "kind": "tree",
+      "tx": 93,
+      "ty": 83
+    },
+    {
+      "id": "object:0865",
+      "kind": "weed",
+      "tx": 18,
+      "ty": 94
+    },
+    {
+      "id": "object:0866",
+      "kind": "rock",
+      "tx": 89,
+      "ty": 51
+    },
+    {
+      "id": "object:0867",
+      "kind": "weed",
+      "tx": 34,
+      "ty": 80
+    },
+    {
+      "id": "object:0868",
+      "kind": "tree",
+      "tx": 57,
+      "ty": 3
+    },
+    {
+      "id": "object:0869",
+      "kind": "tree",
+      "tx": 39,
+      "ty": 16
+    },
+    {
+      "id": "object:0870",
+      "kind": "rock",
+      "tx": 88,
+      "ty": 78
+    },
+    {
+      "id": "object:0871",
+      "kind": "tree",
+      "tx": 26,
+      "ty": 68
+    },
+    {
+      "id": "object:0872",
+      "kind": "tree",
+      "tx": 77,
+      "ty": 15
+    },
+    {
+      "id": "object:0873",
+      "kind": "rock",
+      "tx": 10,
+      "ty": 16
+    },
+    {
+      "id": "object:0874",
+      "kind": "rock",
+      "tx": 34,
+      "ty": 66
+    },
+    {
+      "id": "object:0875",
+      "kind": "rock",
+      "tx": 81,
+      "ty": 52
+    },
+    {
+      "id": "object:0876",
+      "kind": "weed",
+      "tx": 78,
+      "ty": 93
+    },
+    {
+      "id": "object:0877",
+      "kind": "rock",
+      "tx": 7,
+      "ty": 38
+    },
+    {
+      "id": "object:0878",
+      "kind": "weed",
+      "tx": 76,
+      "ty": 92
+    },
+    {
+      "id": "object:0879",
+      "kind": "weed",
+      "tx": 54,
+      "ty": 44
+    },
+    {
+      "id": "object:0880",
+      "kind": "weed",
+      "tx": 65,
+      "ty": 87
+    },
+    {
+      "id": "object:0881",
+      "kind": "weed",
+      "tx": 85,
+      "ty": 94
+    },
+    {
+      "id": "object:0882",
+      "kind": "rock",
+      "tx": 86,
+      "ty": 82
+    },
+    {
+      "id": "object:0883",
+      "kind": "rock",
+      "tx": 48,
+      "ty": 13
+    },
+    {
+      "id": "object:0884",
+      "kind": "weed",
+      "tx": 4,
+      "ty": 16
+    },
+    {
+      "id": "object:0885",
+      "kind": "tree",
+      "tx": 50,
+      "ty": 61
+    },
+    {
+      "id": "object:0886",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 53
+    },
+    {
+      "id": "object:0887",
+      "kind": "tree",
+      "tx": 3,
+      "ty": 28
+    },
+    {
+      "id": "object:0888",
+      "kind": "weed",
+      "tx": 78,
+      "ty": 74
+    },
+    {
+      "id": "object:0889",
+      "kind": "tree",
+      "tx": 21,
+      "ty": 10
+    },
+    {
+      "id": "object:0890",
+      "kind": "tree",
+      "tx": 81,
+      "ty": 12
+    },
+    {
+      "id": "object:0891",
+      "kind": "weed",
+      "tx": 76,
+      "ty": 56
+    },
+    {
+      "id": "object:0892",
+      "kind": "tree",
+      "tx": 45,
+      "ty": 47
+    },
+    {
+      "id": "object:0893",
+      "kind": "rock",
+      "tx": 42,
+      "ty": 53
+    },
+    {
+      "id": "object:0894",
+      "kind": "rock",
+      "tx": 73,
+      "ty": 63
+    },
+    {
+      "id": "object:0895",
+      "kind": "weed",
+      "tx": 51,
+      "ty": 4
+    },
+    {
+      "id": "object:0896",
+      "kind": "weed",
+      "tx": 66,
+      "ty": 26
+    },
+    {
+      "id": "object:0897",
+      "kind": "tree",
+      "tx": 20,
+      "ty": 67
+    },
+    {
+      "id": "object:0898",
+      "kind": "tree",
+      "tx": 90,
+      "ty": 64
+    },
+    {
+      "id": "object:0899",
+      "kind": "weed",
+      "tx": 77,
+      "ty": 83
+    },
+    {
+      "id": "object:0900",
+      "kind": "weed",
+      "tx": 45,
+      "ty": 50
+    },
+    {
+      "id": "object:0901",
+      "kind": "rock",
+      "tx": 45,
+      "ty": 65
+    },
+    {
+      "id": "object:0902",
+      "kind": "rock",
+      "tx": 22,
+      "ty": 4
+    },
+    {
+      "id": "object:0903",
+      "kind": "rock",
+      "tx": 49,
+      "ty": 93
+    },
+    {
+      "id": "object:0904",
+      "kind": "weed",
+      "tx": 49,
+      "ty": 51
+    },
+    {
+      "id": "object:0905",
+      "kind": "weed",
+      "tx": 13,
+      "ty": 44
+    },
+    {
+      "id": "object:0906",
+      "kind": "tree",
+      "tx": 78,
+      "ty": 68
+    },
+    {
+      "id": "object:0907",
+      "kind": "weed",
+      "tx": 47,
+      "ty": 57
+    },
+    {
+      "id": "object:0908",
+      "kind": "tree",
+      "tx": 22,
+      "ty": 23
+    },
+    {
+      "id": "object:0909",
+      "kind": "tree",
+      "tx": 10,
+      "ty": 23
+    },
+    {
+      "id": "object:0910",
+      "kind": "tree",
+      "tx": 13,
+      "ty": 21
+    },
+    {
+      "id": "object:0911",
+      "kind": "weed",
+      "tx": 84,
+      "ty": 75
+    },
+    {
+      "id": "object:0912",
+      "kind": "rock",
+      "tx": 57,
+      "ty": 16
+    },
+    {
+      "id": "object:0913",
+      "kind": "tree",
+      "tx": 28,
+      "ty": 63
+    },
+    {
+      "id": "object:0914",
+      "kind": "rock",
+      "tx": 74,
+      "ty": 70
+    },
+    {
+      "id": "object:0915",
+      "kind": "weed",
+      "tx": 76,
+      "ty": 33
+    },
+    {
+      "id": "object:0916",
+      "kind": "rock",
+      "tx": 34,
+      "ty": 17
+    },
+    {
+      "id": "object:0917",
+      "kind": "rock",
+      "tx": 81,
+      "ty": 39
+    },
+    {
+      "id": "object:0918",
+      "kind": "weed",
+      "tx": 80,
+      "ty": 66
+    },
+    {
+      "id": "object:0919",
+      "kind": "tree",
+      "tx": 92,
+      "ty": 78
+    },
+    {
+      "id": "object:0920",
+      "kind": "tree",
+      "tx": 35,
+      "ty": 63
+    },
+    {
+      "id": "object:0921",
+      "kind": "rock",
+      "tx": 55,
+      "ty": 3
+    },
+    {
+      "id": "object:0922",
+      "kind": "weed",
+      "tx": 35,
+      "ty": 87
+    },
+    {
+      "id": "object:0923",
+      "kind": "tree",
+      "tx": 73,
+      "ty": 39
+    },
+    {
+      "id": "object:0924",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 79
+    },
+    {
+      "id": "object:0925",
+      "kind": "tree",
+      "tx": 83,
+      "ty": 50
+    },
+    {
+      "id": "object:0926",
+      "kind": "rock",
+      "tx": 96,
+      "ty": 83
+    },
+    {
+      "id": "object:0927",
+      "kind": "weed",
+      "tx": 44,
+      "ty": 11
+    },
+    {
+      "id": "object:0928",
+      "kind": "rock",
+      "tx": 14,
+      "ty": 38
+    },
+    {
+      "id": "object:0929",
+      "kind": "weed",
+      "tx": 4,
+      "ty": 10
+    },
+    {
+      "id": "object:0930",
+      "kind": "weed",
+      "tx": 44,
+      "ty": 27
+    },
+    {
+      "id": "object:0931",
+      "kind": "rock",
+      "tx": 47,
+      "ty": 91
+    },
+    {
+      "id": "object:0932",
+      "kind": "tree",
+      "tx": 62,
+      "ty": 74
+    },
+    {
+      "id": "object:0933",
+      "kind": "tree",
+      "tx": 91,
+      "ty": 85
+    },
+    {
+      "id": "object:0934",
+      "kind": "tree",
+      "tx": 42,
+      "ty": 88
+    },
+    {
+      "id": "object:0935",
+      "kind": "tree",
+      "tx": 60,
+      "ty": 28
+    },
+    {
+      "id": "object:0936",
+      "kind": "rock",
+      "tx": 51,
+      "ty": 35
+    },
+    {
+      "id": "object:0937",
+      "kind": "tree",
+      "tx": 84,
+      "ty": 45
+    },
+    {
+      "id": "object:0938",
+      "kind": "weed",
+      "tx": 50,
+      "ty": 14
+    },
+    {
+      "id": "object:0939",
+      "kind": "weed",
+      "tx": 83,
+      "ty": 33
+    },
+    {
+      "id": "object:0940",
+      "kind": "tree",
+      "tx": 28,
+      "ty": 41
+    },
+    {
+      "id": "object:0941",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 76
+    },
+    {
+      "id": "object:0942",
+      "kind": "rock",
+      "tx": 59,
+      "ty": 83
+    },
+    {
+      "id": "object:0943",
+      "kind": "tree",
+      "tx": 35,
+      "ty": 74
+    },
+    {
+      "id": "object:0944",
+      "kind": "rock",
+      "tx": 56,
+      "ty": 58
+    },
+    {
+      "id": "object:0945",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 52
+    },
+    {
+      "id": "object:0946",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 77
+    },
+    {
+      "id": "object:0947",
+      "kind": "weed",
+      "tx": 36,
+      "ty": 67
+    },
+    {
+      "id": "object:0948",
+      "kind": "tree",
+      "tx": 44,
+      "ty": 41
+    },
+    {
+      "id": "object:0949",
+      "kind": "weed",
+      "tx": 23,
+      "ty": 37
+    },
+    {
+      "id": "object:0950",
+      "kind": "weed",
+      "tx": 81,
+      "ty": 91
+    },
+    {
+      "id": "object:0951",
+      "kind": "rock",
+      "tx": 14,
+      "ty": 56
+    },
+    {
+      "id": "object:0952",
+      "kind": "tree",
+      "tx": 57,
+      "ty": 50
+    },
+    {
+      "id": "object:0953",
+      "kind": "weed",
+      "tx": 86,
+      "ty": 41
+    },
+    {
+      "id": "object:0954",
+      "kind": "tree",
+      "tx": 29,
+      "ty": 44
+    },
+    {
+      "id": "object:0955",
+      "kind": "weed",
+      "tx": 65,
+      "ty": 81
+    },
+    {
+      "id": "object:0956",
+      "kind": "tree",
+      "tx": 16,
+      "ty": 44
+    },
+    {
+      "id": "object:0957",
+      "kind": "rock",
+      "tx": 12,
+      "ty": 86
+    },
+    {
+      "id": "object:0958",
+      "kind": "weed",
+      "tx": 87,
+      "ty": 39
+    },
+    {
+      "id": "object:0959",
+      "kind": "weed",
+      "tx": 76,
+      "ty": 37
+    },
+    {
+      "id": "object:0960",
+      "kind": "tree",
+      "tx": 32,
+      "ty": 73
+    },
+    {
+      "id": "object:0961",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 55
+    },
+    {
+      "id": "object:0962",
+      "kind": "weed",
+      "tx": 33,
+      "ty": 58
+    },
+    {
+      "id": "object:0963",
+      "kind": "tree",
+      "tx": 62,
+      "ty": 25
+    },
+    {
+      "id": "object:0964",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 89
+    },
+    {
+      "id": "object:0965",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 18
+    },
+    {
+      "id": "object:0966",
+      "kind": "tree",
+      "tx": 59,
+      "ty": 12
+    },
+    {
+      "id": "object:0967",
+      "kind": "rock",
+      "tx": 43,
+      "ty": 20
+    },
+    {
+      "id": "object:0968",
+      "kind": "tree",
+      "tx": 41,
+      "ty": 18
+    },
+    {
+      "id": "object:0969",
+      "kind": "tree",
+      "tx": 68,
+      "ty": 63
+    },
+    {
+      "id": "object:0970",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 80
+    },
+    {
+      "id": "object:0971",
+      "kind": "weed",
+      "tx": 71,
+      "ty": 86
+    },
+    {
+      "id": "object:0972",
+      "kind": "weed",
+      "tx": 59,
+      "ty": 16
+    },
+    {
+      "id": "object:0973",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 44
+    },
+    {
+      "id": "object:0974",
+      "kind": "rock",
+      "tx": 53,
+      "ty": 94
+    },
+    {
+      "id": "object:0975",
+      "kind": "weed",
+      "tx": 61,
+      "ty": 76
+    },
+    {
+      "id": "object:0976",
+      "kind": "weed",
+      "tx": 33,
+      "ty": 5
+    },
+    {
+      "id": "object:0977",
+      "kind": "rock",
+      "tx": 66,
+      "ty": 57
+    },
+    {
+      "id": "object:0978",
+      "kind": "weed",
+      "tx": 54,
+      "ty": 70
+    },
+    {
+      "id": "object:0979",
+      "kind": "rock",
+      "tx": 75,
+      "ty": 68
+    },
+    {
+      "id": "object:0980",
+      "kind": "weed",
+      "tx": 93,
+      "ty": 59
+    },
+    {
+      "id": "object:0981",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 17
+    },
+    {
+      "id": "object:0982",
+      "kind": "rock",
+      "tx": 59,
+      "ty": 85
+    },
+    {
+      "id": "object:0983",
+      "kind": "weed",
+      "tx": 41,
+      "ty": 23
+    },
+    {
+      "id": "object:0984",
+      "kind": "weed",
+      "tx": 63,
+      "ty": 32
+    },
+    {
+      "id": "object:0985",
+      "kind": "rock",
+      "tx": 72,
+      "ty": 94
+    },
+    {
+      "id": "object:0986",
+      "kind": "tree",
+      "tx": 73,
+      "ty": 79
+    },
+    {
+      "id": "object:0987",
+      "kind": "weed",
+      "tx": 28,
+      "ty": 29
+    },
+    {
+      "id": "object:0988",
+      "kind": "rock",
+      "tx": 78,
+      "ty": 32
+    },
+    {
+      "id": "object:0989",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 14
+    },
+    {
+      "id": "object:0990",
+      "kind": "tree",
+      "tx": 26,
+      "ty": 15
+    },
+    {
+      "id": "object:0991",
+      "kind": "rock",
+      "tx": 18,
+      "ty": 59
+    },
+    {
+      "id": "object:0992",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 67
+    },
+    {
+      "id": "object:0993",
+      "kind": "weed",
+      "tx": 23,
+      "ty": 93
+    },
+    {
+      "id": "object:0994",
+      "kind": "tree",
+      "tx": 93,
+      "ty": 74
+    },
+    {
+      "id": "object:0995",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 18
+    },
+    {
+      "id": "object:0996",
+      "kind": "rock",
+      "tx": 72,
+      "ty": 67
+    },
+    {
+      "id": "object:0997",
+      "kind": "rock",
+      "tx": 44,
+      "ty": 90
+    },
+    {
+      "id": "object:0998",
+      "kind": "weed",
+      "tx": 89,
+      "ty": 39
+    },
+    {
+      "id": "object:0999",
+      "kind": "rock",
+      "tx": 78,
+      "ty": 36
+    },
+    {
+      "id": "object:1000",
+      "kind": "weed",
+      "tx": 9,
+      "ty": 53
+    },
+    {
+      "id": "object:1001",
+      "kind": "weed",
+      "tx": 71,
+      "ty": 89
+    },
+    {
+      "id": "object:1002",
+      "kind": "rock",
+      "tx": 88,
+      "ty": 36
+    },
+    {
+      "id": "object:1003",
+      "kind": "rock",
+      "tx": 73,
+      "ty": 92
+    },
+    {
+      "id": "object:1004",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 44
+    },
+    {
+      "id": "object:1005",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 35
+    },
+    {
+      "id": "object:1006",
+      "kind": "rock",
+      "tx": 70,
+      "ty": 52
+    },
+    {
+      "id": "object:1007",
+      "kind": "weed",
+      "tx": 85,
+      "ty": 61
+    },
+    {
+      "id": "object:1008",
+      "kind": "weed",
+      "tx": 29,
+      "ty": 69
+    },
+    {
+      "id": "object:1009",
+      "kind": "rock",
+      "tx": 85,
+      "ty": 16
+    },
+    {
+      "id": "object:1010",
+      "kind": "weed",
+      "tx": 6,
+      "ty": 78
+    },
+    {
+      "id": "object:1011",
+      "kind": "weed",
+      "tx": 20,
+      "ty": 52
+    },
+    {
+      "id": "object:1012",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 75
+    },
+    {
+      "id": "object:1013",
+      "kind": "tree",
+      "tx": 15,
+      "ty": 28
+    },
+    {
+      "id": "object:1014",
+      "kind": "tree",
+      "tx": 79,
+      "ty": 53
+    },
+    {
+      "id": "object:1015",
+      "kind": "tree",
+      "tx": 43,
+      "ty": 13
+    },
+    {
+      "id": "object:1016",
+      "kind": "rock",
+      "tx": 92,
+      "ty": 5
+    },
+    {
+      "id": "object:1017",
+      "kind": "tree",
+      "tx": 47,
+      "ty": 84
+    },
+    {
+      "id": "object:1018",
+      "kind": "tree",
+      "tx": 58,
+      "ty": 21
+    },
+    {
+      "id": "object:1019",
+      "kind": "tree",
+      "tx": 40,
+      "ty": 8
+    },
+    {
+      "id": "object:1020",
+      "kind": "weed",
+      "tx": 85,
+      "ty": 53
+    },
+    {
+      "id": "object:1021",
+      "kind": "rock",
+      "tx": 11,
+      "ty": 54
+    },
+    {
+      "id": "object:1022",
+      "kind": "weed",
+      "tx": 70,
+      "ty": 20
+    },
+    {
+      "id": "object:1023",
+      "kind": "weed",
+      "tx": 43,
+      "ty": 61
+    },
+    {
+      "id": "object:1024",
+      "kind": "weed",
+      "tx": 59,
+      "ty": 29
+    },
+    {
+      "id": "object:1025",
+      "kind": "rock",
+      "tx": 76,
+      "ty": 21
+    },
+    {
+      "id": "object:1026",
+      "kind": "weed",
+      "tx": 53,
+      "ty": 16
+    },
+    {
+      "id": "object:1027",
+      "kind": "rock",
+      "tx": 65,
+      "ty": 40
+    },
+    {
+      "id": "object:1028",
+      "kind": "tree",
+      "tx": 7,
+      "ty": 90
+    },
+    {
+      "id": "object:1029",
+      "kind": "weed",
+      "tx": 76,
+      "ty": 63
+    },
+    {
+      "id": "object:1030",
+      "kind": "rock",
+      "tx": 14,
+      "ty": 23
+    },
+    {
+      "id": "object:1031",
+      "kind": "tree",
+      "tx": 67,
+      "ty": 32
+    },
+    {
+      "id": "object:1032",
+      "kind": "rock",
+      "tx": 57,
+      "ty": 79
+    },
+    {
+      "id": "object:1033",
+      "kind": "tree",
+      "tx": 21,
+      "ty": 38
+    },
+    {
+      "id": "object:1034",
+      "kind": "weed",
+      "tx": 78,
+      "ty": 40
+    },
+    {
+      "id": "object:1035",
+      "kind": "weed",
+      "tx": 15,
+      "ty": 6
+    },
+    {
+      "id": "object:1036",
+      "kind": "weed",
+      "tx": 37,
+      "ty": 17
+    },
+    {
+      "id": "object:1037",
+      "kind": "rock",
+      "tx": 96,
+      "ty": 34
+    },
+    {
+      "id": "object:1038",
+      "kind": "weed",
+      "tx": 28,
+      "ty": 9
+    },
+    {
+      "id": "object:1039",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 12
+    },
+    {
+      "id": "object:1040",
+      "kind": "tree",
+      "tx": 40,
+      "ty": 3
+    },
+    {
+      "id": "object:1041",
+      "kind": "weed",
+      "tx": 88,
+      "ty": 6
+    },
+    {
+      "id": "object:1042",
+      "kind": "weed",
+      "tx": 9,
+      "ty": 43
+    },
+    {
+      "id": "object:1043",
+      "kind": "weed",
+      "tx": 3,
+      "ty": 48
+    },
+    {
+      "id": "object:1044",
+      "kind": "weed",
+      "tx": 8,
+      "ty": 13
+    },
+    {
+      "id": "object:1045",
+      "kind": "rock",
+      "tx": 38,
+      "ty": 67
+    },
+    {
+      "id": "object:1046",
+      "kind": "tree",
+      "tx": 5,
+      "ty": 48
+    },
+    {
+      "id": "object:1047",
+      "kind": "tree",
+      "tx": 41,
+      "ty": 86
+    },
+    {
+      "id": "object:1048",
+      "kind": "rock",
+      "tx": 83,
+      "ty": 61
+    },
+    {
+      "id": "object:1049",
+      "kind": "tree",
+      "tx": 56,
+      "ty": 43
+    },
+    {
+      "id": "object:1050",
+      "kind": "weed",
+      "tx": 80,
+      "ty": 44
+    },
+    {
+      "id": "object:1051",
+      "kind": "rock",
+      "tx": 26,
+      "ty": 43
+    },
+    {
+      "id": "object:1052",
+      "kind": "tree",
+      "tx": 28,
+      "ty": 87
+    },
+    {
+      "id": "object:1053",
+      "kind": "tree",
+      "tx": 35,
+      "ty": 82
+    },
+    {
+      "id": "object:1054",
+      "kind": "weed",
+      "tx": 16,
+      "ty": 37
+    },
+    {
+      "id": "object:1055",
+      "kind": "weed",
+      "tx": 12,
+      "ty": 25
+    },
+    {
+      "id": "object:1056",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 34
+    },
+    {
+      "id": "object:1057",
+      "kind": "tree",
+      "tx": 16,
+      "ty": 16
+    },
+    {
+      "id": "object:1058",
+      "kind": "weed",
+      "tx": 10,
+      "ty": 68
+    },
+    {
+      "id": "object:1059",
+      "kind": "rock",
+      "tx": 71,
+      "ty": 48
+    },
+    {
+      "id": "object:1060",
+      "kind": "weed",
+      "tx": 19,
+      "ty": 29
+    },
+    {
+      "id": "object:1061",
+      "kind": "weed",
+      "tx": 45,
+      "ty": 85
+    },
+    {
+      "id": "object:1062",
+      "kind": "rock",
+      "tx": 55,
+      "ty": 11
+    },
+    {
+      "id": "object:1063",
+      "kind": "weed",
+      "tx": 46,
+      "ty": 3
+    },
+    {
+      "id": "object:1064",
+      "kind": "tree",
+      "tx": 48,
+      "ty": 6
+    },
+    {
+      "id": "object:1065",
+      "kind": "tree",
+      "tx": 5,
+      "ty": 64
+    },
+    {
+      "id": "object:1066",
+      "kind": "weed",
+      "tx": 41,
+      "ty": 92
+    },
+    {
+      "id": "object:1067",
+      "kind": "weed",
+      "tx": 50,
+      "ty": 87
+    },
+    {
+      "id": "object:1068",
+      "kind": "tree",
+      "tx": 79,
+      "ty": 62
+    },
+    {
+      "id": "object:1069",
+      "kind": "weed",
+      "tx": 80,
+      "ty": 33
+    },
+    {
+      "id": "object:1070",
+      "kind": "weed",
+      "tx": 76,
+      "ty": 11
+    },
+    {
+      "id": "object:1071",
+      "kind": "rock",
+      "tx": 34,
+      "ty": 94
+    },
+    {
+      "id": "object:1072",
+      "kind": "tree",
+      "tx": 13,
+      "ty": 67
+    },
+    {
+      "id": "object:1073",
+      "kind": "tree",
+      "tx": 69,
+      "ty": 9
+    },
+    {
+      "id": "object:1074",
+      "kind": "tree",
+      "tx": 24,
+      "ty": 61
+    },
+    {
+      "id": "object:1075",
+      "kind": "weed",
+      "tx": 12,
+      "ty": 29
+    },
+    {
+      "id": "object:1076",
+      "kind": "weed",
+      "tx": 40,
+      "ty": 68
+    },
+    {
+      "id": "object:1077",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 67
+    },
+    {
+      "id": "object:1078",
+      "kind": "tree",
+      "tx": 90,
+      "ty": 69
+    },
+    {
+      "id": "object:1079",
+      "kind": "rock",
+      "tx": 15,
+      "ty": 69
+    },
+    {
+      "id": "object:1080",
+      "kind": "tree",
+      "tx": 37,
+      "ty": 50
+    },
+    {
+      "id": "object:1081",
+      "kind": "tree",
+      "tx": 30,
+      "ty": 82
+    },
+    {
+      "id": "object:1082",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 20
+    },
+    {
+      "id": "object:1083",
+      "kind": "tree",
+      "tx": 51,
+      "ty": 75
+    },
+    {
+      "id": "object:1084",
+      "kind": "rock",
+      "tx": 46,
+      "ty": 69
+    },
+    {
+      "id": "object:1085",
+      "kind": "rock",
+      "tx": 73,
+      "ty": 56
+    },
+    {
+      "id": "object:1086",
+      "kind": "tree",
+      "tx": 20,
+      "ty": 48
+    },
+    {
+      "id": "object:1087",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 49
+    },
+    {
+      "id": "object:1088",
+      "kind": "weed",
+      "tx": 67,
+      "ty": 28
+    },
+    {
+      "id": "object:1089",
+      "kind": "tree",
+      "tx": 64,
+      "ty": 31
+    },
+    {
+      "id": "object:1090",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 57
+    },
+    {
+      "id": "object:1091",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 14
+    },
+    {
+      "id": "object:1092",
+      "kind": "weed",
+      "tx": 14,
+      "ty": 81
+    },
+    {
+      "id": "object:1093",
+      "kind": "weed",
+      "tx": 58,
+      "ty": 73
+    },
+    {
+      "id": "object:1094",
+      "kind": "tree",
+      "tx": 20,
+      "ty": 88
+    },
+    {
+      "id": "object:1095",
+      "kind": "weed",
+      "tx": 11,
+      "ty": 93
+    },
+    {
+      "id": "object:1096",
+      "kind": "rock",
+      "tx": 94,
+      "ty": 89
+    },
+    {
+      "id": "object:1097",
+      "kind": "weed",
+      "tx": 35,
+      "ty": 24
+    },
+    {
+      "id": "object:1098",
+      "kind": "tree",
+      "tx": 35,
+      "ty": 19
+    },
+    {
+      "id": "object:1099",
+      "kind": "tree",
+      "tx": 95,
+      "ty": 54
+    },
+    {
+      "id": "object:1100",
+      "kind": "tree",
+      "tx": 50,
+      "ty": 59
+    },
+    {
+      "id": "object:1101",
+      "kind": "weed",
+      "tx": 9,
+      "ty": 94
+    },
+    {
+      "id": "object:1102",
+      "kind": "weed",
+      "tx": 23,
+      "ty": 21
+    },
+    {
+      "id": "object:1103",
+      "kind": "tree",
+      "tx": 6,
+      "ty": 71
+    },
+    {
+      "id": "object:1104",
+      "kind": "weed",
+      "tx": 65,
+      "ty": 47
+    },
+    {
+      "id": "object:1105",
+      "kind": "weed",
+      "tx": 14,
+      "ty": 86
+    },
+    {
+      "id": "object:1106",
+      "kind": "rock",
+      "tx": 27,
+      "ty": 56
+    },
+    {
+      "id": "object:1107",
+      "kind": "tree",
+      "tx": 57,
+      "ty": 75
+    },
+    {
+      "id": "object:1108",
+      "kind": "rock",
+      "tx": 38,
+      "ty": 62
+    },
+    {
+      "id": "object:1109",
+      "kind": "weed",
+      "tx": 15,
+      "ty": 3
+    },
+    {
+      "id": "object:1110",
+      "kind": "weed",
+      "tx": 4,
+      "ty": 53
+    },
+    {
+      "id": "object:1111",
+      "kind": "weed",
+      "tx": 66,
+      "ty": 70
+    },
+    {
+      "id": "object:1112",
+      "kind": "tree",
+      "tx": 52,
+      "ty": 27
+    },
+    {
+      "id": "object:1113",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 46
+    },
+    {
+      "id": "object:1114",
+      "kind": "weed",
+      "tx": 11,
+      "ty": 57
+    },
+    {
+      "id": "object:1115",
+      "kind": "weed",
+      "tx": 78,
+      "ty": 34
+    },
+    {
+      "id": "object:1116",
+      "kind": "rock",
+      "tx": 87,
+      "ty": 15
+    },
+    {
+      "id": "object:1117",
+      "kind": "weed",
+      "tx": 62,
+      "ty": 78
+    },
+    {
+      "id": "object:1118",
+      "kind": "weed",
+      "tx": 83,
+      "ty": 48
+    },
+    {
+      "id": "object:1119",
+      "kind": "tree",
+      "tx": 12,
+      "ty": 48
+    },
+    {
+      "id": "object:1120",
+      "kind": "rock",
+      "tx": 75,
+      "ty": 50
+    },
+    {
+      "id": "object:1121",
+      "kind": "tree",
+      "tx": 95,
+      "ty": 92
+    },
+    {
+      "id": "object:1122",
+      "kind": "rock",
+      "tx": 65,
+      "ty": 36
+    },
+    {
+      "id": "object:1123",
+      "kind": "tree",
+      "tx": 42,
+      "ty": 25
+    },
+    {
+      "id": "object:1124",
+      "kind": "rock",
+      "tx": 42,
+      "ty": 45
+    },
+    {
+      "id": "object:1125",
+      "kind": "rock",
+      "tx": 27,
+      "ty": 47
+    },
+    {
+      "id": "object:1126",
+      "kind": "weed",
+      "tx": 26,
+      "ty": 52
+    },
+    {
+      "id": "object:1127",
+      "kind": "rock",
+      "tx": 27,
+      "ty": 3
+    },
+    {
+      "id": "object:1128",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 7
+    },
+    {
+      "id": "object:1129",
+      "kind": "weed",
+      "tx": 38,
+      "ty": 71
+    },
+    {
+      "id": "object:1130",
+      "kind": "weed",
+      "tx": 30,
+      "ty": 16
+    },
+    {
+      "id": "object:1131",
+      "kind": "rock",
+      "tx": 34,
+      "ty": 51
+    },
+    {
+      "id": "object:1132",
+      "kind": "tree",
+      "tx": 10,
+      "ty": 65
+    },
+    {
+      "id": "object:1133",
+      "kind": "rock",
+      "tx": 41,
+      "ty": 64
+    },
+    {
+      "id": "object:1134",
+      "kind": "tree",
+      "tx": 36,
+      "ty": 40
+    },
+    {
+      "id": "object:1135",
+      "kind": "weed",
+      "tx": 82,
+      "ty": 35
+    },
+    {
+      "id": "object:1136",
+      "kind": "weed",
+      "tx": 51,
+      "ty": 19
+    },
+    {
+      "id": "object:1137",
+      "kind": "tree",
+      "tx": 8,
+      "ty": 11
+    },
+    {
+      "id": "object:1138",
+      "kind": "weed",
+      "tx": 52,
+      "ty": 32
+    },
+    {
+      "id": "object:1139",
+      "kind": "weed",
+      "tx": 77,
+      "ty": 47
+    },
+    {
+      "id": "object:1140",
+      "kind": "tree",
+      "tx": 41,
+      "ty": 44
+    },
+    {
+      "id": "object:1141",
+      "kind": "rock",
+      "tx": 50,
+      "ty": 45
+    },
+    {
+      "id": "object:1142",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 83
+    },
+    {
+      "id": "object:1143",
+      "kind": "tree",
+      "tx": 92,
+      "ty": 21
+    },
+    {
+      "id": "object:1144",
+      "kind": "weed",
+      "tx": 18,
+      "ty": 34
+    },
+    {
+      "id": "object:1145",
+      "kind": "tree",
+      "tx": 55,
+      "ty": 75
+    },
+    {
+      "id": "object:1146",
+      "kind": "weed",
+      "tx": 83,
+      "ty": 79
+    },
+    {
+      "id": "object:1147",
+      "kind": "tree",
+      "tx": 84,
+      "ty": 57
+    },
+    {
+      "id": "object:1148",
+      "kind": "tree",
+      "tx": 65,
+      "ty": 34
+    },
+    {
+      "id": "object:1149",
+      "kind": "rock",
+      "tx": 81,
+      "ty": 54
+    },
+    {
+      "id": "object:1150",
+      "kind": "tree",
+      "tx": 6,
+      "ty": 15
+    },
+    {
+      "id": "object:1151",
+      "kind": "weed",
+      "tx": 55,
+      "ty": 94
+    },
+    {
+      "id": "object:1152",
+      "kind": "rock",
+      "tx": 16,
+      "ty": 89
+    },
+    {
+      "id": "object:1153",
+      "kind": "tree",
+      "tx": 56,
+      "ty": 63
+    },
+    {
+      "id": "object:1154",
+      "kind": "tree",
+      "tx": 56,
+      "ty": 65
+    },
+    {
+      "id": "object:1155",
+      "kind": "tree",
+      "tx": 74,
+      "ty": 58
+    },
+    {
+      "id": "object:1156",
+      "kind": "tree",
+      "tx": 20,
+      "ty": 65
+    },
+    {
+      "id": "object:1157",
+      "kind": "tree",
+      "tx": 54,
+      "ty": 34
+    },
+    {
+      "id": "object:1158",
+      "kind": "weed",
+      "tx": 48,
+      "ty": 89
+    },
+    {
+      "id": "object:1159",
+      "kind": "tree",
+      "tx": 87,
+      "ty": 48
+    },
+    {
+      "id": "object:1160",
+      "kind": "tree",
+      "tx": 61,
+      "ty": 34
+    },
+    {
+      "id": "object:1161",
+      "kind": "tree",
+      "tx": 9,
+      "ty": 55
+    },
+    {
+      "id": "object:1162",
+      "kind": "weed",
+      "tx": 68,
+      "ty": 22
+    },
+    {
+      "id": "object:1163",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 35
+    },
+    {
+      "id": "object:1164",
+      "kind": "tree",
+      "tx": 73,
+      "ty": 35
+    },
+    {
+      "id": "object:1165",
+      "kind": "rock",
+      "tx": 79,
+      "ty": 70
+    },
+    {
+      "id": "object:1166",
+      "kind": "weed",
+      "tx": 5,
+      "ty": 28
+    },
+    {
+      "id": "object:1167",
+      "kind": "bin",
+      "tx": 93,
+      "ty": 25
+    }
+  ],
+  "decor": [
+    {
+      "id": "decor:0000",
+      "kind": "flowers",
+      "tx": 50,
+      "ty": 9
+    },
+    {
+      "id": "decor:0001",
+      "kind": "flowers",
+      "tx": 14,
+      "ty": 14
+    },
+    {
+      "id": "decor:0002",
+      "kind": "flowers",
+      "tx": 83,
+      "ty": 43
+    },
+    {
+      "id": "decor:0003",
+      "kind": "flowers",
+      "tx": 23,
+      "ty": 53
+    },
+    {
+      "id": "decor:0004",
+      "kind": "flowers",
+      "tx": 89,
+      "ty": 60
+    },
+    {
+      "id": "decor:0005",
+      "kind": "flowers",
+      "tx": 67,
+      "ty": 14
+    },
+    {
+      "id": "decor:0006",
+      "kind": "flowers",
+      "tx": 78,
+      "ty": 15
+    }
+  ],
+  "ground": [
+    {
+      "tx": 72,
+      "ty": 2,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 2,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 3,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 3,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 4,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 4,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 5,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 5,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 6,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 6,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 7,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 7,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 8,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 8,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 9,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 9,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 10,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 10,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 11,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 11,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 12,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 12,
+      "ground": "dirt"
+    },
+    {
+      "tx": 72,
+      "ty": 13,
+      "ground": "dirt"
+    },
+    {
+      "tx": 73,
+      "ty": 13,
+      "ground": "dirt"
+    },
+    {
+      "tx": 92,
+      "ty": 27,
+      "ground": "dirt"
+    },
+    {
+      "tx": 93,
+      "ty": 27,
+      "ground": "dirt"
+    },
+    {
+      "tx": 94,
+      "ty": 27,
+      "ground": "dirt"
+    },
+    {
+      "tx": 82,
+      "ty": 28,
+      "ground": "dirt"
+    },
+    {
+      "tx": 83,
+      "ty": 28,
+      "ground": "dirt"
+    },
+    {
+      "tx": 92,
+      "ty": 28,
+      "ground": "dirt"
+    },
+    {
+      "tx": 93,
+      "ty": 28,
+      "ground": "dirt"
+    },
+    {
+      "tx": 94,
+      "ty": 28,
+      "ground": "dirt"
+    },
+    {
+      "tx": 82,
+      "ty": 29,
+      "ground": "dirt"
+    },
+    {
+      "tx": 83,
+      "ty": 29,
+      "ground": "dirt"
+    },
+    {
+      "tx": 92,
+      "ty": 29,
+      "ground": "dirt"
+    },
+    {
+      "tx": 93,
+      "ty": 29,
+      "ground": "dirt"
+    },
+    {
+      "tx": 94,
+      "ty": 29,
+      "ground": "dirt"
+    },
+    {
+      "tx": 20,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 23,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 24,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 25,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 26,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 27,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 28,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 29,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 30,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 31,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 32,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 33,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 34,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 35,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 36,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 37,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 38,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 39,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 40,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 41,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 42,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 43,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 44,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 45,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 46,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 47,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 48,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 49,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 50,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 51,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 52,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 53,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 54,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 55,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 56,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 57,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 58,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 59,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 60,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 61,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 62,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 63,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 64,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 65,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 66,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 67,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 68,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 69,
+      "ty": 30,
+      "ground": "grass"
+    },
+    {
+      "tx": 20,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 23,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 24,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 25,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 26,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 27,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 28,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 29,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 30,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 31,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 32,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 33,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 34,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 35,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 36,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 37,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 38,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 39,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 40,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 41,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 42,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 43,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 44,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 45,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 46,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 47,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 48,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 49,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 50,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 51,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 52,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 53,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 54,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 55,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 56,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 57,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 58,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 59,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 60,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 61,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 62,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 63,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 64,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 65,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 66,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 67,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 68,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 69,
+      "ty": 31,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 32,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 32,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 33,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 33,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 34,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 34,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 35,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 35,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 36,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 36,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 37,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 37,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 38,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 38,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 39,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 39,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 40,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 40,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 41,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 41,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 42,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 42,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 43,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 43,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 44,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 44,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 45,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 45,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 46,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 46,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 47,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 47,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 48,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 48,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 49,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 49,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 50,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 50,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 51,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 51,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 52,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 52,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 53,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 53,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 54,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 54,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 55,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 55,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 56,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 56,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 57,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 57,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 58,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 58,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 59,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 59,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 60,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 60,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 61,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 61,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 62,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 62,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 63,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 63,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 64,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 64,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 65,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 65,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 66,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 66,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 67,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 67,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 68,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 68,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 69,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 69,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 70,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 70,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 71,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 71,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 72,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 72,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 73,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 73,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 74,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 74,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 75,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 75,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 76,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 76,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 77,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 77,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 78,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 78,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 79,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 79,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 80,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 80,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 81,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 81,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 82,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 82,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 83,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 83,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 84,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 84,
+      "ground": "grass"
+    },
+    {
+      "tx": 21,
+      "ty": 85,
+      "ground": "grass"
+    },
+    {
+      "tx": 22,
+      "ty": 85,
+      "ground": "grass"
+    }
+  ]
+}

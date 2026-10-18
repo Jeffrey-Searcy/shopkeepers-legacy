@@ -6,7 +6,7 @@
  * Placement is driven via the test seam (same call the carpenter/shop flow will use).
  */
 import { test, expect } from '@playwright/test';
-import { bootGame, getState } from './helpers/gameHarness';
+import { bootGame, getState, clearFarmResources } from './helpers/gameHarness';
 
 /** Attempt a placement via the seam; returns whether it succeeded. */
 async function place(
@@ -22,7 +22,8 @@ async function place(
 
 test('valid placement succeeds and persists', async ({ page }) => {
   await bootGame(page);
-  // (40,40) is well inside the farm's buildable region (x>2,y>2,x<97,y<87).
+  // Prepare a harvested plot; approved authored trees are not implicitly empty test space.
+  await clearFarmResources(page, { tx: 40, ty: 40, w: 3, h: 3 });
   const ok = await place(page, 'tavern', 40, 40, 3, 3);
   expect(ok).toBe(true);
 
@@ -36,6 +37,7 @@ test('valid placement succeeds and persists', async ({ page }) => {
 
 test('overlapping placement is rejected', async ({ page }) => {
   await bootGame(page);
+  await clearFarmResources(page, { tx: 40, ty: 40, w: 3, h: 3 });
   expect(await place(page, 'tavern', 40, 40, 3, 3)).toBe(true);
   // Overlaps the first footprint (40..42) -> rejected.
   expect(await place(page, 'blacksmith', 41, 41, 3, 3)).toBe(false);

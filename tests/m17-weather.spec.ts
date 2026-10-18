@@ -1,3 +1,4 @@
+import { teleportAtFarmShop } from './helpers/gameHarness';
 /**
  * M17 — Weather: rain auto-waters overnight; rejected interior stays inaccessible.
  */
@@ -40,13 +41,14 @@ test('rain overnight waters unwatered crops and they grow', async ({ page }) => 
   expect(s.tiles[k]).toBe('watered');
 });
 
-test('the Tavern door sleeps outside and never spawns the old farmhouse TV', async ({ page }) => {
+test('the Tavern door enters without sleeping and never spawns the old farmhouse TV', async ({ page }) => {
   await bootGame(page);
   const day = (await getState(page)).day;
-  await teleport(page, 72, 13, 'up');
+  await teleportAtFarmShop(page, 0, 1, 'up');
   await act(page, 'interact');
-  expect((await getState(page)).day).toBe(day + 1);
-  expect(await activeScene(page)).toBe('FarmScene');
+  await page.waitForFunction(() => window.__GAME__!.scene.isActive('TavernScene'));
+  expect((await getState(page)).day).toBe(day);
+  expect(await activeScene(page)).toBe('TavernScene');
   expect(await page.evaluate(() => window.__GAME__!.scene.isActive('HomeInteriorScene'))).toBe(false);
   expect(
     await page.evaluate(() =>

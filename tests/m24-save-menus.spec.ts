@@ -25,6 +25,22 @@ async function waitForMenu(page: Page): Promise<void> {
   await page.waitForFunction(() => window.__GAME__?.scene.isActive('MainMenuScene') === true);
 }
 
+/** Open save management from the conventional title before exercising slot-specific controls. */
+async function openLoadGame(page: Page): Promise<void> {
+  const hasContinue = await page.evaluate(() => {
+    const menu = window.__GAME__!.scene.getScene('MainMenuScene');
+    const main = menu.children.getByName('title-main-root') as unknown as { getByName(name: string): unknown };
+    return main.getByName('title-continue') !== null;
+  });
+  await page.keyboard.press('ArrowDown'); // Continue -> New, or New -> Load.
+  if (hasContinue) await page.keyboard.press('ArrowDown');
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(() => {
+    const menu = window.__GAME__!.scene.getScene('MainMenuScene');
+    return (menu.children.getByName('title-load-root') as unknown as { visible: boolean }).visible;
+  });
+}
+
 /** Start the selected empty/occupied slot with the menu's real Enter path. */
 async function enterSelectedSlot(page: Page): Promise<void> {
   await page.keyboard.press('Enter');
@@ -203,8 +219,9 @@ test.describe('M24 save files and menus', () => {
     expect(resumed.gold).toBe(246);
     expect(resumed.player).toMatchObject({ x: 488, y: 344, facing: 'left' });
 
-    // Return to title via the real pause-menu flow: down, down, Enter, choose Yes, Enter.
+    // Return to title via the fourth pause option; Appearance follows Save.
     await page.keyboard.press('Escape');
+    await page.keyboard.press('ArrowDown');
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('Enter');
@@ -216,6 +233,7 @@ test.describe('M24 save files and menus', () => {
     await waitForMenu(page);
 
     // Delete key also has a cancel/confirm barrier.
+    await openLoadGame(page);
     await page.keyboard.press('Delete');
     await page.keyboard.press('Escape');
     expect(
@@ -251,6 +269,9 @@ test.describe('M24 save files and menus', () => {
       // @ts-expect-error runtime module paths are served by Vite in browser tests
       return (await import('/src/systems/SaveSystem.ts')).SaveSystem.currentSlot();
     })).toBe(1);
+    // A new adventure opens with Mayor Hollis's greeting; Escape closes it before it can pause.
+    await page.keyboard.press('Escape');
+    await expect.poll(async () => (await getState(page)).dialogue).toBeNull();
     await page.keyboard.down('KeyD');
     await page.evaluate(() => window.__TEST__!.input('reel:on'));
     await page.waitForTimeout(80);
@@ -295,8 +316,15 @@ test.describe('M24 save files and menus', () => {
     await page.waitForTimeout(250);
     const resumed = await getState(page);
     expect(resumed.paused).toBe(false);
-    expect(resumed.player.x).toBeCloseTo(pausedAfter.player.x, 4);
-    expect(resumed.player.y).toBeCloseTo(pausedAfter.player.y, 4);
+    // why: the released D must not keep walking after resume. The only movement allowed is the tile settle
+    // (Player.settle), which glides the stopped feet onto the tile center chosen by settleTarget with the
+    // last walk (right) as its lean. Expect exactly that center, not the paused mid-tile point.
+    const settled = await page.evaluate(async ({ x, y }) => {
+      // @ts-expect-error runtime module paths are served by Vite in browser tests
+      return (await import('/src/entities/Player.ts')).settleTarget(x, y, 1, 0) as { x: number; y: number };
+    }, pausedAfter.player);
+    expect(resumed.player.x).toBeCloseTo(settled.x, 4);
+    expect(resumed.player.y).toBeCloseTo(settled.y, 4);
 
     // A new pause session shows current-slot context, not stale success text from the prior open.
     await page.keyboard.press('Escape');
@@ -350,6 +378,7 @@ test.describe('M24 save files and menus', () => {
     await page.keyboard.press('Escape');
     expect((await getState(page)).daySummary).toBeNull();
     await page.keyboard.press('Escape');
+    await page.keyboard.press('ArrowDown');
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('Enter');

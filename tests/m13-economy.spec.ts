@@ -1,6 +1,7 @@
+import { teleportAtFarmShop, teleportAtFarmBin } from './helpers/gameHarness';
 /**
  * M13 — Economy + day-cycle rules from the designer's playtest:
- *  - the unfinished Tavern sleeps from its exterior doorstep without exposing an interior,
+ *  - the shop door and rear doorway lead to a private room with a working bed,
  *  - the shipping bin queues items and pays out gold at day end,
  *  - staying up past 2:00 makes you pass out: wake outside on a new day with half stamina.
  */
@@ -14,13 +15,28 @@ import {
   activeScene,
 } from './helpers/gameHarness';
 
-test('the Tavern doorstep sleeps outside without activating the rejected interior', async ({ page }) => {
+test('the walk-in shop and rear bedroom doors lead to a bed that advances the day', async ({ page }) => {
   await bootGame(page);
   const before = await getState(page);
-  await teleport(page, 72, 13, 'up');
-  await act(page, 'interact');
+  await teleportAtFarmShop(page, 0, 1, 'up');
+  await page.keyboard.down('w');
+  try {
+    await page.waitForFunction(() => window.__GAME__!.scene.isActive('TavernScene') && window.__TEST__!.ready);
+  } finally {
+    await page.keyboard.up('w');
+  }
+  await teleport(page, 22, 4, 'up');
+  await page.keyboard.down('w');
+  try {
+    await page.waitForFunction(() => window.__GAME__!.scene.isActive('BedroomScene') && window.__TEST__!.ready);
+  } finally {
+    await page.keyboard.up('w');
+  }
+  await teleport(page, 14, 5, 'up');
+  await page.keyboard.press('e');
+  await expect.poll(async () => (await getState(page)).day).toBe(before.day + 1);
   expect((await getState(page)).day).toBe(before.day + 1);
-  expect(await activeScene(page)).toBe('FarmScene');
+  expect(await activeScene(page)).toBe('BedroomScene');
   expect(await page.evaluate(() => window.__GAME__!.scene.isActive('HomeInteriorScene'))).toBe(false);
 });
 
@@ -29,8 +45,8 @@ test('shipping bin: queue items, take one back, gold arrives at day end', async 
   await give(page, 'wood', 10); // 10 x 2g
   await give(page, 'parsnip', 2); // 2 x 35g
 
-  // The farm bin is at (80,13), beside the wider Tavern facade; stand left facing right.
-  await teleport(page, 79, 13, 'right');
+  // Stand left of the current authored shipping bin and face it.
+  await teleportAtFarmBin(page);
   await act(page, 'interact');
   expect((await getState(page)).binOpen).toBe(true);
 

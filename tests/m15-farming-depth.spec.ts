@@ -4,7 +4,7 @@
  *  - seeds as items: planting consumes one, zero seeds = rejected, harvest returns 0..2 seeds;
  *  - seasons: 28-day calendar on state, off-season planting rejected, in-season accepted;
  *  - crop catalog: parsnip vs potato grow at different speeds;
- *  - tree stages: full tree -> stump -> cleared -> sapling regrows after N days -> small -> full;
+ *  - farm tree stages: full tree -> stump -> cleared; cleared farm trees never auto-regrow;
  *  - REAL keyboard input for the watering flow (seam-only tests once masked broken digit keys).
  */
 import { test, expect } from '@playwright/test';
@@ -239,7 +239,7 @@ test('crop catalog: parsnip and potato grow at different speeds', async ({ page 
   expect(s.crops[`${row.tx + 1},${row.ty}`]?.stage).toBe(1);
 });
 
-test('tree lifecycle: full -> stump -> cleared -> sapling regrows -> small -> full', async ({ page }) => {
+test('farm tree lifecycle: full -> stump -> cleared land stays clear until replanted', async ({ page }) => {
   await bootGame(page);
   const all = await nodes(page);
   const occupied = new Set(all.map((n) => `${n.tx},${n.ty}`));
@@ -262,21 +262,12 @@ test('tree lifecycle: full -> stump -> cleared -> sapling regrows -> small -> fu
   let s = await getState(page);
   expect(s.removedNodes[`FarmScene:${tree.tx},${tree.ty}`]?.kind).toBe('tree');
 
-  // After TREE_REGROW_DAYS (3) nights, a sapling sprouts on the cleared spot.
-  for (let i = 0; i < 3; i++) await sleepInGame(page);
+  // The old seven-night regrowth cycle must no longer reclaim player-cleared farm land.
+  for (let i = 0; i < 7; i++) await sleepInGame(page);
   at = (await nodes(page)).find((n) => n.tx === tree.tx && n.ty === tree.ty);
-  expect(at?.kind).toBe('tree');
-  expect(at?.stage).toBe('sapling');
+  expect(at).toBeUndefined();
   s = await getState(page);
-  expect(s.removedNodes[`FarmScene:${tree.tx},${tree.ty}`]).toBeFalsy();
-
-  // Two more nights per stage: sapling -> small -> full (TREE_STAGE_DAYS = 2).
-  for (let i = 0; i < 2; i++) await sleepInGame(page);
-  at = (await nodes(page)).find((n) => n.tx === tree.tx && n.ty === tree.ty);
-  expect(at?.stage).toBe('small');
-  for (let i = 0; i < 2; i++) await sleepInGame(page);
-  at = (await nodes(page)).find((n) => n.tx === tree.tx && n.ty === tree.ty);
-  expect(at?.stage).toBe('full');
+  expect(s.removedNodes[`FarmScene:${tree.tx},${tree.ty}`]?.kind).toBe('tree');
 });
 
 test('REAL keyboard: till with 1+Space, water with 5+Space, meter drains (real input path)', async ({ page }) => {

@@ -20,11 +20,35 @@ import { InputBus } from '../input/InputBus';
 import { getMapData } from '../world/MapDef';
 import { SaveSystem } from './SaveSystem';
 import { markNotReady } from '../debug/DebugHooks';
+import { mapEditorMode, mapEditorUrl } from '../debug/MapEditorMode';
+
+/** Enter the non-playable editor only during asset boot in its own development page. */
+export function enterMapEditor(from: Phaser.Scene): void {
+  if (mapEditorMode() !== 'edit' || from.scene.key !== SceneKey.Preload) {
+    throw new Error('SceneTransitionSystem: map editor requires a separate development page');
+  }
+  from.scene.start(SceneKey.MapEditor);
+}
+
+/** Enter the non-playable resident route workshop only during asset boot in its isolated development page. */
+export function enterRouteEditor(from: Phaser.Scene): void {
+  if (mapEditorMode() !== 'routes' || from.scene.key !== SceneKey.Preload) {
+    throw new Error('SceneTransitionSystem: route editor requires a separate development page');
+  }
+  from.scene.start(SceneKey.RouteEditor);
+}
 
 /** The spawn the next world scene should use, set just before a transition. */
 let pendingSpawnId: string | null = null;
 /** Exact saved feet position applied only after a validated named staging spawn exists. */
 let pendingResumePlayer: PlayerState | null = null;
+/** Scene-local fade ownership; shutdown removes the lock before a scene is reused. */
+const departing = new WeakSet<Phaser.Scene>();
+
+/** Event lets world scenes stop physics and input before the transition fade starts. */
+export const WORLD_TRANSITION_START = 'world-transition-start';
+/** Short world fades preserve the visual seam without making every doorway feel like a pause. */
+export const WORLD_FADE_MS = 70;
 
 /** Read (and consume) the pending spawn id. Returns 'start' the very first time (initial boot). */
 export function consumePendingSpawn(): string {
@@ -47,6 +71,18 @@ function assertWorldTarget(target: SceneKey): void {
   }
 }
 
+/** Validate the complete destination before any input lock, animation, or saved-state mutation. */
+export function validateDestination(target: SceneKey, spawnId: string): void {
+  assertWorldTarget(target);
+  if (!spawnId) throw new Error(`SceneTransitionSystem: missing spawnId for transition to "${target}"`);
+  const map = getMapData(target);
+  const spawn = map.spawns.find(candidate => candidate.id === spawnId);
+  if (!spawn) throw new Error(`SceneTransitionSystem: "${target}" has no spawn "${spawnId}"`);
+  if (spawn.tx < 0 || spawn.ty < 0 || spawn.tx >= map.w || spawn.ty >= map.h) {
+    throw new Error(`SceneTransitionSystem: "${target}" spawn "${spawnId}" is outside its map`);
+  }
+}
+
 /**
  * Transition from the current world scene to `target`, placing the player at `spawnId` in the
  * destination. `from` is the scene initiating the warp (used to stop it cleanly).
@@ -54,10 +90,12 @@ function assertWorldTarget(target: SceneKey): void {
 export function transitionTo(from: Phaser.Scene, target: SceneKey, spawnId: string): void {
   // (1) Validate target is a real world scene. WORLD_SCENE_KEYS is the runtime half of the guard;
   // the SceneKey type is the compile-time half (you can't pass a string that isn't a SceneKey).
-  assertWorldTarget(target);
-  if (!spawnId) {
-    throw new Error(`SceneTransitionSystem: missing spawnId for transition to "${target}"`);
-  }
+  validateDestination(target, spawnId);
+  if (departing.has(from)) return;
+  departing.add(from);
+  from.events.once('shutdown', () => departing.delete(from));
+  InputBus.instance.clearAll();
+  from.events.emit(WORLD_TRANSITION_START);
 
   // (2) Record intent so the destination scene spawns the player correctly.
   pendingSpawnId = spawnId;
@@ -66,10 +104,10 @@ export function transitionTo(from: Phaser.Scene, target: SceneKey, spawnId: stri
   // (3) Framed transition: fade out, swap scenes, fade in. The camera fade is purely cosmetic;
   // the important part is that we stop the old scene and start the new one via the scene manager.
   const cam = from.cameras.main;
-  cam.fadeOut(150, 0, 0, 0);
   cam.once('camerafadeoutcomplete', () => {
     from.scene.start(target); // start() stops `from` and starts `target`
   });
+  cam.fadeOut(WORLD_FADE_MS, 0, 0, 0);
 }
 
 /**
@@ -95,6 +133,11 @@ export function enterWorldFromMenu(from: Phaser.Scene, target: SceneKey, resumeP
  * hooks finish against the old state; only then are GameState and save-session ownership reset.
  */
 export function returnToMainMenu(from: Phaser.Scene): void {
+  // A preview has no title/save-slot session. Leave its entire disposable page instead.
+  if (mapEditorMode() === 'preview') {
+    window.location.assign(mapEditorUrl('edit'));
+    return;
+  }
   InputBus.instance.clearAll();
   markNotReady();
   const activeWorlds = from.scene.manager

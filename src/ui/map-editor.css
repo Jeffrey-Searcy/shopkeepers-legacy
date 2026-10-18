@@ -1,0 +1,49 @@
+/* Development-only layout desk, using the game's cream, timber and forest-green palette. */
+.map-editor { font: 14px 'Trebuchet MS', sans-serif; color: #354e42; position: fixed; inset: 0; pointer-events: none; z-index: 20; }
+.map-editor * { box-sizing: border-box; }
+.map-editor-header { position: absolute; inset: 0 0 auto; min-height: 76px; background: #fff9e9; border-bottom: 1px solid #d8dfc6; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 22px; pointer-events: auto; }
+.map-editor-kicker { color: #6c7965; font-size: 9px; letter-spacing: 1.7px; font-weight: bold; }
+.map-editor h1 { margin: 4px 0 0; font: 24px Georgia, serif; }
+.map-editor h1 span { font: 10px 'Trebuchet MS', sans-serif; background: #d9e9cd; padding: 4px 8px; border-radius: 12px; vertical-align: middle; margin-left: 10px; }
+.map-editor-actions { display: flex; gap: 8px; }
+.map-editor button { font: bold 12px 'Trebuchet MS', sans-serif; color: #354e42; background: #f0ead8; border: 1px solid #d8dfc6; border-radius: 10px; padding: 10px 12px; cursor: pointer; min-height: 38px; }
+.map-editor button:hover:not(:disabled) { background: #d9e9cd; border-color: #507861; }
+.map-editor button:focus-visible { outline: 3px solid #c59449; outline-offset: 2px; }
+.map-editor button:disabled { opacity: .4; cursor: default; }
+.map-editor button[aria-pressed=true], .map-editor button.map-editor-primary { background: #315345; color: #fff9e9; border-color: #315345; }
+.map-editor button.map-editor-primary:hover { background: #507861; }
+.map-editor-sidebar { position: absolute; width: 224px; top: 76px; bottom: 44px; left: 0; background: #fff9e9; border-right: 1px solid #d8dfc6; padding: 22px 16px; pointer-events: auto; overflow-y: auto; }
+.map-editor h2 { font: 17px Georgia, serif; margin: 0 0 6px; }
+.map-editor p { color: #6c7965; font-size: 12px; line-height: 1.55; margin: 0 0 12px; }
+.map-editor-section + .map-editor-section { border-top: 1px solid #e5e3d1; padding-top: 18px; margin-top: 18px; }
+.map-editor-tools, .map-editor-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 6px; }
+.map-editor-tools button { text-align: left; min-height: 45px; }
+.map-editor-reset { width: 100%; background: transparent !important; color: #946947 !important; margin: 4px 0 10px; }
+.map-editor-help { background: #f0ead8; border-radius: 12px; padding: 13px; margin-top: 18px; }
+.map-editor-help strong { font-size: 11px; }
+.map-editor-help p { font-size: 11px; margin: 8px 0 0; }
+.map-editor-footer { position: absolute; inset: auto 0 0; min-height: 44px; background: #fff9e9; border-top: 1px solid #d8dfc6; display: flex; align-items: center; padding: 9px 18px; gap: 20px; pointer-events: auto; font-size: 12px; }
+.map-editor-footer strong { white-space: nowrap; }
+.map-editor-footer [role=status] { color: #6c7965; }
+.map-editor .is-error { color: #a33d36 !important; }
+.map-editor .is-dirty { color: #946947; }
+.map-preview-banner { position: fixed; top: 6px; left: 50%; transform: translateX(-50%); z-index: 30; padding: 8px 14px; border-radius: 16px; color: #fff9e9; background: #315345; font: 12px 'Trebuchet MS', sans-serif; box-shadow: 0 2px 8px #0004; }
+.map-preview-banner a { color: #f1ce77; margin-left: 14px; }
+@media (max-width: 760px) {
+  .map-editor-header { padding: 9px 12px; min-height: 76px; }
+  .map-editor h1 { font-size: 20px; }
+  .map-editor h1 span, .map-editor-kicker { display: none; }
+  .map-editor-header button { padding: 8px; font-size: 11px; }
+  .map-editor-sidebar { top: 76px; bottom: auto; width: 100%; padding: 8px; display: flex; gap: 12px; height: 142px; overflow: auto; border-bottom: 1px solid #d8dfc6; }
+  .map-editor-section { flex: 0 0 176px; }
+  .map-editor-section + .map-editor-section { border: 0; margin: 0; padding: 0; }
+  .map-editor h2 { font-size: 14px; }
+  .map-editor-section p, .map-editor-help { display: none; }
+  .map-editor-sidebar button { padding: 5px; min-height: 30px; font-size: 11px; }
+  .map-editor-tools button { min-height: 42px; }
+  .map-editor-sidebar [data-area=maps] { margin-bottom: 3px; }
+  .map-editor-sidebar [data-area=maps] button { min-height: 22px; padding: 2px; font-size: 10px; }
+  .map-editor-section:first-child h2 { display: none; }
+  .map-editor-footer { padding: 7px 10px; gap: 8px; font-size: 11px; }
+  .map-editor-footer strong { max-width: 34%; overflow: hidden; text-overflow: ellipsis; }
+}

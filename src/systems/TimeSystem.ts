@@ -6,6 +6,10 @@
  */
 import { GameState } from '../state/GameState';
 import { registerTimeStepper } from '../debug/DebugHooks';
+import { syncTownSocialLife } from './TownSocialLifeSystem';
+import { isTavernNight, TAVERN_NIGHT } from './TownRoutePlanSystem';
+import { SceneKey } from '../config/AssetKeys';
+import { VitalitySystem } from './VitalitySystem';
 
 /** A full game day is 20 real-ish minutes compressed; we model 24h as this many game-minutes. */
 export const DAY_MINUTES = 24 * 60;
@@ -14,19 +18,51 @@ export const DAY_MINUTES = 24 * 60;
  * real minutes); the old value of 12 made days fly by ~8x too fast (the designer's report).
  */
 const MINUTES_PER_SECOND = 1.5;
+/**
+ * Clock speed inside The Wayfarer during Wednesday night. The crowd is there only from 13:00 to 16:00
+ * after 06:00 (19:00-22:00), so a slower clock gives the keeper time to sit, chat, and play cards.
+ * Leaving the bar restores normal speed on the next frame.
+ */
+export const WAYFARER_NIGHT_CLOCK_FACTOR = 0.35;
+
+/**
+ * True while the keeper stands in The Wayfarer during its busy night window.
+ * @param day absolute game day
+ * @param timeOfDay minutes since 06:00
+ * @param scene the keeper's current world scene
+ */
+export function isWayfarerNightSlowTime(day: number, timeOfDay: number, scene: SceneKey): boolean {
+  return scene === SceneKey.TownBar && isTavernNight(day)
+    && timeOfDay >= TAVERN_NIGHT.opensAt && timeOfDay < TAVERN_NIGHT.closesAt;
+}
 
 export const TimeSystem = {
   /** Advance the clock by `minutes` game-minutes, clamped within a single day. */
   advance(minutes: number): void {
     const gs = GameState.instance;
-    if (gs.paused) return;
+    // A direct resident conversation owns the player's attention. Freeze the authoritative clock
+    // through choice, scripted reply, typing, model wait, and reply states until that panel closes.
+    // Resident routes read this same clock, so freezing it also preserves the exact route position.
+    if (gs.paused || gs.dialogue?.residentId !== undefined) return;
+    const before = gs.timeOfDay;
     gs.timeOfDay = Math.min(DAY_MINUTES, gs.timeOfDay + minutes);
+    // why: pass the minutes that really passed (the clock stops at DAY_MINUTES), so meditation at
+    // 2am never trains on time that did not happen.
+    VitalitySystem.meditate(gs.timeOfDay - before);
+    // Process crossed meeting minutes immediately. Event ids and bond days make repeated frames harmless.
+    syncTownSocialLife(gs.day, gs.timeOfDay);
   },
 
-  /** Feed real elapsed milliseconds (from the scene update loop) into the clock. */
+  /**
+   * Feed real elapsed milliseconds (from the scene update loop) into the clock.
+   * @param deltaMs real milliseconds since the last frame
+   */
   tick(deltaMs: number): void {
-    const scale = GameState.instance.devTuning.clockScale;
-    this.advance((deltaMs / 1000) * MINUTES_PER_SECOND * scale);
+    const gs = GameState.instance;
+    const scale = gs.devTuning.clockScale;
+    // Wayfarer night stretches only real-time play; stepTime() and sleep still move whole minutes.
+    const place = isWayfarerNightSlowTime(gs.day, gs.timeOfDay, gs.activeScene) ? WAYFARER_NIGHT_CLOCK_FACTOR : 1;
+    this.advance((deltaMs / 1000) * MINUTES_PER_SECOND * scale * place);
   },
 
   /**

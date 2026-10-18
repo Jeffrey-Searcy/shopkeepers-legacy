@@ -5,7 +5,7 @@
  * preserves quantities, and leaves state untouched for clicks and off-grid releases.
  */
 import { test, expect, type Page } from '@playwright/test';
-import { activeScene, advanceFrames, bootGame, getState, give, teleport } from './helpers/gameHarness';
+import { activeScene, advanceFrames, aimWorldTile, bootGame, getState, give, teleport, teleportAtFarmBin, teleportToExit, uiCanvasPoint } from './helpers/gameHarness';
 
 const PANEL_X = 100;
 const PANEL_Y = 69;
@@ -25,9 +25,7 @@ function bagCenter(index: number): { x: number; y: number } {
 
 /** Convert fixed game coordinates into the displayed canvas coordinates. */
 async function canvasPoint(page: Page, point: { x: number; y: number }): Promise<{ x: number; y: number }> {
-  const box = await page.locator('canvas').boundingBox();
-  if (!box) throw new Error('M22: game canvas has no bounding box');
-  return { x: box.x + (point.x / 960) * box.width, y: box.y + (point.y / 540) * box.height };
+  return uiCanvasPoint(page, point);
 }
 
 /** Perform a pointer drag with enough distance/time to cross Phaser's drag threshold. */
@@ -157,25 +155,26 @@ test('an item stack dragged onto the toolbelt remains transferable through chest
 
   await teleport(page, 60, 60, 'down');
   await page.evaluate(() => window.__TEST__!.startPlacing('chest'));
+  await aimWorldTile(page, 60, 61);
   await page.evaluate(() => window.__TEST__!.input('use-tool'));
   await advanceFrames(page, 150);
   await page.evaluate(() => window.__TEST__!.input('interact'));
   await advanceFrames(page, 120);
   expect((await getState(page)).chestOpen).toBe(true);
-  await clickGame(page, { x: 352, y: 308 });
+  await clickGame(page, { x: 525, y: 226 });
   let state = await getState(page);
   expect(state.inventory.wood ?? 0).toBe(0);
   expect(state.chest.wood).toBe(5);
-  await clickGame(page, { x: 352, y: 160 });
+  await clickGame(page, { x: 145, y: 226 });
   state = await getState(page);
   expect(state.inventory.wood).toBe(5);
 
   await page.keyboard.press('e');
-  await teleport(page, 79, 13, 'right');
+  await teleportAtFarmBin(page);
   await page.evaluate(() => window.__TEST__!.input('interact'));
   await advanceFrames(page, 120);
   expect((await getState(page)).binOpen).toBe(true);
-  await clickGame(page, { x: 352, y: 308 });
+  await clickGame(page, { x: 525, y: 226 });
   state = await getState(page);
   expect(state.inventory.wood ?? 0).toBe(0);
   expect(state.bin.wood).toBe(5);
@@ -234,7 +233,8 @@ test('full-bag ground drops survive a scene transition and respawn on return', a
   expect(state.groundDrops[0].ty).toBeGreaterThanOrEqual(59); // the drop may be mid-hop at shutdown
   expect(state.groundDrops[0].ty).toBeLessThanOrEqual(60);
 
-  await teleport(page, 0, 30, 'left');
+  // why: the Town road home moves whenever the Town is redrawn, so read it from the live map.
+  await teleportToExit(page, 'FarmScene', 'left');
   await expect.poll(() => activeScene(page), { timeout: 15_000 }).toBe('FarmScene');
   state = await getState(page);
   expect(state.groundDrops).toEqual([]);

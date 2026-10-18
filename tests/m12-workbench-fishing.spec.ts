@@ -5,7 +5,7 @@
  *  - Fishing: cast the rod at water -> waiting -> bite -> hook -> a fish lands in the bag.
  */
 import { test, expect } from '@playwright/test';
-import { bootGame, getState, teleport, give, act, advanceFrames } from './helpers/gameHarness';
+import { bootGame, getState, teleport, give, act, advanceFrames, aimWorldTile } from './helpers/gameHarness';
 
 async function craft(page: import('@playwright/test').Page, id: string): Promise<boolean> {
   return page.evaluate(async (rid) => {
@@ -23,6 +23,7 @@ test('workbench: craft from bag, place it, open its crafting panel, craft a ches
   expect(await craft(page, 'workbench')).toBe(true);
   await teleport(page, 60, 60, 'down');
   await page.evaluate(() => window.__TEST__!.startPlacing('workbench'));
+  await aimWorldTile(page, 60, 61);
   await act(page, 'use-tool'); // places at (60,61)
   let s = await getState(page);
   expect(s.placedItems).toContainEqual(expect.objectContaining({ item: 'workbench', tx: 60, ty: 61 }));

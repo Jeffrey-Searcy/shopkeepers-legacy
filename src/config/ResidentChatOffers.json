@@ -1,0 +1,52 @@
+{
+  "offers": {
+    "teach-mana": {
+      "residentId": "nyra",
+      "label": "Teach me to feel mana",
+      "ability": "teach the player to sense and gather their own mana, then train it by quiet meditation; only when the player shows real interest in magic",
+      "acceptLine": "Close your eyes. Breathe out slowly. Feel that small warm hum under your ribs? That is yours. Sit still and breathe with it, an hour at a time, and it will grow.",
+      "minHearts": 2,
+      "repeat": "once"
+    },
+    "show-magic": {
+      "residentId": "nyra",
+      "label": "Show me a little magic",
+      "ability": "show the player a small, harmless charm that puts a spring in their step for about an hour",
+      "acceptLine": "Hold still. There. A little wind charm on your heels. Go on, try walking.",
+      "minHearts": 1,
+      "repeat": "daily"
+    },
+    "herbal-tea": {
+      "residentId": "sylvie",
+      "label": "I'd love a cup of tea",
+      "ability": "brew the player a cup of restoring herbal tea when they seem tired or overworked",
+      "acceptLine": "Chamomile, mint, and a little nettle. Sip it slowly. You will feel steadier in a moment.",
+      "minHearts": 1,
+      "repeat": "daily"
+    },
+    "on-the-house": {
+      "residentId": "julian",
+      "label": "One on the house? Sure",
+      "ability": "pour the player a drink on the house that lifts their mood for a couple of hours",
+      "acceptLine": "On the house. Do not tell the regulars. Cheers to good company.",
+      "minHearts": 1,
+      "repeat": "daily"
+    },
+    "fresh-berries": {
+      "residentId": "tessa",
+      "label": "I'll take some berries",
+      "ability": "hand the player a couple of fresh strawberries from the market stall",
+      "acceptLine": "Two of the sweetest from this morning's crate. They are on me.",
+      "minHearts": 1,
+      "repeat": "daily"
+    },
+    "spare-potion": {
+      "residentId": "cael",
+      "label": "A spare potion? Thanks",
+      "ability": "give the player one spare healing potion from a test batch, if they talk about danger, the portal, or getting hurt",
+      "acceptLine": "This batch passed every test. Take it. Drink it only if you are actually hurt.",
+      "minHearts": 3,
+      "repeat": "daily"
+    }
+  }
+}

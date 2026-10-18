@@ -1,5 +1,6 @@
+import { teleportAtFarmShop, farmLayout } from './helpers/gameHarness';
 /**
- * M26 — no-interior Tavern flow, porch physics, directional actions, and exhaustive tool details.
+ * M26 — walk-in shop flow, porch physics, directional actions, and exhaustive tool details.
  *
  * These cases use real canvas/keyboard input for player-facing paths. Runtime module access is
  * limited to deterministic save setup and read-only inspection of Phaser objects/data.
@@ -12,8 +13,8 @@ import {
   bootGame,
   getState,
   sendInput,
-  stopMove,
   teleport,
+  teleportToExit,
 } from './helpers/gameHarness';
 
 const MENU_URL = '/?test=1&seed=42&menu=1';
@@ -50,11 +51,12 @@ test('interior: the public door is not a Home warp and the enlarged facade has e
     // @ts-expect-error Vite resolves runtime TypeScript modules in browser tests.
     const { SceneKey } = await import('/src/config/AssetKeys.ts');
     const farm = getMapData(SceneKey.Farm);
+    const { tx: dx, ty: dy } = farm.shopOffset;
     return {
       homeWarps: farm.warps.filter((warp: { target: string }) => warp.target === SceneKey.Home),
-      wall: [farm.solid[9][69], farm.solid[12][76]],
-      porch: [farm.solid[13][70], farm.solid[13][72], farm.solid[13][75]],
-      steps: [farm.solid[14][72], farm.solid[14][73]],
+      wall: [farm.solid[9 + dy][69 + dx], farm.solid[12 + dy][76 + dx]],
+      porch: [farm.solid[13 + dy][70 + dx], farm.solid[13 + dy][72 + dx], farm.solid[13 + dy][75 + dx]],
+      steps: [farm.solid[14 + dy][72 + dx], farm.solid[14 + dy][73 + dx]],
       spawns: farm.spawns.filter((spawn: { id: string }) => ['start', 'from_home'].includes(spawn.id)),
     };
   });
@@ -62,25 +64,26 @@ test('interior: the public door is not a Home warp and the enlarged facade has e
   expect(layout.wall).toEqual([true, true]);
   expect(layout.porch).toEqual([false, false, false]);
   expect(layout.steps).toEqual([false, false]);
+  const { arrival } = await farmLayout(page);
   expect(layout.spawns).toEqual([
-    expect.objectContaining({ id: 'start', tx: 72, ty: 15 }),
-    expect.objectContaining({ id: 'from_home', tx: 72, ty: 15 }),
+    expect.objectContaining({ id: 'start', ...arrival }),
+    expect.objectContaining({ id: 'from_home', ...arrival }),
   ]);
 
-  // Exterior door interaction advances the day and keeps the Farm active instead of exposing Home.
+  // Hold a real movement key across the porch and threshold; no interact action enters the shop.
   const before = await getState(page);
-  await teleport(page, 72, 15, 'up');
-  await sendInput(page, 'move:up');
-  await advanceFrames(page, 650);
-  await stopMove(page);
-  expect(Math.floor((await getState(page)).player.y / 16)).toBe(13);
+  await teleportAtFarmShop(page, 0, 3, 'up');
   await page.screenshot({
     path: '.frontend-loop/tavern-player-tools-polish/screenshots/round-01-tavern-porch.png',
   });
-  await sendInput(page, 'interact');
-  await advanceFrames(page, 180);
-  expect((await getState(page)).day).toBe(before.day + 1);
-  expect(await activeScene(page)).toBe('FarmScene');
+  await page.keyboard.down('w');
+  try {
+    await page.waitForFunction(() => window.__GAME__!.scene.isActive('TavernScene') && window.__TEST__!.ready);
+  } finally {
+    await page.keyboard.up('w');
+  }
+  expect((await getState(page)).day).toBe(before.day);
+  await expect.poll(() => activeScene(page)).toBe('TavernScene');
   expect(await page.evaluate(() => window.__GAME__!.scene.isActive('HomeInteriorScene'))).toBe(false);
 });
 
@@ -121,8 +124,8 @@ test('animation: down and right scythe actions differ, and scythe/sword no longe
     const textures = window.__GAME__!.cache.json.get('manifest').textures as Record<string, { file?: string }>;
     return { sweep: textures['player-sweep'].file, sword: textures['player-sword'].file };
   });
-  expect(manifest.sweep).toBe('characters/player-sweep.png');
-  expect(manifest.sword).toBe('characters/player-sword.png');
+  expect(manifest.sweep).toBe('characters/player-sweep-v3.png');
+  expect(manifest.sword).toBe('characters/player-sword-v3.png');
   expect(manifest.sweep).not.toBe(manifest.sword);
 
   await teleport(page, 50, 50, 'down');
@@ -149,7 +152,7 @@ test('animation: down and right scythe actions differ, and scythe/sword no longe
   // Reach the Mines through named warps, then exercise the real slot-8 + Space combat path.
   await teleport(page, 98, 30, 'right');
   await expect.poll(() => activeScene(page)).toBe('TownScene');
-  await teleport(page, 40, 0, 'up');
+  await teleportToExit(page, 'MountainScene', 'up');
   await expect.poll(() => activeScene(page)).toBe('MountainScene');
   await teleport(page, 39, 12, 'up');
   await expect.poll(() => activeScene(page)).toBe('MinesScene');
@@ -157,8 +160,9 @@ test('animation: down and right scythe actions differ, and scythe/sword no longe
   await advanceFrames(page, 500);
   await page.keyboard.press('8');
   await page.keyboard.down('Space');
-  await advanceFrames(page, 80);
-  expect(await playerVisual(page)).toMatchObject({ texture: 'player-sword', animation: 'player-sword-down' });
+  await expect
+    .poll(() => playerVisual(page), { timeout: 1_000, intervals: [20, 40, 80] })
+    .toMatchObject({ texture: 'player-sword', animation: 'player-sword-down' });
   await page.screenshot({
     path: '.frontend-loop/tavern-player-tools-polish/screenshots/round-01-sword-down.png',
   });

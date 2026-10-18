@@ -2,11 +2,11 @@
  * M10 — Collision precision regression gates. The designer reported possibly walking through a tree.
  * These specs push the player INTO solid things for a full second and assert they're stopped:
  *  - a tree's base tile (1-tile trunk collision; walking behind the canopy is allowed by design),
- *  - the Tavern wall behind its walkable porch,
+ *  - the shop wall behind its walkable porch, with its central walk-in door kept open,
  *  - a placed chest (the farm ships no pre-placed chest, so the test places one first).
  */
 import { test, expect } from '@playwright/test';
-import { bootGame, getState, teleport, give, act, nodes, sendInput, stopMove, advanceFrames } from './helpers/gameHarness';
+import { bootGame, getState, teleport, give, act, nodes, sendInput, stopMove, advanceFrames, aimWorldTile, farmLayout, teleportAtFarmShop } from './helpers/gameHarness';
 import { TILE } from '../src/config/GameConfig';
 
 test('the player cannot walk through a tree trunk', async ({ page }) => {
@@ -28,27 +28,30 @@ test('the player cannot walk through a tree trunk', async ({ page }) => {
   expect(Math.floor(s.player.x / TILE)).toBe(tree.tx - 1);
 });
 
-test('the player cannot walk through the inherited Tavern wall', async ({ page }) => {
+test('the player cannot walk through the inherited shop wall from its porch', async ({ page }) => {
   await bootGame(page);
-  // The facade wall is rows 9..12; row 13 is the intentionally walkable porch.
-  await teleport(page, 71, 15, 'up');
+  const { door } = await farmLayout(page);
+  // The porch lies one tile south of the named door; the adjacent wall stays solid.
+  // Start on the deck: approaching from grass now hits the raised stone face before the wall.
+  await teleportAtFarmShop(page, -1, 1, 'up');
   await sendInput(page, 'move:up');
   await advanceFrames(page, 1000);
   await stopMove(page);
 
   const s = await getState(page);
-  expect(Math.floor(s.player.y / TILE)).toBe(13);
+  expect(Math.floor(s.player.y / TILE)).toBe(door.ty + 1);
 });
 
-test('walking up the path reaches the porch without entering the deferred interior', async ({ page }) => {
+test('walking up the path crosses the porch and enters the shop without the rejected legacy interior', async ({ page }) => {
   await bootGame(page);
   // Start on the path and walk naturally up the centered steps onto the porch.
-  await teleport(page, 72, 16, 'up');
-  await sendInput(page, 'move:up');
-  await advanceFrames(page, 1000);
-  await stopMove(page);
-  expect(Math.floor((await getState(page)).player.y / TILE)).toBe(13);
-  expect((await getState(page)).activeScene).toBe('FarmScene');
+  await teleportAtFarmShop(page, 0, 4, 'up');
+  await page.keyboard.down('w');
+  try {
+    await page.waitForFunction(() => window.__GAME__!.scene.isActive('TavernScene') && window.__TEST__!.ready);
+  } finally { await page.keyboard.up('w'); }
+  expect((await getState(page)).activeScene).toBe('TavernScene');
+  expect((await getState(page)).player).toMatchObject({ x: 232, y: 248 });
   expect(await page.evaluate(() => window.__GAME__!.scene.isActive('HomeInteriorScene'))).toBe(false);
 });
 
@@ -58,6 +61,7 @@ test('the player cannot walk through a chest', async ({ page }) => {
   await give(page, 'chest', 1);
   await teleport(page, 60, 60, 'down');
   await page.evaluate(() => window.__TEST__!.startPlacing('chest'));
+  await aimWorldTile(page, 60, 61);
   await act(page, 'use-tool');
 
   await teleport(page, 59, 61, 'right');
@@ -86,11 +90,12 @@ test('the shipping deposit trunk collider matches its art and blocks all four ap
   });
   expect(trunk).toEqual({ displayWidth: 40, displayHeight: 26, bodyWidth: 40, bodyHeight: 26 });
 
+  const { bin } = await farmLayout(page);
   const approaches = [
-    { tx: 80, ty: 15, facing: 'up', action: 'move:up', side: 'bottom' },
-    { tx: 80, ty: 10, facing: 'down', action: 'move:down', side: 'top' },
-    { tx: 78, ty: 13, facing: 'right', action: 'move:right', side: 'left' },
-    { tx: 83, ty: 13, facing: 'left', action: 'move:left', side: 'right' },
+    { tx: bin.tx, ty: bin.ty + 2, facing: 'up', action: 'move:up', side: 'bottom' },
+    { tx: bin.tx, ty: bin.ty - 3, facing: 'down', action: 'move:down', side: 'top' },
+    { tx: bin.tx - 2, ty: bin.ty, facing: 'right', action: 'move:right', side: 'left' },
+    { tx: bin.tx + 3, ty: bin.ty, facing: 'left', action: 'move:left', side: 'right' },
   ] as const;
 
   for (const approach of approaches) {

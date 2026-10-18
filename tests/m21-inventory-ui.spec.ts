@@ -9,11 +9,15 @@ import { test, expect, type Page } from '@playwright/test';
 import type Phaser from 'phaser';
 import {
   activeScene,
+  aimWorldTile,
   advanceFrames,
   bootGame,
   getState,
   give,
   teleport,
+  teleportToExit,
+  teleportAtFarmBin,
+  uiCanvasPoint,
 } from './helpers/gameHarness';
 
 const ALL_ITEMS = [
@@ -24,10 +28,8 @@ const ALL_ITEMS = [
 
 /** Click a point expressed in the game's fixed 960x540 coordinate system. */
 async function clickGame(page: Page, gameX: number, gameY: number): Promise<void> {
-  const canvas = page.locator('canvas');
-  const box = await canvas.boundingBox();
-  if (!box) throw new Error('M21: game canvas has no bounding box');
-  await page.mouse.click(box.x + (gameX / 960) * box.width, box.y + (gameY / 540) * box.height);
+  const point = await uiCanvasPoint(page, { x: gameX, y: gameY });
+  await page.mouse.click(point.x, point.y);
   await advanceFrames(page, 120);
 }
 
@@ -35,7 +37,7 @@ async function clickGame(page: Page, gameX: number, gameY: number): Promise<void
 async function enterMines(page: Page): Promise<void> {
   await teleport(page, 98, 30, 'right');
   await expect.poll(() => activeScene(page), { timeout: 15_000 }).toBe('TownScene');
-  await teleport(page, 40, 0, 'up');
+  await teleportToExit(page, 'MountainScene', 'up');
   await expect.poll(() => activeScene(page), { timeout: 15_000 }).toBe('MountainScene');
   await teleport(page, 39, 12, 'up');
   await expect.poll(() => activeScene(page), { timeout: 15_000 }).toBe('MinesScene');
@@ -115,18 +117,19 @@ test('chest transfer uses real canvas clicks in both directions', async ({ page 
   await give(page, 'chest', 1);
   await teleport(page, 60, 60, 'down');
   await page.evaluate(() => window.__TEST__!.startPlacing('chest'));
+  await aimWorldTile(page, 60, 61);
   await page.evaluate(() => window.__TEST__!.input('use-tool'));
   await advanceFrames(page, 150);
   await page.evaluate(() => window.__TEST__!.input('interact'));
   await advanceFrames(page, 150);
   expect((await getState(page)).chestOpen).toBe(true);
 
-  await clickGame(page, 352, 308); // satchel wood -> chest
+  await clickGame(page, 525, 226); // pockets wood -> chest
   let state = await getState(page);
   expect(state.inventory.wood ?? 0).toBe(0);
   expect(state.chest.wood).toBe(5);
 
-  await clickGame(page, 352, 160); // chest wood -> satchel
+  await clickGame(page, 145, 226); // chest wood -> pockets
   state = await getState(page);
   expect(state.inventory.wood).toBe(5);
   expect(state.chest.wood ?? 0).toBe(0);
@@ -135,17 +138,17 @@ test('chest transfer uses real canvas clicks in both directions', async ({ page 
 test('shipping transfer uses real canvas clicks in both directions', async ({ page }) => {
   await bootGame(page);
   await give(page, 'wood', 4);
-  await teleport(page, 79, 13, 'right');
+  await teleportAtFarmBin(page);
   await page.evaluate(() => window.__TEST__!.input('interact'));
   await advanceFrames(page, 150);
   expect((await getState(page)).binOpen).toBe(true);
 
-  await clickGame(page, 352, 308); // satchel wood -> shipping crate
+  await clickGame(page, 525, 226); // pockets wood -> shipping crate
   let state = await getState(page);
   expect(state.inventory.wood ?? 0).toBe(0);
   expect(state.bin.wood).toBe(4);
 
-  await clickGame(page, 352, 160); // shipping crate wood -> satchel
+  await clickGame(page, 145, 226); // shipping crate wood -> pockets
   state = await getState(page);
   expect(state.inventory.wood).toBe(4);
   expect(state.bin.wood ?? 0).toBe(0);
@@ -202,7 +205,7 @@ test('visual evidence: all 19 item stacks fit at desktop and compact viewports',
   expect(layout.css.top).toBeGreaterThanOrEqual(0);
   expect(layout.css.right).toBeLessThanOrEqual(layout.viewport.width);
   expect(layout.css.bottom).toBeLessThanOrEqual(layout.viewport.height);
-  expect(layout.labels).toEqual(expect.arrayContaining(['TOOLBELT', 'BACKPACK · 24 SLOTS', 'SELECTED CHARM']));
+  expect(layout.labels).toEqual(expect.arrayContaining(['TOOLBELT', 'BACKPACK', '24 pockets', 'ITEM DETAILS']));
 
   expect(pageErrors).toEqual([]);
   expect(requestFailures).toEqual([]);

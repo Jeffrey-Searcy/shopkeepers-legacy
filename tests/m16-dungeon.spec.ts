@@ -10,7 +10,7 @@
  * through the seam's input()), so these specs press REAL keys via page.keyboard — the same path
  * a player uses. Positioning uses the teleport seam so runs stay deterministic.
  *
- * Route to the mines (mirrors m14): Farm -> Town (98,30) -> Mountain (40,0) -> Mines (39,12).
+ * Route to the mines (mirrors m14): Farm -> Town (98,30) -> authored north road -> Mountain -> Mines (39,12).
  * Mines entrance spawn: (25,4). Mines ladder warp back to Mountain: (25,2).
  */
 import { test, expect, type Page } from '@playwright/test';
@@ -23,6 +23,7 @@ import {
   enemies,
   setHp,
   setGold,
+  farmLayout,
 } from './helpers/gameHarness';
 
 const ENTRANCE = { tx: 25, ty: 4 };
@@ -40,7 +41,14 @@ async function warpTo(page: Page, tx: number, ty: number, facing: string, scene:
 async function enterMines(page: Page): Promise<void> {
   await bootGame(page);
   await warpTo(page, 98, 30, 'right', 'TownScene');
-  await warpTo(page, 40, 0, 'up', 'MountainScene');
+  const road = await page.evaluate(async () => {
+    // @ts-expect-error Vite resolves the current map in the live browser.
+    const { getMapData } = await import('/src/world/MapDef.ts');
+    const warp = getMapData('TownScene').warps.find((warp: { target: string }) => warp.target === 'MountainScene');
+    if (!warp) throw new Error('Town has no outdoor mine entrance road');
+    return { tx: warp.tx + Math.floor(warp.w / 2), ty: warp.ty + Math.floor(warp.h / 2) };
+  });
+  await warpTo(page, road.tx, road.ty, 'up', 'MountainScene');
   await warpTo(page, 39, 12, 'up', 'MinesScene');
 }
 
@@ -168,6 +176,7 @@ test('death penalty: 20% gold lost, day advances, wake outside the Tavern fully 
   await setGold(page, 100);
   await setHp(page, 1);
   const day0 = (await getState(page)).day;
+  const { arrival } = await farmLayout(page);
 
   // Walk into a slime until the killing contact fires the named exterior wake-up.
   for (let i = 0; i < 12; i++) {
@@ -180,14 +189,19 @@ test('death penalty: 20% gold lost, day advances, wake outside the Tavern fully 
   await expect
     .poll(async () => activeScene(page), { timeout: 10_000, intervals: [200] })
     .toBe('FarmScene');
-  await advanceFrames(page, 300);
+  await expect
+    .poll(async () => {
+      const player = (await getState(page)).player;
+      return { tx: Math.floor(player.x / 16), ty: Math.floor(player.y / 16) };
+    }, { timeout: 5_000, intervals: [50, 100, 200] })
+    .toEqual(arrival);
 
   const s = await getState(page);
   expect(s.gold).toBe(80); // floor(100 * 0.8)
   expect(s.day).toBe(day0 + 1); // the knockout burns the rest of the day (sleep path)
   expect(s.hp).toBe(s.maxHp); // wake healed
-  expect(Math.floor(s.player.x / 16)).toBe(72);
-  expect(Math.floor(s.player.y / 16)).toBe(15);
+  expect(Math.floor(s.player.x / 16)).toBe(arrival.tx);
+  expect(Math.floor(s.player.y / 16)).toBe(arrival.ty);
   expect(await page.evaluate(() => window.__GAME__!.scene.isActive('HomeInteriorScene'))).toBe(false);
 });
 

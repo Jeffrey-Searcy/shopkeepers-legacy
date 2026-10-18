@@ -73,6 +73,30 @@ export const CROPS: Record<string, CropDef> = {
     produce: 'melon',
     stageDays: [4, 4, 4], // 12 watered days
   },
+  cabbage: {
+    type: 'cabbage',
+    label: 'Cabbage',
+    season: 'spring',
+    seed: 'cabbage-seeds',
+    produce: 'cabbage',
+    stageDays: [1, 2, 1], // 4 watered days
+  },
+  strawberry: {
+    type: 'strawberry',
+    label: 'Strawberry',
+    season: 'spring',
+    seed: 'strawberry-seeds',
+    produce: 'strawberry',
+    stageDays: [2, 3, 3], // 8 watered days
+  },
+  tomato: {
+    type: 'tomato',
+    label: 'Tomato',
+    season: 'summer',
+    seed: 'tomato-seeds',
+    produce: 'tomato',
+    stageDays: [2, 2, 2], // 6 watered days
+  },
 };
 
 /** Reverse lookup: seed item id -> crop def (null when the item isn't a seed). */

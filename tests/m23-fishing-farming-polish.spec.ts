@@ -52,6 +52,7 @@ async function keyboardCast(page: import('@playwright/test').Page): Promise<void
 async function fishingVisuals(page: import('@playwright/test').Page): Promise<{
   playerTexture: string;
   playerFrame: string | number;
+  playerFlipX: boolean;
   rodType: string | null;
   rodActive: boolean;
   lineActive: boolean;
@@ -61,7 +62,7 @@ async function fishingVisuals(page: import('@playwright/test').Page): Promise<{
 }> {
   return page.evaluate(() => {
     const farm = window.__GAME__!.scene.getScene('FarmScene') as unknown as {
-      player: { texture: { key: string }; frame: { name: string | number } };
+      player: { texture: { key: string }; frame: { name: string | number }; flipX: boolean };
       heldRod: { type: string; active: boolean; visible: boolean } | null;
       fishingLine: { active: boolean; visible: boolean; commandBuffer: number[] } | null;
       bobber: { active: boolean; visible: boolean } | null;
@@ -70,6 +71,7 @@ async function fishingVisuals(page: import('@playwright/test').Page): Promise<{
     return {
       playerTexture: farm.player.texture.key,
       playerFrame: farm.player.frame.name,
+      playerFlipX: farm.player.flipX,
       rodType: farm.heldRod?.type ?? null,
       rodActive: !!farm.heldRod?.active && farm.heldRod.visible,
       lineActive: !!farm.fishingLine?.active && farm.fishingLine.visible,
@@ -143,10 +145,10 @@ test('equipped slot uses a separate, stronger treatment than inspected inventory
 test('all four fishing facings keep directional player art, a rod-only pose, and one tether', async ({ page }) => {
   await bootGame(page);
   const expectedTexture: Record<TestFacing, string> = {
-    up: 'player-cardinal',
-    down: 'player-cardinal',
-    left: 'player-idle',
-    right: 'player-idle',
+    up: 'player-navigation',
+    down: 'player-navigation',
+    left: 'player-navigation',
+    right: 'player-navigation',
   };
   const observedFrames = new Map<TestFacing, string | number>();
 
@@ -158,6 +160,7 @@ test('all four fishing facings keep directional player art, a rod-only pose, and
     observedFrames.set(facing, visual.playerFrame);
     expect(visual).toMatchObject({
       playerTexture: expectedTexture[facing],
+      playerFlipX: false,
       rodType: 'Graphics',
       rodActive: true,
       lineActive: true,
@@ -266,7 +269,7 @@ test('dev tuning is serialized, validates scales, advances time, and steps a cro
   await page.screenshot({ path: '.frontend-loop/fishing-farming-feedback/screenshots/round-03-growth-lab.png' });
 });
 
-test('crop preview renders larger plants, plant-foot shadows, and a lighter wet-soil sheen', async ({ page }) => {
+test('crop preview keeps native plants, growing foot shadows, and connected wet-soil frames', async ({ page }) => {
   await bootGame(page);
   await page.evaluate(async () => {
     // @ts-expect-error runtime module path is served by Vite in browser tests
@@ -284,19 +287,22 @@ test('crop preview renders larger plants, plant-foot shadows, and a lighter wet-
   const visuals = await page.evaluate(() => {
     const farm = window.__GAME__!.scene.getScene('FarmScene') as unknown as {
       overlay: Map<string, { displayWidth: number }>;
-      cropShadows: Map<string, unknown>;
-      soil: { wet: Map<string, { fillAlpha: number }> };
+      cropShadows: Map<string, { displayWidth: number }>;
+      soil: { layer: { getTileAt(x: number, y: number): { index: number } } };
     };
     return {
       cropWidths: [...farm.overlay.values()].map((crop) => crop.displayWidth),
       shadows: farm.cropShadows.size,
-      wetAlpha: [...farm.soil.wet.values()][0]?.fillAlpha,
+      shadowWidths: [...farm.cropShadows.values()].map(shadow => shadow.displayWidth),
+      // Four corner digits encode empty=0, dry=1, wet=2 instead of a blue rectangle overlay.
+      soilFrames: [50, 51, 52, 53, 54].map(x => farm.soil.layer.getTileAt(x, 50).index),
     };
   });
   expect(visuals.cropWidths).toHaveLength(4);
-  expect(Math.min(...visuals.cropWidths)).toBeGreaterThan(16);
+  expect(visuals.cropWidths).toEqual([16, 16, 16, 16]);
   expect(visuals.shadows).toBe(4);
-  expect(visuals.wetAlpha).toBeCloseTo(0.22, 2);
+  expect(visuals.shadowWidths).toEqual([4, 6, 9, 11]);
+  expect(visuals.soilFrames).toEqual([54, 45, 63, 45, 9]);
   await page.screenshot({ path: '.frontend-loop/fishing-farming-feedback/screenshots/cute-crop-soil-preview.png' });
 });
 

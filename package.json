@@ -9,6 +9,12 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --port 4173",
     "typecheck": "tsc --noEmit",
+    "npc-chat": "node scripts/npc-chat-server.mjs",
+    "npc-chat:local": "SHOPKEEPERS_LOCAL_MODEL=gemma4:12b SHOPKEEPERS_OLLAMA_URL=http://127.0.0.1:11434 node scripts/npc-chat-server.mjs",
+    "docker:up": "docker compose up --detach --build",
+    "docker:down": "docker compose down",
+    "docker:status": "docker compose ps",
+    "docker:logs": "docker compose logs --follow game chat",
     "test": "playwright test",
     "test:headed": "playwright test --headed"
   },

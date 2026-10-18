@@ -1,6 +1,5 @@
 /**
- * Player navigation art regression: keep the approved Sunnyside side sprite and use matching
- * cardinal rotations only for vertical movement/idle.
+ * Player navigation art regression: one coherent sheet supplies every cardinal walk and idle.
  */
 import { test, expect, type Page } from '@playwright/test';
 import type Phaser from 'phaser';
@@ -34,30 +33,33 @@ async function playerVisual(page: Page): Promise<PlayerVisual> {
   });
 }
 
-test('up/down use matching cardinal views while left/right retain the approved side sprite', async ({ page }) => {
+/** Wait until animation state reaches the expected real runtime state without a fixed sleep guess. */
+async function expectPlayerVisual(page: Page, expected: Partial<PlayerVisual>): Promise<void> {
+  await expect
+    .poll(() => playerVisual(page), { timeout: 1_000, intervals: [20, 40, 80] })
+    .toMatchObject(expected);
+}
+
+test('up, down, left, and right use matching rows from one navigation sheet', async ({ page }) => {
   await page.setViewportSize({ width: 960, height: 540 });
   await bootGame(page);
   await advanceFrames(page, 100);
   let visual = await playerVisual(page);
-  expect(visual).toMatchObject({ texture: 'player-cardinal', animation: 'player-idle-down', flipX: false });
+  expect(visual).toMatchObject({ texture: 'player-navigation', animation: 'player-idle-down', flipX: false });
 
   await sendInput(page, 'move:up');
   await advanceFrames(page, 120);
-  visual = await playerVisual(page);
-  expect(visual).toMatchObject({ texture: 'player-cardinal', animation: 'player-walk-up', facing: 'up', flipX: false });
+  await expectPlayerVisual(page, { texture: 'player-navigation', animation: 'player-walk-up', facing: 'up', flipX: false });
   await page.screenshot({
     path: '.frontend-loop/inventory-dragdrop/screenshots/player-facing-up.png',
     clip: { x: 400, y: 190, width: 160, height: 160 },
   });
   await stopMove(page);
-  await advanceFrames(page, 100);
-  visual = await playerVisual(page);
-  expect(visual).toMatchObject({ texture: 'player-cardinal', animation: 'player-idle-up' });
+  await expectPlayerVisual(page, { texture: 'player-navigation', animation: 'player-idle-up' });
 
   await sendInput(page, 'move:down');
   await advanceFrames(page, 120);
-  visual = await playerVisual(page);
-  expect(visual).toMatchObject({ texture: 'player-cardinal', animation: 'player-walk-down', facing: 'down' });
+  await expectPlayerVisual(page, { texture: 'player-navigation', animation: 'player-walk-down', facing: 'down' });
   await page.screenshot({
     path: '.frontend-loop/inventory-dragdrop/screenshots/player-facing-down.png',
     clip: { x: 400, y: 190, width: 160, height: 160 },
@@ -66,8 +68,7 @@ test('up/down use matching cardinal views while left/right retain the approved s
 
   await sendInput(page, 'move:right');
   await advanceFrames(page, 120);
-  visual = await playerVisual(page);
-  expect(visual).toMatchObject({ texture: 'player', animation: 'player-walk', facing: 'right', flipX: false });
+  await expectPlayerVisual(page, { texture: 'player-navigation', animation: 'player-walk-right', facing: 'right', flipX: false });
   await page.screenshot({
     path: '.frontend-loop/inventory-dragdrop/screenshots/player-facing-right.png',
     clip: { x: 400, y: 190, width: 160, height: 160 },
@@ -76,8 +77,7 @@ test('up/down use matching cardinal views while left/right retain the approved s
 
   await sendInput(page, 'move:left');
   await advanceFrames(page, 120);
-  visual = await playerVisual(page);
-  expect(visual).toMatchObject({ texture: 'player', animation: 'player-walk', facing: 'left', flipX: true });
+  await expectPlayerVisual(page, { texture: 'player-navigation', animation: 'player-walk-left', facing: 'left', flipX: false });
   await page.screenshot({
     path: '.frontend-loop/inventory-dragdrop/screenshots/player-facing-left.png',
     clip: { x: 400, y: 190, width: 160, height: 160 },

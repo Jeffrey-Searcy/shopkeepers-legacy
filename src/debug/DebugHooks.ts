@@ -49,6 +49,8 @@ export interface TestApi {
   setHp: (hp: number) => void;
   /** Test-only: set the player's gold directly (death-penalty specs assert the 20% loss). */
   setGold: (gold: number) => void;
+  /** Test-only: set one known resident's bounded relationship points. */
+  setResidentPoints: (residentId: string, points: number) => void;
   /** Test-only: attempt to place a building; returns whether it succeeded. */
   place: (type: string, tx: number, ty: number, w: number, h: number) => boolean;
   /** Test-only: ground type at a tile (grass/dirt/water/floor). */
@@ -142,6 +144,9 @@ export function installDebugHooks(game: Phaser.Game): void {
         throw new Error(`startPlacing: no "${item}" in inventory`);
       }
       GameState.instance.placingItem = item;
+      GameState.instance.placingSource = 'inventory';
+      GameState.instance.placingCancelledEntry = null;
+      GameState.instance.placingRotation = 0;
     },
     setTimeScale: (scale: number) => DevTuningSystem.setClockScale(scale),
     setCropScale: (scale: number) => DevTuningSystem.setCropScale(scale),
@@ -180,6 +185,12 @@ export function installDebugHooks(game: Phaser.Game): void {
     setGold: (gold: number) => {
       if (!Number.isInteger(gold) || gold < 0) throw new Error(`setGold: invalid gold ${gold}`);
       GameState.instance.gold = gold;
+    },
+    setResidentPoints: (residentId: string, points: number) => {
+      const record = GameState.instance.relationships.residents[residentId as keyof typeof GameState.instance.relationships.residents];
+      if (!record) throw new Error(`setResidentPoints: unknown resident ${residentId}`);
+      if (!Number.isInteger(points) || points < 0 || points > 2500) throw new Error(`setResidentPoints: invalid points ${points}`);
+      record.points = points;
     },
     setWeather: (day: number, weather: string) => {
       WeatherSystem.override(day, weather as Weather);

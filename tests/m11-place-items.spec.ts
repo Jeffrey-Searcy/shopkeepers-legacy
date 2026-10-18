@@ -11,10 +11,12 @@ import {
   bootGame,
   getState,
   teleport,
+  teleportToExit,
   give,
   act,
   activeScene,
   advanceFrames,
+  aimWorldTile,
 } from './helpers/gameHarness';
 
 /** Craft via the same system call the bag panel's button makes. */
@@ -37,6 +39,7 @@ test('craft a chest from 20 wood, place it on open grass, use it, pick it back u
   // Stand on open grass far from the buildable-zone rules (place-anywhere!) facing down.
   await teleport(page, 60, 60, 'down');
   await page.evaluate(() => window.__TEST__!.startPlacing('chest'));
+  await aimWorldTile(page, 60, 61);
   await act(page, 'use-tool'); // the swing places it at the facing tile (60,61)
 
   s = await getState(page);
@@ -81,6 +84,7 @@ test('placement is rejected on water and the item is kept', async ({ page }) => 
   void ground;
 
   await page.evaluate(() => window.__TEST__!.startPlacing('chest'));
+  await aimWorldTile(page, waterTx, 43);
   await act(page, 'use-tool');
 
   const s = await getState(page);
@@ -94,13 +98,15 @@ test('placed chests persist across scene transitions', async ({ page }) => {
   await give(page, 'chest', 1);
   await teleport(page, 60, 60, 'down');
   await page.evaluate(() => window.__TEST__!.startPlacing('chest'));
+  await aimWorldTile(page, 60, 61);
   await act(page, 'use-tool');
   expect((await getState(page)).placedItems).toHaveLength(1);
 
   // Warp to town and back.
   await teleport(page, 98, 30, 'right');
   await expect.poll(async () => activeScene(page), { timeout: 15_000, intervals: [200] }).toBe('TownScene');
-  await teleport(page, 0, 30, 'left');
+  // why: the Town road home moves whenever the Town is redrawn, so read it from the live map.
+  await teleportToExit(page, 'FarmScene', 'left');
   await expect.poll(async () => activeScene(page), { timeout: 15_000, intervals: [200] }).toBe('FarmScene');
   await advanceFrames(page, 400);
 

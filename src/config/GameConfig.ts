@@ -23,12 +23,34 @@ export const ZOOM = 2;
  */
 export const MAP_TILES = {
   farm: { w: 100, h: 100 },
-  town: { w: 80, h: 60 },
+  // The painted Town (TownArt: 2624x2400 texels at 32 texels a tile). Saves of version 26 and older used
+  // the hand-built 120x110 Town (TownMap); SaveSystem moves their positions onto this one.
+  town: { w: 82, h: 75 },
   home: { w: 30, h: 18 }, // Temporary upstairs shell fills the 960px viewport; full interior is next.
 } as const;
 
-/** Player movement speed in pixels/second. */
-export const PLAYER_SPEED = 120;
+/** Player top movement speed in pixels/second: six 16px tiles each second. */
+export const PLAYER_SPEED = 96;
+
+/** Movement acceleration in pixels/second squared; reaches top speed in 100ms. */
+export const PLAYER_ACCELERATION = 960;
+
+/** Movement braking in pixels/second squared; stops from top speed in about 67ms. */
+export const PLAYER_BRAKING = 1440;
+
+/**
+ * Tile settle glide speed in pixels/second. After the keeper stops, the feet glide onto the nearest
+ * tile center so the facing-tile highlight sits squarely in front of the body, never half a tile
+ * to one side (playtester report: "the tile is not center... things just feel slightly off").
+ */
+export const PLAYER_SETTLE_SPEED = 72;
+
+/**
+ * Forward lean in pixels when choosing the settle tile. The keeper finishes a step that is more
+ * than a quarter tile into the next tile instead of sliding back, so a stop never pulls the body
+ * backward by more than 4px.
+ */
+export const PLAYER_SETTLE_LEAN_PX = 4;
 
 /**
  * Camera follow lerp (0..1). NOTE: with roundPixels, any low lerp STALLS before centering (step

@@ -8,7 +8,7 @@
  * places one via the placement seam (the m11 flow), then drives the transfer UI against it.
  */
 import { test, expect } from '@playwright/test';
-import { bootGame, getState, teleport, give, act } from './helpers/gameHarness';
+import { bootGame, getState, teleport, give, act, aimWorldTile } from './helpers/gameHarness';
 
 test('chest opens a transfer UI; stack moves round-trip; E closes', async ({ page }) => {
   await bootGame(page);
@@ -17,6 +17,7 @@ test('chest opens a transfer UI; stack moves round-trip; E closes', async ({ pag
   await give(page, 'chest', 1);
   await teleport(page, 60, 60, 'down');
   await page.evaluate(() => window.__TEST__!.startPlacing('chest'));
+  await aimWorldTile(page, 60, 61);
   await act(page, 'use-tool');
 
   // E opens the chest panel.

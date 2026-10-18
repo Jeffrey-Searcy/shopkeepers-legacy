@@ -1,17 +1,18 @@
+import { teleportAtFarmBin } from './helpers/gameHarness';
 /**
  * M19 — The end-of-day sell screen: waking after shipping shows a per-item report (qty × unit =
  * total, grand total, new gold balance); E dismisses it and the day begins.
  */
 import { test, expect } from '@playwright/test';
-import { bootGame, getState, teleport, give, act, sendInput, advanceFrames } from './helpers/gameHarness';
+import { bootGame, getState, give, act, sendInput, advanceFrames } from './helpers/gameHarness';
 
 test('sleeping after shipping shows the itemized report; E dismisses it', async ({ page }) => {
   await bootGame(page);
   await give(page, 'wood', 3); // 3 x 2g = 6
   await give(page, 'parsnip', 2); // 2 x 35g = 70
 
-  // Queue both stacks in the shipping bin (at farm 80,13, beside the Tavern).
-  await teleport(page, 79, 13, 'right');
+  // Queue both stacks at the current authored shipping bin.
+  await teleportAtFarmBin(page);
   await act(page, 'interact');
   expect((await getState(page)).binOpen).toBe(true);
   await page.evaluate(async () => {

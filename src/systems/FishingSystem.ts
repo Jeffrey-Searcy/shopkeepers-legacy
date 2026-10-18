@@ -13,17 +13,33 @@
  */
 import { GameState } from '../state/GameState';
 import { Rng } from '../state/Rng';
+import { SceneKey } from '../config/AssetKeys';
 
 /**
  * The fish table. `weight` = how often it bites; rarer fish are HARDER (the designer's rule): `speed` is
  * how fast it darts around the track, `drainMult` scales how quickly progress bleeds when it's
  * outside your zone. Icons exist as `icon-<id>`.
+ * `waters` lists the scenes where the fish bites; null = any water. The first three bite anywhere
+ * (the farm pond keeps its original catch table); the week-one fish reward visiting new places.
  */
-export const FISH = [
-  { id: 'fish-sardine', label: 'Sardine', weight: 5, speed: 42, drainMult: 1.0 },
-  { id: 'fish-bass', label: 'Bass', weight: 3, speed: 62, drainMult: 1.25 },
-  { id: 'fish-carp', label: 'Carp', weight: 2, speed: 85, drainMult: 1.6 },
-] as const;
+export const FISH: readonly { id: string; label: string; weight: number; speed: number; drainMult: number; waters: readonly SceneKey[] | null }[] = [
+  { id: 'fish-sardine', label: 'Sardine', weight: 5, speed: 42, drainMult: 1.0, waters: null },
+  { id: 'fish-bass', label: 'Bass', weight: 3, speed: 62, drainMult: 1.25, waters: null },
+  { id: 'fish-carp', label: 'Carp', weight: 2, speed: 85, drainMult: 1.6, waters: null },
+  { id: 'fish-trout', label: 'Trout', weight: 3, speed: 70, drainMult: 1.3, waters: [SceneKey.Forest] },
+  { id: 'fish-pike', label: 'Pike', weight: 1, speed: 95, drainMult: 1.7, waters: [SceneKey.Forest] },
+  { id: 'fish-eel', label: 'Eel', weight: 3, speed: 80, drainMult: 1.45, waters: [SceneKey.Beach] },
+];
+
+/**
+ * The fish that can bite in one scene.
+ * @throws when no fish lives there (fishing must never silently fall back to another table)
+ */
+export function fishForScene(scene: SceneKey): readonly (typeof FISH)[number][] {
+  const pool = FISH.filter(fish => fish.waters === null || fish.waters.includes(scene));
+  if (pool.length === 0) throw new Error(`FishingSystem: no fish live in ${scene}`);
+  return pool;
+}
 
 /** How long a bite stays hookable (ms). */
 export const BITE_WINDOW_MS = 700;
@@ -55,10 +71,11 @@ export const FishingSystem = {
   startReel(): void {
     const gs = GameState.instance;
     if (gs.fishing?.phase !== 'bite') return;
-    const total = FISH.reduce((a, f) => a + f.weight, 0);
+    const pool = fishForScene(gs.activeScene);
+    const total = pool.reduce((a, f) => a + f.weight, 0);
     let roll = Rng.instance.next() * total;
-    let picked: (typeof FISH)[number] = FISH[0];
-    for (const f of FISH) {
+    let picked: (typeof FISH)[number] = pool[0];
+    for (const f of pool) {
       roll -= f.weight;
       if (roll <= 0) {
         picked = f;
