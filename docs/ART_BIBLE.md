@@ -1,5 +1,16 @@
 # ShopkeepersLegacy — Art Bible
 
+## Current production clarifications — September 14, 2026
+
+Use [ART_WORKFLOW](handbook/ART_WORKFLOW.md) for the approved town facade pipeline and current
+source owners. Built-in image generation produced the new facades/prop atlas; PixelLab notes
+below describe the earlier native-pixel pipeline, not a required provider for every request.
+The active image tool/skill rules take precedence. Do not replace a working provider silently.
+The original actor uses a padded 96×64 logical canvas, not the historical 32×32 target below;
+customers have separate measured contracts. Read GameConfig.
+Multi-tile furnishings and buildings use authored footprints, not a universal one-tile collider.
+Jeff approves the twelve town exteriors, but explicitly says the public interiors need more work.
+
 > The canonical art spec so every PixelLab asset is cohesive. The video creator had no such
 > doc, which is partly why his result looked inconsistent (floating houses, mismatched shadows).
 > Read this AND `docs/PIXELLAB_GUIDE.md` before generating art. Keep these values FIXED across
@@ -78,13 +89,23 @@ Every asset lives on a 16px top-down tile grid. Generate accordingly:
   tiles made paths/plazas read as rock walls.)
 - **Chain tilesets** to the shared grass base tile id so every terrain family matches.
 - **Objects** (trees/rocks/furniture): transparent PNG, base sized to a whole tile multiple,
-  bottom-anchored with a small contact shadow; collision is ONE tile at the base regardless of
-  art height.
+  bottom-anchored with a small contact shadow. Use the owning data's footprint: a resource trunk
+  can be one tile, while furniture/buildings can occupy several. Art padding never defines collision.
 - **Buildings**: straight-on facades (view "side" + "flat horizontal ground line, NO isometric
   angle"), width = footprint tiles × 16 exactly, flat baseline so they sit on a tile row.
 - **Icons**: straight-on ("side"), centered, readable silhouette at 28px.
 
 ## Consistency rules (enforce during the art pass)
+
+**Revised user direction, 2026-09-12:** the literal90° image experiment is rejected.
+Jeff clarifies the final table rule: rotate the SAME tabletop90°, then move its two visible feet
+to the new edge nearest the bottom of the screen. Do not rotate the feet sideways. Tables join
+matching neighboring cells, including mixed orientations, corners and blocks. Rugs join the same
+way, retaining their border only around the outside. Workbenches use matching authored views.
+Use quiet warm wood, broad rectangular tops and thin aprons. Preserve native pixels with
+transparent-padding crops or native repeating surface patches. Saved rotation still swaps their2×1 and1×2 grid footprints
+independently of source pixels. See `docs/art/furniture-perspective.md` for accepted assets.
+
 - Same perspective, same light direction, same outline weight on everything.
 - Objects sit grounded; use small contact shadows, not floating drop shadows.
 - Match tile edges so terrain transitions are seamless (regenerate a tile rather than shipping a seam).

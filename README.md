@@ -31,9 +31,10 @@ Well past a prototype — it's genuinely playable:
 - Inventory and chests, day/night cycle and sleep, building placement
 - NPCs with dialogue, fishing (with a reel minigame), a gold/shipping economy, crafting
 - A Moonlighter-style combat dungeon in the Mines
-- 41+ Playwright gameplay tests
+- 400+ Playwright gameplay tests
 
-Still on the roadmap: more crafting, a relationship system, deeper dungeons, and music. See
+Friendship, gifts, romance stages, NPC bonds, and an optional guarded local-chat foundation are installed.
+Still on the roadmap: relationship dates and marriage, more crafting, deeper dungeons, and music. See
 `docs/ROADMAP.md`.
 
 ## Quick start

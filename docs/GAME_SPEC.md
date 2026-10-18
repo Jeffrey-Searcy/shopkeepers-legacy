@@ -1,11 +1,54 @@
 # ShopkeepersLegacy — Game Spec (V1)
 
+> Historical V1 design. For the installed game and later user decisions, read
+> [START_HERE](handbook/START_HERE.md). Do not remove later hospitality, town, or appearance work
+> to restore this initial milestone's limits.
+
 > This is the spec the build agent follows. It is structured in the same order the video
 > creator (Mansel Scheffel) used: Definition of Done → Tech Contract → Controls → Worlds &
 > Scenes → Systems → Art Integration → Build Order → Self-Verification. It is tailored to
 > **ShopkeepersLegacy** and scoped to **V1 (Stardew core)**. Read `CLAUDE.md` for the HOW-rules.
 
 ## Full-game vision (context — NOT all in V1)
+**Current direction, confirmed 2026-09-10:** the inherited tavern is the core progression hub.
+The **mines** and **dungeon** are distinct: Stardew-style mining levels and ore progression,
+versus Moonlighter-style dungeon rooms, combat and loot risk. Neither replaces the other.
+The tavern chapter is specified in `docs/plans/PLAN-tavern-opening.md`. The current interface and
+cosmetic wardrobe pass is specified in `docs/plans/PLAN-cozy-interface.md`; it does not expand gameplay.
+
+**Shop/home direction, confirmed 2026-09-12:** the inherited building should suit different shop
+types, not look permanently branded as a tavern. The current pass adds a raised, layered porch,
+an animated walk-in door, and a private rear bedroom while keeping the existing tavern service.
+Guest-only stairs reserve future inn activity; bookings, NPC lodging, shop selection, and a
+player-accessible upstairs are not implemented in this pass. Save v4 adds explicit compatibility
+for old Farm positions inside the new porch solids. All 140 regression tests pass, but Jeff's
+playtest leaves visual quality, HUD coverage, door timing, and conventional title actions open.
+The subsequent interior foundation pass uses researched Travellers Rest/Necesse direction:
+mostly open rooms, native timber/plaster surfaces, whole-tile furniture footprints, cardinal
+rotation, a compact task badge, faster walk-in entry, and conventional title/settings navigation.
+Save v5 stores rotation; old expanded table/rug placements recover into the bag or persistent drops.
+Bar counters and registers are furnishing, not movable working service stations yet.
+All 162 tests, typecheck and build pass; Jeff's visual approval remains open. Current evidence
+and limits are in `docs/playtest-reports/2026-09-12-interior-foundation.md`.
+See `docs/plans/PLAN-interior-foundation.md` for the bounded scope. Earlier porch evidence is in
+`docs/plans/PLAN-shop-home.md` and `docs/playtest-reports/2026-09-12-shop-home.md`.
+The V1 sections below remain the historical base contract, not a list of all current scenes.
+
+**Player-built shop, 2026-09-12:** the room now starts with architecture only. Furniture follows
+the mouse throughout visible clear floor; full footprints, player overlap, HUD and doorway routes
+guard placement. Bag-craft a workbench, then craft/place a register, bar and stove. Those placed
+stations now own restoration, opening, cooking and serving. Active service locks the layout.
+Save v6 migrates older expanded workbenches and newly blocked entrances explicitly, preserving
+items and progress. Crafting uses the cozy inventory style; shared text uses actual display
+resolution. Original stone/oak architecture and lower furniture replace the rejected first pass.
+The vertical table retains its prior art after its new candidate fails visual review. Visual
+approval remains with Jeff. See `plans/PLAN-player-built-shop.md` and its playtest report.
+
+**Follow-up direction:** Jeff replaces alternate table views with literal90° image rotation for
+the table and workbench only. Both use their same native image at0°/90° and swap grid footprints.
+Interior cameras now reserve space above the toolbar so the south exit stays visible on approach.
+World zoom, outdoor views and the other furniture remain unchanged. See `plans/PLAN-literal-rotation-exit.md`.
+
 Stardew Valley (near 1:1 base mechanics) crossed with Moonlighter (shop management + dungeons).
 You inherit a rundown plot/building from your grandpa, move to town, clear the overgrown land,
 and farm. As you earn money you **buy/build different shop types** (tavern/inn, potions,
@@ -64,7 +107,14 @@ Each maps to a regression/feature spec.
 - **Interact** (chests, doors, NPCs, sign): E.
 - **Hotbar select:** number keys 1–0.
 - **Toggle inventory:** I (or Tab).
-- **Sleep:** interact with the bed in the Home interior.
+- **Pause / appearance:** Escape opens Pause. Appearance edits a draft; Apply changes the keeper,
+  while Cancel or Escape discards the draft. Save Game or sleep persists the applied appearance.
+- **Inventory keyboard:** arrows inspect pockets, Enter picks up/drops a slot, Space uses its action,
+  and C crafts a workbench. In chest/shipping menus, Tab switches panels and Enter moves a stack.
+- **Furniture:** inspect a crafted furnishing in the bag and choose Place in World. R rotates;
+  Space or an adjacent mouse click places; E cancels. Axe/pickaxe returns it as a collectible drop.
+- **Task details:** J expands or closes the compact objective badge.
+- **Sleep:** interact with the bed in the private rear bedroom.
 Controls route through an `InputBus` so Playwright can emit the same actions via `window.__TEST__.input(...)`.
 
 ---

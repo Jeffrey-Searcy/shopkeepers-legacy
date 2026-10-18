@@ -1,25 +1,37 @@
 # AGENTS.md — ShopkeepersLegacy build rules
 
+## Current continuity entrypoint
+
+Before substantial work, read `docs/handbook/START_HERE.md`, then only the linked guide and source
+needed for the task. It records the live September 2026 state, explicit user decisions, rejected
+art experiments, and safe test commands. Old milestone plans are history, not current completion evidence.
+The reusable skill is `~/.codex/skills/shopkeepers-legacy/SKILL.md`; read it directly if
+it is not in the skill picker. Character-image work also uses the existing `game-character` skill.
+Do not promise a smaller model identical results. Preserve quality through measured art, small
+verified changes, and user playtests. Current user requests override historical design choices.
+
 > This file is auto-loaded every session. It is the contract for HOW you build.
-> The WHAT lives in `docs/GAME_SPEC.md` + `docs/ROADMAP.md` (current status & next prompts).
+> Current WHAT: `docs/handbook/START_HERE.md`; `docs/GAME_SPEC.md` and `docs/ROADMAP.md` retain historical milestones.
 >
 > **Use the project skills and agents** — they encode everything already learned the hard way:
 > - Skills: `game-art` (PixelLab + tile-format rules), `game-systems` (architecture + Phaser
 >   gotchas that were real bugs), `playtest` (seam API + verification).
-> - Agents (`.Codex/agents/`): **art-director**, **map-designer**, **gameplay-engineer**,
+> - Agent guides (`.claude/agents/`): **art-director**, **map-designer**, **gameplay-engineer**,
 >   **playtester** — delegate matching work to them, in parallel where possible.
 > Read `docs/ART_BIBLE.md` + the `game-art` skill before generating any art.
 
 ## What we're building (one line)
 A browser-based 2D top-down pixel-art game: Stardew Valley core mechanics (near 1:1)
 crossed with Moonlighter (shop management + dungeons). Full vision in `docs/GAME_SPEC.md`.
-**V1 = Stardew core only.** Shops/dungeons are later prompts — do NOT build them in V1.
+The initial V1 covered Stardew core only. The project has since added the player inn/tavern and
+twelve public town rooms. Keep those working; build future services only when requested.
 
 ## The stack (non-negotiable for V1)
 - **Phaser 3** (3.8x line) — game framework.
 - **TypeScript**, `strict: true` — every scene key, texture key, and physics body is typed.
 - **Vite** — dev server + build. Start from the `template-vite-ts` layout.
-- **Tiled** (`.tmj` / `.tsj`) — all maps are authored as data, imported by Phaser. Maps are NOT hardcoded in TS.
+- **Maps are authored data** — current `MapData` composition uses TypeScript/JSON plus historical
+  Tiled (`.tmj` / `.tsj`) sources. Preserve existing map/scene owners; do not rewrite them during cosmetic work.
 - **Playwright** — automated gameplay verification (see Self-Verification below).
 
 Rationale you must respect: the framework's built-ins (`camera.startFollow`, Tiled tilemap

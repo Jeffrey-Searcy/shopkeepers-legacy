@@ -4,7 +4,95 @@
 > build (spec → build → Playwright green → playtest), executed with the custom agents in
 > `.claude/agents/` (art-director, map-designer, gameplay-engineer, playtester).
 
-## Done
+## Current status — September 15, 2026
+
+Read [the maintained starting guide](handbook/START_HERE.md) before using the milestones below.
+Save v14, living hospitality, Farm/Town editors and approved layouts,
+and twelve town buildings/residents are installed. All twelve adults now have authored friendship,
+gift, romance, NPC-bond, journal, and optional guarded local-chat foundations.
+All twelve residents also follow weekday/weekend routes and record changing daily Town conversations.
+Their 66 possible bonds support emergent romance, open agreements, witnessed cheating, and breakups.
+Jeff approves the town exteriors. All twelve interiors now have connected homes, visible two-heart bedrooms,
+and building-fit service points. The guild board introduces contracts for the future northern portal dungeons.
+Final interior visual approval, hiring, dates, marriage, and relationship story events remain future work.
+The older notes below include rejected experiments and superseded "future work" claims.
+In particular, the whole-image table rotation experiment is rejected; tabletop rotation keeps feet upright.
+
+## Historical pass — Player-built shop (2026-09-12, visual approval open)
+
+Mouse-led room placement, an empty starting shop, and functional crafted workbench/register/bar/
+stove now replace fixed service stations. Save v6 preserves items and progress through explicit
+older-layout recovery. Crafting uses cozy recipe pockets, text renders at display resolution,
+and the title centers conventional controls. Native oak/stone surfaces, deep rear doorway and
+substantial stairs remain architectural. Lower horizontal-table and vise-workbench art address
+Jeff's latest feedback; the vertical table keeps its prior image after rejecting its new candidate.
+
+All181 tests pass with four workers, including strict door timing and real craft-to-service flow.
+Final visual acceptance remains open. See `playtest-reports/2026-09-12-player-built-shop.md`.
+Ale brewing, product displays, seating, staff, room bookings and NPC lodging remain future work.
+
+Latest follow-up: Jeff chooses literal90° image turns for table/workbench, not a separate
+perspective sprite. Interior views reserve toolbar clearance; camera zoom and outdoor views
+stay unchanged. This supersedes the vertical-table artwork task above. See
+`plans/PLAN-literal-rotation-exit.md` and `planning_artifacts/literal-rotation-exit-2026-09-12/review.md`.
+
+## Previous pass — Interior foundation and clear menus (2026-09-12, playtest candidate)
+
+The shop and bedroom now use native wood floors, plaster/timber walls and clearer door recesses.
+Most dining clutter is gone. A small fixed service area keeps the current food loop working;
+the rest of the room is for player-built furniture. Tables, chairs, bar counters, registers and
+rugs share grid footprints and native art crops. R rotates; Space or an adjacent click places;
+an axe/pickaxe picks up from any occupied tile. New bar/register items are furnishing only.
+Movable working stations, ale brewing, product displays and lodging remain future work.
+
+Save v5 preserves furniture rotation and rejects overlapping or out-of-bounds placements.
+Old placed tables/rugs return to the bag, or safe persistent drops when it is full, because their
+footprints expand. Other items keep their positions. Title navigation is now Continue, New Game,
+Load Game and Settings, with working sound/motion choices. The task badge expands with J;
+walk-in door timing is shorter. Verification and remaining limits live in
+`playtest-reports/2026-09-12-interior-foundation.md`. Jeff's visual approval stays open.
+All 162 tests pass with four workers; typecheck and build pass. Real WebGL screenshots and
+independent review support this local playtest. Formal governed-session closure remains blocked.
+
+## Previous pass — Shop porch and private home (2026-09-12, visual feedback open)
+
+The inherited building now has a shop-neutral exterior, raised porch, and animated walk-in
+door. The keeper enters by walking up the steps; E is not required. A rear doorway leads
+to a private bedroom with the existing sleep and save flow. Guest-only stairs stay blocked
+to the keeper. Room bookings, NPC lodging, shop selection, and playable upstairs remain later work.
+Current tavern service remains in place. Save v4 narrowly moves older Farm saves out of the
+new porch solids; valid old positions and the existing legacy Home redirect stay intact.
+All 140 tests pass with four workers; typecheck and build pass. Jeff's playtest still rejects
+the visual quality: tables/chairs/walls need work, the HUD covers too much game, and the door
+feels delayed. He wants Travellers Rest interior research and a conventional New/Load/Settings
+title informed by Necesse. That new visual work remains open. See `plans/PLAN-shop-home.md` and
+`playtest-reports/2026-09-12-shop-home.md`; passing tests do not mean visual acceptance.
+
+## Previous pass — Cozy interface and wardrobe (2026-09-12)
+
+The browser now fills its window with integer world-camera zoom. Title, pause, inventory,
+chest and shipping menus share cream surfaces, soft green accents and rounded item pockets.
+Pause > Appearance keeps the current body and edits hair, hats, shirts, pants and five color
+categories. Four-direction and tool previews use a detached draft; Apply changes the keeper,
+Cancel leaves the keeper unchanged. Save Game or sleep persists the applied outfit in save v3.
+Explicit v1/v2 migration preserves the original keeper. The wardrobe is cosmetic, not equipment.
+All 132 tests pass. See `plans/PLAN-cozy-interface.md` and
+`playtest-reports/2026-09-12-cozy-interface.md` for controls, verified evidence, and remaining limits.
+
+## Previous chapter — Tavern opening (2026-09-10, local playtest candidate)
+
+Jeff confirms the inherited tavern is the heart of the game. Mines remain Stardew-style;
+the separate dungeon will play like Moonlighter. This chapter adds the tavern room,
+restoration, cooking, first customers and first business upgrade. See
+`plans/PLAN-tavern-opening.md` for the acceptance contract. Older completion notes below are
+historical; several interiors were removed during later quality passes.
+
+Local build includes restoration, batch cooking, sequential guests, daily service limits,
+the first upgrade, and save migration. All 111 tests pass with four browser workers; build and
+type checking pass. See `playtest-reports/2026-09-10-tavern-opening.md` for controls, evidence,
+known visual limits, and the still-open formal review. This is not a finished-game claim.
+
+## Earlier milestones
 - **V1 Stardew core (M0–M8):** big maps, camera, transitions, tools/stamina/hotbar, farming loop,
   inventory/chests, day/night+sleep, tile-valid placement, real PixelLab art. 
 - **Polish pass:** Wang autotiled terrain (grass/dirt/water), designed farm+town, NPCs+dialogue
