@@ -1,0 +1,51 @@
+{
+  "tool": "Built-in image_gen",
+  "inputs": [
+    "public/assets/objects/shop-facade.png",
+    "public/assets/objects/shop-facade-inn.png"
+  ],
+  "inn": "Use case: precise-object-edit. Image1 is the edit target: the accepted 160x160 pixel-art storefront sprite. Create ONE fantasy inn facade variation for this exact farming game. Preserve the exact original composition, silhouette footprint, centered black doorway, left/right window positions, porch baseline, roof height, transparent margins and pixel grid; only revise roof/wall finish and decorative details. Warm wine-red shingles, cozy honey timber and cream plaster, subtle carved gable trim, a small golden crescent-and-key emblem replacing the circular sign. Suggest hospitality with warm amber windows. Keep the porch, two narrow outer timber posts and central entrance identical in size and position. Front elevation, absolutely flat horizontal baseline, no isometric side face, no tower, no people or text. Small clean 16-bit pixel art, top-left lighting, restrained cozy colors. Entire isolated sprite on genuinely transparent background, no ground plane, no checkerboard. Output square, the same registered framing as reference; do not zoom, recenter, add margins or crop. This must downsample cleanly to the native160x160 game canvas.",
+  "variants": [
+    [
+      "blacksmith",
+      "BLACKSMITH. Charcoal slate shingles with warm copper edges, weathered gray stone infill between the same timber beams, iron-banded window frames, warm orange furnace light behind the left window, a small anvil emblem in the central gable. No new large chimney or forge outside; retain the shop silhouette."
+    ],
+    [
+      "magic",
+      "MAGIC SHOP. Deep indigo shingles edged in muted gold, lavender-cream plaster, luminous turquoise diamond panes within the existing two windows, a small crescent and crystal emblem in the central gable. Restrained arcane carvings, no floating objects or tower."
+    ],
+    [
+      "farm",
+      "FARM SHOP. Moss-green shingles, pale warm plaster with rustic oak beams, golden wheat emblem in the central gable, warm windows with a few small hanging herb bunches behind glass. No outdoor crates blocking the porch."
+    ],
+    [
+      "church",
+      "SMALL FANTASY CHURCH. Muted blue-gray shingles, pale limestone infill between the existing timber structure, jewel-colored stained glass in the exact rectangular window bounds, a small golden sun emblem in the gable. No tower or steeple added; same modest little porch building."
+    ],
+    [
+      "library",
+      "LIBRARY. Teal slate shingles, warm ivory plaster and walnut wood trim, book spines visible behind the two existing windows, a gold open-book emblem inside the gable. Scholarly quiet cozy charm, no text or extra wing."
+    ],
+    [
+      "tailor",
+      "TAILOR. Dusty rose shingles, warm cream walls and deep plum timber accents, fine draped fabric and thread spools visible behind existing windows, a small gold scissors emblem in the gable. Same structure, no large awning."
+    ],
+    [
+      "alchemist",
+      "ALCHEMIST. Muted emerald shingles with aged copper trim, warm pale stone infill and dark timber, green and amber potion bottles behind the existing window glass, a small flask emblem in the central gable. Subtle botanical detail, no smoke clouds, no extra tower."
+    ]
+  ],
+  "sharedVariantContract": "Preserve original porch, overall width and height, roofline geometry, centered single doorway, window positions, two outer wooden posts and flat baseline. All details stay within same footprint. Crisp native16-bit farming-sim pixel art, cozy restrained colors, top-left light. Straight-on front elevation, zero isometric side face. No text, people, ground plane or shadows outside silhouette. Genuinely transparent RGBA PNG around the building. Door opening inside the building remains dark opaque.",
+  "cutout": "Remove ALL background outside the outline to real alpha transparency, including white, black and checkerboard pixels. Keep the centered black door opening opaque. Preserve building artwork, colors and proportions; no redesign.",
+  "finalCutouts": {
+    "inn": "exec-ff6d28dd-38a2-4f07-80cb-1c258386e2f7.png",
+    "blacksmith": "exec-fee8fa2e-f0c1-43fd-a270-18ffb4bbc4d6.png",
+    "magic": "exec-4ab7e619-4b4a-4d5a-8819-84e3ee949735.png",
+    "farm": "exec-9425f747-5a34-482b-9891-0c0b03929b7b.png",
+    "church": "exec-ec4b0282-b2db-4460-a153-e0835ed571e0.png",
+    "library": "exec-8ac91b07-273a-47a3-a22a-a0764d71938a.png",
+    "alchemist": "exec-9fa57aef-5759-494d-a283-dd7d8408b87b.png",
+    "tailor": "exec-76ef79fc-84a5-43ef-88f4-3fc65b325e5d.png"
+  },
+  "packing": "node scripts/pack-shop-facade.mjs INPUT public/assets/objects/shop-facade-ID.png. Register visible alpha>=128 bounds against original native content; nearest-neighbor resampling; no original-art overwrite."
+}

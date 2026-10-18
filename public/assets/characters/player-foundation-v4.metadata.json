@@ -1,0 +1,26 @@
+{
+  "source": "PixelLab",
+  "characterId": "06b9b9cd-c1b8-490d-ab62-1039cf84f191",
+  "characterName": "Shopkeepers Legacy Player Foundation v3",
+  "canvas": {
+    "width": 48,
+    "height": 48
+  },
+  "characterPrompt": "Friendly young adult village shopkeeper and farmer, brown side-parted hair, warm red work shirt, blue trousers with clearly separated legs, brown work boots, readable compact full-body silhouette, classic warm cozy farming RPG pixel art",
+  "navigationAnimation": "navigation-walk-v3",
+  "actionAnimations": {
+    "chop": "foundation-chop-v3",
+    "dig": "foundation-dig-v3",
+    "mine": "foundation-mine-v3",
+    "sweep": "foundation-sweep-v3",
+    "water": "foundation-water-v3",
+    "sword": "foundation-sword-v3"
+  },
+  "sheetLayout": {
+    "frameWidth": 96,
+    "frameHeight": 64,
+    "columns": 4,
+    "rowOrder": ["south", "north", "west", "east"],
+    "visibleFeetRow": 39
+  }
+}

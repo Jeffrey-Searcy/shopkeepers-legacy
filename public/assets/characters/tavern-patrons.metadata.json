@@ -1,0 +1,69 @@
+{
+  "source": "PixelLab",
+  "purpose": "Distinct villagers for the inherited tavern opening. Art uses the player foundation sheet layout and fixed feet line.",
+  "generationAudit": {
+    "date": "2026-09-10",
+    "generationsBefore": 4971,
+    "generationsAfter": 4966,
+    "generationsSpent": 5,
+    "breakdown": "Rosa and Finn reused at zero cost. Mara standard character: 1 generation. Mara template walk: 4 directions at 1 generation each.",
+    "paidCreditsSpentUSD": 0
+  },
+  "sheetLayout": {
+    "frameWidth": 96,
+    "frameHeight": 64,
+    "columns": 4,
+    "rowOrder": ["south", "north", "west", "east"],
+    "visibleFeetRow": 39,
+    "horizontalCanvasPivot": 48,
+    "packing": "scripts/pack-pixellab-character-animation.mjs --normalize-frame-bottom"
+  },
+  "characters": {
+    "rosa": {
+      "file": "tavern-rosa.png",
+      "characterId": "3398d529-2ada-4601-91cf-1da739595cef",
+      "characterName": "Rosa",
+      "sourceDownload": "https://api.pixellab.ai/mcp/characters/3398d529-2ada-4601-91cf-1da739595cef/download",
+      "reusedExistingCharacter": true,
+      "additionalGenerations": 0,
+      "prompt": "a kind middle-aged shopkeeper woman with brown hair in a bun, warm smile, white apron over a teal dress, cozy 16-bit farming-sim style, subtle dark outline, soft shading, Stardew-Valley-inspired",
+      "animation": "walking-4-frames",
+      "animationGroupId": "3e6c94b1-1550-4582-97d4-737c15e4a35b",
+      "downloadAnimationFolder": "animating",
+      "opaqueHeightRange": [34, 39],
+      "opaqueWidthRange": [12, 20]
+    },
+    "finn": {
+      "file": "tavern-finn.png",
+      "characterId": "63eb55c9-cce0-493e-b12f-c460437da103",
+      "characterName": "Finn",
+      "sourceDownload": "https://api.pixellab.ai/mcp/characters/63eb55c9-cce0-493e-b12f-c460437da103/download",
+      "reusedExistingCharacter": true,
+      "additionalGenerations": 0,
+      "prompt": "an old fisherman villager with a white beard, straw hat, olive green vest and brown trousers, cozy 16-bit farming-sim style, subtle dark outline, soft shading, Stardew-Valley-inspired",
+      "animation": "walking-4-frames",
+      "animationGroupId": "8cc12e3f-eefa-455d-ad7b-26b44dc4e48a",
+      "downloadAnimationFolder": "animating",
+      "opaqueHeightRange": [35, 38],
+      "opaqueWidthRange": [14, 18]
+    },
+    "mara": {
+      "file": "tavern-mara.png",
+      "characterId": "4c9f42cd-eff4-4623-9837-eed47a8a416f",
+      "characterName": "Shopkeepers Legacy Mara Carpenter",
+      "sourceDownload": "https://api.pixellab.ai/mcp/characters/4c9f42cd-eff4-4623-9837-eed47a8a416f/download",
+      "reusedExistingCharacter": false,
+      "additionalGenerations": 5,
+      "generationMode": "standard",
+      "requestedSize": 32,
+      "sourceCanvas": { "width": 48, "height": 48 },
+      "prompt": "16-bit top-down 3/4 farming-sim pixel art, cozy warm palette, subtle dark outline, soft shading with top-left light, grounded (not floating), clean and readable at small size, Stardew-Valley-inspired. Subject: Mara, friendly adult village carpenter woman, short dark brown bob hair, ochre yellow work shirt, dark brown work trousers with clearly separated legs, sturdy brown boots, leather carpenter belt without a held tool, readable compact full-body silhouette, classic warm cozy farming RPG pixel art.",
+      "animation": "walking-4-frames",
+      "animationName": "tavern-walk",
+      "animationGroupId": "1d6f8a59-31dd-412f-a0ac-a2ff6cfcd88b",
+      "downloadAnimationFolder": "tavern-walk",
+      "opaqueHeightRange": [34, 38],
+      "opaqueWidthRange": [11, 18]
+    }
+  }
+}

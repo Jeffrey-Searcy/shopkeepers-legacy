@@ -1,0 +1,1115 @@
+{
+  "_comment": "Single source of truth mapping logical texture keys -> art source. Each entry is either a runtime-generated placeholder rect or a real image/spritesheet/atlas file under public/assets/. Swapping a placeholder for a PixelLab PNG = change type+file here and drop the PNG; NO game-logic changes (see CLAUDE.md Hard Rule 4). Sizes here are art sizes; collision comes from GameConfig, not from these.",
+  "_comment_player": "Player navigation and visible actions use one feet-normalized, four-direction PixelLab character. Legacy sheets remain available for rollback.",
+  "textures": {
+    "town-interior-props": { "type": "image", "file": "objects/town-interior-props.png" },
+    "market-counter": { "type": "image", "file": "interior/market/counter.png" },
+    "market-produce": { "type": "image", "file": "interior/market/produce.png" },
+    "market-cabinet": { "type": "image", "file": "interior/market/cabinet.png" },
+    "market-stove": { "type": "image", "file": "interior/market/stove.png" },
+    "market-table": { "type": "image", "file": "interior/market/table.png" },
+    "market-bed": { "type": "image", "file": "interior/market/bed.png" },
+    "market-dresser": { "type": "image", "file": "interior/market/dresser.png" },
+    "market-doorway": { "type": "image", "file": "interior/market/doorway.png" },
+    "town-market": { "type": "image", "file": "objects/town-market.png" },
+    "town-forge": { "type": "image", "file": "objects/town-forge.png" },
+    "town-museum": { "type": "image", "file": "objects/town-museum.png" },
+    "town-magic": { "type": "image", "file": "objects/town-magic.png" },
+    "town-clinic": { "type": "image", "file": "objects/town-clinic.png" },
+    "town-guild": { "type": "image", "file": "objects/town-guild.png" },
+    "town-ranch": { "type": "image", "file": "objects/town-ranch.png" },
+    "town-bar": { "type": "image", "file": "objects/town-bar.png" },
+    "town-carpenter": { "type": "image", "file": "objects/town-carpenter.png" },
+    "town-fishing": { "type": "image", "file": "objects/town-fishing.png" },
+    "town-alchemy": { "type": "image", "file": "objects/town-alchemy.png" },
+    "town-tailor": { "type": "image", "file": "objects/town-tailor.png" },
+    "shop-facade-inn": { "type": "image", "file": "objects/shop-facade-inn.png" },
+    "shop-facade-blacksmith": { "type": "image", "file": "objects/shop-facade-blacksmith.png" },
+    "shop-facade-magic": { "type": "image", "file": "objects/shop-facade-magic.png" },
+    "shop-facade-farm": { "type": "image", "file": "objects/shop-facade-farm.png" },
+    "shop-facade-church": { "type": "image", "file": "objects/shop-facade-church.png" },
+    "shop-facade-library": { "type": "image", "file": "objects/shop-facade-library.png" },
+    "shop-facade-tailor": { "type": "image", "file": "objects/shop-facade-tailor.png" },
+    "shop-facade-alchemist": { "type": "image", "file": "objects/shop-facade-alchemist.png" },
+    "tree-pine-full": {
+      "type": "image",
+      "file": "living-farm/tree-pine-full.png"
+    },
+    "tree-pine-small": {
+      "type": "image",
+      "file": "living-farm/tree-pine-small.png"
+    },
+    "tree-pine-sapling": {
+      "type": "image",
+      "file": "living-farm/tree-pine-sapling.png"
+    },
+    "icon-stew": {
+      "type": "image",
+      "file": "living-farm/icon-stew.png"
+    },
+    "icon-broom": {
+      "type": "image",
+      "file": "living-farm/icon-broom.png"
+    },
+    "icon-ale": {
+      "type": "image",
+      "file": "living-farm/icon-ale.png"
+    },
+    "icon-oak-seed": {
+      "type": "image",
+      "file": "living-farm/icon-oak-seed.png"
+    },
+    "icon-pine-seed": {
+      "type": "image",
+      "file": "living-farm/icon-pine-seed.png"
+    },
+    "interior-floor": {
+      "type": "image",
+      "file": "shop-rebuild/floor-oak-quiet.png"
+    },
+    "interior-wall": {
+      "type": "image",
+      "file": "shop-rebuild/wall-north.png"
+    },
+    "furniture-stove": {
+      "type": "image",
+      "file": "shop-rebuild/stove.png"
+    },
+    "interior-stairs": {
+      "type": "image",
+      "file": "shop-rebuild/stairs.png"
+    },
+    "interior-doorway": {
+      "type": "image",
+      "file": "shop-rebuild/doorway.png"
+    },
+    "furniture-chair-south": {
+      "type": "image",
+      "file": "interior/chair-south.png"
+    },
+    "furniture-chair-north": {
+      "type": "image",
+      "file": "interior/chair-north.png"
+    },
+    "furniture-chair-east": {
+      "type": "image",
+      "file": "interior/chair-east.png"
+    },
+    "furniture-chair-west": {
+      "type": "image",
+      "file": "interior/chair-west.png"
+    },
+    "furniture-rug": {
+      "type": "image",
+      "file": "interior/rug.png"
+    },
+    "furniture-table-horizontal": {
+      "type": "image",
+      "file": "furniture-perspective/table-horizontal.png"
+    },
+    "furniture-table-vertical": {
+      "type": "image",
+      "file": "furniture-perspective/table-vertical.png"
+    },
+    "furniture-bar-horizontal": {
+      "type": "image",
+      "file": "interior/bar-horizontal.png"
+    },
+    "furniture-bar-vertical": {
+      "type": "image",
+      "file": "interior/bar-vertical.png"
+    },
+    "furniture-register": {
+      "type": "image",
+      "file": "interior/register.png"
+    },
+    "tavern-rosa": {
+      "type": "spritesheet",
+      "file": "characters/tavern-rosa.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "tavern-finn": {
+      "type": "spritesheet",
+      "file": "characters/tavern-finn.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "tavern-mara": {
+      "type": "spritesheet",
+      "file": "characters/tavern-mara.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-navigation": {
+      "type": "spritesheet",
+      "file": "characters/player-navigation-v5.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player": {
+      "type": "spritesheet",
+      "file": "characters/player-walk.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-cardinal": {
+      "type": "spritesheet",
+      "file": "characters/player-cardinal.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-idle": {
+      "type": "spritesheet",
+      "file": "characters/player-idle.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-chop": {
+      "type": "spritesheet",
+      "file": "characters/player-chop-v3.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-dig": {
+      "type": "spritesheet",
+      "file": "characters/player-dig-v3.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-mine": {
+      "type": "spritesheet",
+      "file": "characters/player-mine-v3.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-sweep": {
+      "type": "spritesheet",
+      "file": "characters/player-sweep-v3.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-broom": {
+      "type": "spritesheet",
+      "file": "characters/player-broom-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-water": {
+      "type": "spritesheet",
+      "file": "characters/player-water-v3.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-cast": {
+      "type": "spritesheet",
+      "file": "characters/player-cast.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "tree": {
+      "type": "image",
+      "file": "objects/tree.png"
+    },
+    "rock": {
+      "type": "image",
+      "file": "objects/rock.png"
+    },
+    "weed": {
+      "type": "image",
+      "file": "objects/weed.png"
+    },
+    "chest": {
+      "type": "image",
+      "file": "objects/chest-front.png"
+    },
+    "bed": {
+      "type": "image",
+      "file": "objects/bed-front.png"
+    },
+    "house": {
+      "type": "image",
+      "file": "objects/house-pack.png"
+    },
+    "tavern-exterior": {
+      "type": "image",
+      "file": "objects/inherited-tavern-wide.png"
+    },
+    "shop-facade": {
+      "type": "image",
+      "file": "objects/shop-facade.png"
+    },
+    "crop": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-4.png"
+    },
+    "crop-1": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-1.png"
+    },
+    "crop-2": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-2.png"
+    },
+    "crop-3": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-3.png"
+    },
+    "crop-4": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-4.png"
+    },
+    "terrain-tileset": {
+      "type": "image",
+      "file": "tilesets/terrain-strip.png"
+    },
+    "wang-dirt": {
+      "type": "image",
+      "file": "tilesets/terrain.png"
+    },
+    "wang-water": {
+      "type": "image",
+      "file": "tilesets/water.png"
+    },
+    "wang-sand": {
+      "type": "image",
+      "file": "tilesets/sand.png"
+    },
+    "wang-stone": {
+      "type": "image",
+      "file": "tilesets/stone.png"
+    },
+    "wang-water-sand": {
+      "type": "image",
+      "file": "tilesets/water-sand.png"
+    },
+    "wang-cave": {
+      "type": "image",
+      "file": "tilesets/cave.png"
+    },
+    "cave-entrance": {
+      "type": "image",
+      "file": "objects/cave-entrance.png"
+    },
+    "driftwood": {
+      "type": "image",
+      "file": "objects/driftwood.png"
+    },
+    "seashell": {
+      "type": "image",
+      "file": "objects/seashell.png"
+    },
+    "mine-ladder": {
+      "type": "image",
+      "file": "objects/mine-ladder.png"
+    },
+    "bush": {
+      "type": "image",
+      "file": "objects/bush.png"
+    },
+    "flowers": {
+      "type": "image",
+      "file": "objects/flowers.png"
+    },
+    "title-screen": {
+      "type": "image",
+      "file": "ui/title/title.png"
+    },
+    "title-button": {
+      "type": "image",
+      "file": "ui/title/title-button.png"
+    },
+    "title-button-selected": {
+      "type": "image",
+      "file": "ui/title/title-button-selected.png"
+    },
+    "papers-letter": {
+      "type": "image",
+      "file": "ui/title/papers-1-letter.png"
+    },
+    "papers-departure": {
+      "type": "image",
+      "file": "ui/title/papers-2-departure.png"
+    },
+    "papers-choice": {
+      "type": "image",
+      "file": "ui/title/papers-3-choice.png"
+    },
+    "civic-interiors-magic": {
+      "type": "image",
+      "file": "civic-interiors/magic.png"
+    },
+    "civic-interiors-forge": {
+      "type": "image",
+      "file": "civic-interiors/forge.png"
+    },
+    "civic-interiors-museum": {
+      "type": "image",
+      "file": "civic-interiors/museum.png"
+    },
+    "civic-interiors-guild": {
+      "type": "image",
+      "file": "civic-interiors/guild.png"
+    },
+    "civic-interiors-ranch": {
+      "type": "image",
+      "file": "civic-interiors/ranch.png"
+    },
+    "civic-interiors-bar": {
+      "type": "image",
+      "file": "civic-interiors/bar.png"
+    },
+    "civic-interiors-carpenter": {
+      "type": "image",
+      "file": "civic-interiors/carpenter.png"
+    },
+    "civic-interiors-fishing": {
+      "type": "image",
+      "file": "civic-interiors/fishing.png"
+    },
+    "civic-interiors-alchemy": {
+      "type": "image",
+      "file": "civic-interiors/alchemy.png"
+    },
+    "civic-interiors-tailor": {
+      "type": "image",
+      "file": "civic-interiors/tailor.png"
+    },
+    "civic-interiors-market": {
+      "type": "image",
+      "file": "civic-interiors/market.png"
+    },
+    "civic-interiors-jail": {
+      "type": "image",
+      "file": "civic-interiors/jail.png"
+    },
+    "civic-interiors-jail-front": {
+      "type": "image",
+      "file": "civic-interiors/jail-front.png"
+    },
+    "dungeon-rooms-hub": {
+      "type": "image",
+      "file": "dungeon-rooms/hub.png"
+    },
+    "dungeon-rooms-hub-front": {
+      "type": "image",
+      "file": "dungeon-rooms/hub-front.png"
+    },
+    "dungeon-rooms-hub-fall": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/hub-fall.png",
+      "frameWidth": 68,
+      "frameHeight": 124
+    },
+    "dungeon-rooms-hub-pool": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/hub-pool.png",
+      "frameWidth": 544,
+      "frameHeight": 320
+    },
+    "dungeon-rooms-cave": {
+      "type": "image",
+      "file": "dungeon-rooms/cave.png"
+    },
+    "dungeon-rooms-cave-fall-right": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/cave-fall-right.png",
+      "frameWidth": 54,
+      "frameHeight": 150
+    },
+    "dungeon-rooms-cave-pool-right": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/cave-pool-right.png",
+      "frameWidth": 172,
+      "frameHeight": 116
+    },
+    "dungeon-rooms-cave-fall-mid": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/cave-fall-mid.png",
+      "frameWidth": 60,
+      "frameHeight": 274
+    },
+    "dungeon-rooms-cave-fall-left": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/cave-fall-left.png",
+      "frameWidth": 48,
+      "frameHeight": 84
+    },
+    "dungeon-rooms-cave-seal": {
+      "type": "image",
+      "file": "dungeon-rooms/cave-seal.png"
+    },
+    "dungeon-rooms-library": {
+      "type": "image",
+      "file": "dungeon-rooms/library.png"
+    },
+    "dungeon-rooms-library-seal": {
+      "type": "image",
+      "file": "dungeon-rooms/library-seal.png"
+    },
+    "dungeon-rooms-sewer": {
+      "type": "image",
+      "file": "dungeon-rooms/sewer.png"
+    },
+    "dungeon-rooms-sewer-fall-left": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/sewer-fall-left.png",
+      "frameWidth": 62,
+      "frameHeight": 110
+    },
+    "dungeon-rooms-sewer-fall-right": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/sewer-fall-right.png",
+      "frameWidth": 60,
+      "frameHeight": 122
+    },
+    "dungeon-rooms-sewer-pool-top": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/sewer-pool-top.png",
+      "frameWidth": 640,
+      "frameHeight": 160
+    },
+    "dungeon-rooms-sewer-pool-low": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/sewer-pool-low.png",
+      "frameWidth": 636,
+      "frameHeight": 212
+    },
+    "dungeon-rooms-sewer-seal": {
+      "type": "image",
+      "file": "dungeon-rooms/sewer-seal.png"
+    },
+    "dungeon-rooms-boss": {
+      "type": "image",
+      "file": "dungeon-rooms/boss.png"
+    },
+    "dungeon-rooms-boss-lava-left": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/boss-lava-left.png",
+      "frameWidth": 334,
+      "frameHeight": 666
+    },
+    "dungeon-rooms-boss-lava-right": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/boss-lava-right.png",
+      "frameWidth": 332,
+      "frameHeight": 536
+    },
+    "dungeon-rooms-boss-fall-bl": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/boss-fall-bl.png",
+      "frameWidth": 38,
+      "frameHeight": 138
+    },
+    "dungeon-rooms-boss-fall-br": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/boss-fall-br.png",
+      "frameWidth": 38,
+      "frameHeight": 138
+    },
+    "dungeon-rooms-boss-fall-back": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/boss-fall-back.png",
+      "frameWidth": 34,
+      "frameHeight": 216
+    },
+    "dungeon-rooms-boss-exit": {
+      "type": "spritesheet",
+      "file": "dungeon-rooms/boss-exit.png",
+      "frameWidth": 96,
+      "frameHeight": 68
+    },
+    "gate-plaza": {
+      "type": "image",
+      "file": "gate-plaza/plaza.png"
+    },
+    "gate-plaza-front": {
+      "type": "image",
+      "file": "gate-plaza/plaza-front.png"
+    },
+    "gate-plaza-portal": {
+      "type": "spritesheet",
+      "file": "gate-plaza/plaza-portal.png",
+      "frameWidth": 88,
+      "frameHeight": 124
+    },
+    "beach": {
+      "type": "image",
+      "file": "beach/beach.png"
+    },
+    "beach-front": {
+      "type": "image",
+      "file": "beach/beach-front.png"
+    },
+    "beach-nodes": {
+      "type": "image",
+      "file": "beach/beach-nodes.png"
+    },
+    "forest": {
+      "type": "image",
+      "file": "forest/forest.png"
+    },
+    "forest-front": {
+      "type": "image",
+      "file": "forest/forest-front.png"
+    },
+    "forest-nodes": {
+      "type": "image",
+      "file": "forest/forest-nodes.png"
+    },
+    "town": {
+      "type": "image",
+      "file": "town/town.png"
+    },
+    "town-front": {
+      "type": "image",
+      "file": "town/town-front.png"
+    },
+    "town-nodes": {
+      "type": "image",
+      "file": "town/town-nodes.png"
+    },
+    "town-water-fall-north": {
+      "type": "spritesheet",
+      "file": "town/town-water-fall-north.png",
+      "frameWidth": 160,
+      "frameHeight": 72
+    },
+    "town-water-river-north": {
+      "type": "spritesheet",
+      "file": "town/town-water-river-north.png",
+      "frameWidth": 212,
+      "frameHeight": 752
+    },
+    "town-water-river-middle": {
+      "type": "spritesheet",
+      "file": "town/town-water-river-middle.png",
+      "frameWidth": 260,
+      "frameHeight": 426
+    },
+    "town-water-river-bend-north": {
+      "type": "spritesheet",
+      "file": "town/town-water-river-bend-north.png",
+      "frameWidth": 268,
+      "frameHeight": 210
+    },
+    "town-water-river-bend-south": {
+      "type": "spritesheet",
+      "file": "town/town-water-river-bend-south.png",
+      "frameWidth": 438,
+      "frameHeight": 272
+    },
+    "town-water-river-east": {
+      "type": "spritesheet",
+      "file": "town/town-water-river-east.png",
+      "frameWidth": 570,
+      "frameHeight": 336
+    },
+    "town-water-river-west": {
+      "type": "spritesheet",
+      "file": "town/town-water-river-west.png",
+      "frameWidth": 866,
+      "frameHeight": 204
+    },
+    "town-water-fall-west": {
+      "type": "spritesheet",
+      "file": "town/town-water-fall-west.png",
+      "frameWidth": 72,
+      "frameHeight": 184
+    },
+    "town-water-pool-west": {
+      "type": "spritesheet",
+      "file": "town/town-water-pool-west.png",
+      "frameWidth": 156,
+      "frameHeight": 116
+    },
+    "town-water-fountain-spray": {
+      "type": "spritesheet",
+      "file": "town/town-water-fountain-spray.png",
+      "frameWidth": 106,
+      "frameHeight": 82
+    },
+    "town-water-fountain-basin": {
+      "type": "spritesheet",
+      "file": "town/town-water-fountain-basin.png",
+      "frameWidth": 140,
+      "frameHeight": 102
+    },
+    "civic-interiors-magic": {
+      "type": "image",
+      "file": "civic-interiors/magic.png"
+    },
+    "civic-interiors-forge": {
+      "type": "image",
+      "file": "civic-interiors/forge.png"
+    },
+    "civic-interiors-museum": {
+      "type": "image",
+      "file": "civic-interiors/museum.png"
+    },
+    "civic-interiors-guild": {
+      "type": "image",
+      "file": "civic-interiors/guild.png"
+    },
+    "civic-interiors-ranch": {
+      "type": "image",
+      "file": "civic-interiors/ranch.png"
+    },
+    "civic-interiors-bar": {
+      "type": "image",
+      "file": "civic-interiors/bar.png"
+    },
+    "civic-interiors-carpenter": {
+      "type": "image",
+      "file": "civic-interiors/carpenter.png"
+    },
+    "civic-interiors-fishing": {
+      "type": "image",
+      "file": "civic-interiors/fishing.png"
+    },
+    "civic-interiors-alchemy": {
+      "type": "image",
+      "file": "civic-interiors/alchemy.png"
+    },
+    "civic-interiors-tailor": {
+      "type": "image",
+      "file": "civic-interiors/tailor.png"
+    },
+    "civic-interiors-market": {
+      "type": "image",
+      "file": "civic-interiors/market.png"
+    },
+    "civic-interiors-jail": {
+      "type": "image",
+      "file": "civic-interiors/jail.png"
+    },
+    "civic-interiors-jail-front": {
+      "type": "image",
+      "file": "civic-interiors/jail-front.png"
+    },
+    "icon-hoe": {
+      "type": "image",
+      "file": "ui/sunny-hoe.png"
+    },
+    "icon-axe": {
+      "type": "image",
+      "file": "ui/pixellate-axe.png"
+    },
+    "icon-pickaxe": {
+      "type": "image",
+      "file": "ui/pixellate-pickaxe.png"
+    },
+    "icon-scythe": {
+      "type": "image",
+      "file": "ui/pixellate-scythe.png"
+    },
+    "icon-watering-can": {
+      "type": "image",
+      "file": "ui/pixellate-watering-can.png"
+    },
+    "icon-seeds": {
+      "type": "image",
+      "file": "ui/sunny-seeds.png"
+    },
+    "icon-wood": {
+      "type": "image",
+      "file": "ui/sunny-wood.png"
+    },
+    "icon-stone": {
+      "type": "image",
+      "file": "ui/sunny-stone.png"
+    },
+    "icon-fiber": {
+      "type": "image",
+      "file": "ui/icon-fiber.png"
+    },
+    "workbench": {
+      "type": "image",
+      "file": "furniture-perspective/workbench-horizontal.png"
+    },
+    "workbench-vertical": {
+      "type": "image",
+      "file": "furniture-perspective/workbench-vertical.png"
+    },
+    "shipping-bin": {
+      "type": "image",
+      "file": "objects/shipping-bin.png"
+    },
+    "bobber": {
+      "type": "image",
+      "file": "objects/bobber.png"
+    },
+    "icon-rod": {
+      "type": "image",
+      "file": "ui/pixellate-rod.png"
+    },
+    "icon-fish-sardine": {
+      "type": "image",
+      "file": "ui/icon-fish-sardine.png"
+    },
+    "icon-fish-bass": {
+      "type": "image",
+      "file": "ui/icon-fish-bass.png"
+    },
+    "icon-fish-carp": {
+      "type": "image",
+      "file": "ui/icon-fish-carp.png"
+    },
+    "tile-grass": {
+      "type": "placeholder",
+      "color": "#6ab04c",
+      "w": 16,
+      "h": 16
+    },
+    "tile-dirt": {
+      "type": "placeholder",
+      "color": "#a9744f",
+      "w": 16,
+      "h": 16
+    },
+    "tile-water": {
+      "type": "placeholder",
+      "color": "#4aa3c7",
+      "w": 16,
+      "h": 16
+    },
+    "tile-floor": {
+      "type": "placeholder",
+      "color": "#c8a06a",
+      "w": 16,
+      "h": 16
+    },
+    "tile-floor-wood": {
+      "type": "image",
+      "file": "tilesets/tile-floor-wood.png"
+    },
+    "tile-wall-wood": {
+      "type": "image",
+      "file": "tilesets/tile-wall-wood.png"
+    },
+    "wang-cliff": {
+      "type": "image",
+      "file": "tilesets/cliff.png"
+    },
+    "wang-soil": {
+      "type": "spritesheet",
+      "file": "living-farm/soil-connected.png",
+      "frameWidth": 16,
+      "frameHeight": 16
+    },
+    "tree-sapling": {
+      "type": "image",
+      "file": "objects/tree-sapling.png"
+    },
+    "tree-small": {
+      "type": "image",
+      "file": "objects/tree-small.png"
+    },
+    "tree-stump": {
+      "type": "image",
+      "file": "objects/tree-stump.png"
+    },
+    "crop-parsnip-1": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-1.png"
+    },
+    "crop-parsnip-2": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-2.png"
+    },
+    "crop-parsnip-3": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-3.png"
+    },
+    "crop-parsnip-4": {
+      "type": "image",
+      "file": "living-farm/crop-parsnip-4.png"
+    },
+    "crop-potato-1": {
+      "type": "image",
+      "file": "living-farm/crop-potato-1.png"
+    },
+    "crop-potato-2": {
+      "type": "image",
+      "file": "living-farm/crop-potato-2.png"
+    },
+    "crop-potato-3": {
+      "type": "image",
+      "file": "living-farm/crop-potato-3.png"
+    },
+    "crop-potato-4": {
+      "type": "image",
+      "file": "living-farm/crop-potato-4.png"
+    },
+    "crop-melon-1": {
+      "type": "image",
+      "file": "living-farm/crop-melon-1.png"
+    },
+    "crop-melon-2": {
+      "type": "image",
+      "file": "living-farm/crop-melon-2.png"
+    },
+    "crop-melon-3": {
+      "type": "image",
+      "file": "living-farm/crop-melon-3.png"
+    },
+    "crop-melon-4": {
+      "type": "image",
+      "file": "living-farm/crop-melon-4.png"
+    },
+    "icon-potato": {
+      "type": "image",
+      "file": "ui/sunny-potato.png"
+    },
+    "icon-parsnip": {
+      "type": "image",
+      "file": "ui/sunny-parsnip.png"
+    },
+    "icon-parsnip-seeds": {
+      "type": "image",
+      "file": "ui/icon-seeds.png"
+    },
+    "icon-melon": {
+      "type": "image",
+      "file": "ui/icon-melon.png"
+    },
+    "icon-potato-seeds": {
+      "type": "image",
+      "file": "ui/icon-potato-seeds.png"
+    },
+    "icon-melon-seeds": {
+      "type": "image",
+      "file": "ui/icon-melon-seeds.png"
+    },
+    "furniture-table": {
+      "type": "image",
+      "file": "objects/furniture-table.png"
+    },
+    "furniture-chair": {
+      "type": "image",
+      "file": "objects/furniture-chair.png"
+    },
+    "rug": {
+      "type": "image",
+      "file": "objects/rug.png"
+    },
+    "tv": {
+      "type": "image",
+      "file": "objects/tv.png"
+    },
+    "kitchen-counter": {
+      "type": "image",
+      "file": "objects/kitchen-counter.png"
+    },
+    "store-shelf": {
+      "type": "image",
+      "file": "objects/store-shelf.png"
+    },
+    "enemy-slime": {
+      "type": "image",
+      "file": "objects/enemy-slime.png"
+    },
+    "enemy-bat": {
+      "type": "image",
+      "file": "objects/enemy-bat.png"
+    },
+    "icon-sword": {
+      "type": "image",
+      "file": "ui/sunny-sword.png"
+    },
+    "icon-slime-gel": {
+      "type": "image",
+      "file": "ui/icon-slime-gel.png"
+    },
+    "icon-bat-wing": {
+      "type": "image",
+      "file": "ui/icon-bat-wing.png"
+    },
+    "player-sword": {
+      "type": "spritesheet",
+      "file": "characters/player-sword-v3.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-f-navigation": {
+      "type": "spritesheet",
+      "file": "characters/player-f-navigation-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-f-chop": {
+      "type": "spritesheet",
+      "file": "characters/player-f-chop-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-f-dig": {
+      "type": "spritesheet",
+      "file": "characters/player-f-dig-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-f-mine": {
+      "type": "spritesheet",
+      "file": "characters/player-f-mine-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-f-sweep": {
+      "type": "spritesheet",
+      "file": "characters/player-f-sweep-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-f-broom": {
+      "type": "spritesheet",
+      "file": "characters/player-f-broom-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-f-water": {
+      "type": "spritesheet",
+      "file": "characters/player-f-water-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "player-f-sword": {
+      "type": "spritesheet",
+      "file": "characters/player-f-sword-v1.png",
+      "frameWidth": 96,
+      "frameHeight": 64
+    },
+    "keeper-garment-apron": {
+      "type": "image",
+      "file": "characters/keeper-garment-apron-v1.png"
+    },
+    "keeper-garment-smith": {
+      "type": "image",
+      "file": "characters/keeper-garment-smith-v1.png"
+    },
+    "keeper-garment-overalls": {
+      "type": "image",
+      "file": "characters/keeper-garment-overalls-v1.png"
+    },
+    "keeper-garment-vest": {
+      "type": "image",
+      "file": "characters/keeper-garment-vest-v1.png"
+    },
+    "keeper-garment-tabard": {
+      "type": "image",
+      "file": "characters/keeper-garment-tabard-v1.png"
+    },
+    "keeper-garment-robe": {
+      "type": "image",
+      "file": "characters/keeper-garment-robe-v1.png"
+    },
+    "icon-fish-trout": {
+      "type": "image",
+      "file": "ui/icon-fish-trout.png"
+    },
+    "icon-fish-pike": {
+      "type": "image",
+      "file": "ui/icon-fish-pike.png"
+    },
+    "icon-fish-eel": {
+      "type": "image",
+      "file": "ui/icon-fish-eel.png"
+    },
+    "icon-cabbage": {
+      "type": "image",
+      "file": "ui/icon-cabbage.png"
+    },
+    "icon-tomato": {
+      "type": "image",
+      "file": "ui/icon-tomato.png"
+    },
+    "icon-strawberry": {
+      "type": "image",
+      "file": "ui/icon-strawberry.png"
+    },
+    "icon-cabbage-seeds": {
+      "type": "image",
+      "file": "ui/icon-cabbage-seeds.png"
+    },
+    "icon-tomato-seeds": {
+      "type": "image",
+      "file": "ui/icon-tomato-seeds.png"
+    },
+    "icon-strawberry-seeds": {
+      "type": "image",
+      "file": "ui/icon-strawberry-seeds.png"
+    },
+    "icon-mushroom": {
+      "type": "image",
+      "file": "ui/icon-mushroom.png"
+    },
+    "icon-wild-leek": {
+      "type": "image",
+      "file": "ui/icon-wild-leek.png"
+    },
+    "icon-seashell": {
+      "type": "image",
+      "file": "ui/icon-seashell.png"
+    },
+    "icon-portal-shard": {
+      "type": "image",
+      "file": "ui/icon-portal-shard.png"
+    },
+    "icon-warden-core": {
+      "type": "image",
+      "file": "ui/icon-warden-core.png"
+    },
+    "icon-healing-potion": {
+      "type": "image",
+      "file": "ui/icon-healing-potion.png"
+    },
+    "crop-cabbage-1": {
+      "type": "image",
+      "file": "living-farm/crop-cabbage-1.png"
+    },
+    "crop-cabbage-2": {
+      "type": "image",
+      "file": "living-farm/crop-cabbage-2.png"
+    },
+    "crop-cabbage-3": {
+      "type": "image",
+      "file": "living-farm/crop-cabbage-3.png"
+    },
+    "crop-cabbage-4": {
+      "type": "image",
+      "file": "living-farm/crop-cabbage-4.png"
+    },
+    "crop-tomato-1": {
+      "type": "image",
+      "file": "living-farm/crop-tomato-1.png"
+    },
+    "crop-tomato-2": {
+      "type": "image",
+      "file": "living-farm/crop-tomato-2.png"
+    },
+    "crop-tomato-3": {
+      "type": "image",
+      "file": "living-farm/crop-tomato-3.png"
+    },
+    "crop-tomato-4": {
+      "type": "image",
+      "file": "living-farm/crop-tomato-4.png"
+    },
+    "crop-strawberry-1": {
+      "type": "image",
+      "file": "living-farm/crop-strawberry-1.png"
+    },
+    "crop-strawberry-2": {
+      "type": "image",
+      "file": "living-farm/crop-strawberry-2.png"
+    },
+    "crop-strawberry-3": {
+      "type": "image",
+      "file": "living-farm/crop-strawberry-3.png"
+    },
+    "crop-strawberry-4": {
+      "type": "image",
+      "file": "living-farm/crop-strawberry-4.png"
+    }
+  }
+}
