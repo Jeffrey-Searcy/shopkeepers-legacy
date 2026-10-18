@@ -8,6 +8,63 @@ dist/
 # them here; see README "Getting the art assets". This keeps the repo legal.
 public/assets/
 
+# Project-owned player art may ship. Keep every licensed pack file ignored.
+!public/assets/
+public/assets/*
+!public/assets/manifest.json
+!public/assets/characters/
+public/assets/characters/*
+!public/assets/characters/player-navigation-v4.png
+!public/assets/characters/player-chop-v2.png
+!public/assets/characters/player-dig-v2.png
+!public/assets/characters/player-mine-v2.png
+!public/assets/characters/player-sweep-v2.png
+!public/assets/characters/player-water-v2.png
+!public/assets/characters/player-sword-v2.png
+!public/assets/characters/player-foundation-v4.metadata.json
+!public/assets/characters/tavern-rosa.png
+!public/assets/characters/tavern-finn.png
+!public/assets/characters/tavern-mara.png
+!public/assets/characters/tavern-patrons.metadata.json
+
+# Project-owned neutral storefront; keep all third-party object art excluded.
+!public/assets/objects/
+public/assets/objects/*
+!public/assets/objects/shop-facade.png
+
+# Original native interior art only; source kits, rejected drafts and downloads remain local.
+!public/assets/interior/
+public/assets/interior/*
+!public/assets/interior/chair-south.png
+!public/assets/interior/chair-north.png
+!public/assets/interior/chair-east.png
+!public/assets/interior/chair-west.png
+!public/assets/interior/table-horizontal.png
+!public/assets/interior/table-vertical-v2.png
+!public/assets/interior/bar-horizontal.png
+!public/assets/interior/bar-vertical.png
+!public/assets/interior/register.png
+!public/assets/interior/rug.png
+!public/assets/interior/architecture/
+public/assets/interior/architecture/*
+!public/assets/interior/architecture/floor.png
+!public/assets/interior/architecture/wall-north.png
+
+# Original player-built-shop art; rejected/source files live outside public.
+!public/assets/shop-rebuild/
+public/assets/shop-rebuild/*
+!public/assets/shop-rebuild/floor-oak.png
+!public/assets/shop-rebuild/floor-oak-staggered.png
+!public/assets/shop-rebuild/floor-oak-quiet.png
+!public/assets/shop-rebuild/wall-north.png
+!public/assets/shop-rebuild/workbench.png
+!public/assets/shop-rebuild/workbench-low.png
+!public/assets/shop-rebuild/table-horizontal.png
+!public/assets/shop-rebuild/table-vertical.png
+!public/assets/shop-rebuild/stove.png
+!public/assets/shop-rebuild/stairs.png
+!public/assets/shop-rebuild/doorway.png
+
 # Agent / editor tooling and local skills (machine-specific)
 .claude/
 .codex/
@@ -37,3 +94,6 @@ undefined/
 
 # OS
 .DS_Store
+
+# Python bytecode from tools/keeper-art
+__pycache__/

@@ -1,0 +1,62 @@
+# Local Docker Desktop stack. Both published ports remain loopback-only on Jeff's Mac.
+name: shopkeepers-legacy
+
+services:
+  game:
+    image: shopkeepers-legacy-dev:local
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    init: true
+    restart: unless-stopped
+    # Vite writes a temporary bundled config beside its config file. Keep that write in a
+    # Docker volume so the bind-mounted project can remain read-only inside the container.
+    command:
+      - sh
+      - -lc
+      - cp /app/vite.config.ts /app/.docker-vite/vite.config.ts && exec npm run dev -- --config /app/.docker-vite/vite.config.ts --host 0.0.0.0 --port 5273
+    environment:
+      # vite.config.ts forwards same-origin /chat* requests here (the chat service on the compose network).
+      SHOPKEEPERS_CHAT_PROXY: http://chat:5277
+    ports:
+      - "127.0.0.1:5273:5273"
+    volumes:
+      - .:/app:ro
+      - shopkeepers-node-modules:/app/node_modules
+      - shopkeepers-vite-config:/app/.docker-vite
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:5273/').then(response=>process.exit(response.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 15s
+
+  chat:
+    image: shopkeepers-legacy-dev:local
+    init: true
+    restart: unless-stopped
+    command: ["npm", "run", "npc-chat"]
+    depends_on:
+      game:
+        condition: service_healthy
+    environment:
+      SHOPKEEPERS_CHAT_HOST: 0.0.0.0
+      SHOPKEEPERS_LOCAL_MODEL: gemma4:12b
+      SHOPKEEPERS_OLLAMA_URL: http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:5277:5277"
+    volumes:
+      - .:/app:ro
+      - shopkeepers-node-modules:/app/node_modules:ro
+    healthcheck:
+      test: ["CMD", "node", "-e", "const socket=require('node:net').connect(5277,'127.0.0.1');socket.on('connect',()=>{socket.destroy();process.exit(0)});socket.on('error',()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
+
+volumes:
+  shopkeepers-node-modules:
+  shopkeepers-vite-config:
