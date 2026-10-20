@@ -13,7 +13,35 @@ The first shows the warm wood/stone, substantial furniture and room depth he ask
 feet grounded on a porch beneath the facade. Neither is approval of our current town interiors.
 The source files were a chat clipboard PNG and `Screenshot 2026-09-12 at 2.23.17 PM.png` respectively.
 
-## The successful town facades
+## Painted areas (current)
+
+The Town, eleven town interiors, the jail cell, the Forest, the Beach, the Gate Plaza and the dungeon rooms
+are each one painting. The flow is:
+
+1. The source painting lives in `docs/art-source/<area>/`.
+2. A packer in `scripts/` (`pack-town-art.py`, `pack-civic-interiors-art.py`, `pack-forest-art.py`,
+   `pack-beach-art.py`, `pack-gate-plaza-art.py`, `pack-dungeon-rooms-art.py`) fits it to the map and writes
+   the textures. Shared helpers are in `scripts/painted_art.py` and `scripts/painted_outdoor.py`. The packers
+   need numpy and Pillow. Read the packer's header for its usage and outputs.
+3. A data module in `src/world/` (`TownArt.ts`, `CivicRoomArt.ts`, `ForestArt.ts`, `BeachArt.ts`,
+   `GatePlazaArt.ts`, `DungeonRooms.ts`) holds the walk grid traced over the painting, the doors and the
+   pieces drawn above the keeper. Some packers print values that must be copied into these modules.
+4. `src/world/PaintedRoomRenderer.ts` draws it. It throws when a texture is missing or has the wrong size.
+
+The walk grid is traced over the painting, so what you see is what you hit. If a painting or its scale
+changes, retrace the grid in the same change.
+
+## Keeper art (the player)
+
+From the repo root, run `python tools/keeper-art/build_sheets.py .` (needs `tools/keeper-art/requirements.txt`:
+numpy and Pillow). It writes the keeper sheets and garment images to `public/assets/characters/`,
+`player-keeper-v5.metadata.json`, and `src/config/KeeperArt.generated.ts`. Each frame is 96×64.
+Do not edit the generated module by hand. The script checks every sheet before it writes it.
+
+## The town facades (history)
+
+The Town is now one painting, so these separate facades are no longer drawn. `TownBuildingFront.ts`
+is still in the repo but nothing uses it. The steps below are kept as history.
 
 Exact prompts: [twelve facades](../art/town-buildings-v1/PRODUCTION-PROMPTS.md).
 Sources: `public/assets/objects/town-*.png`, referenced through `public/assets/manifest.json`.
@@ -39,9 +67,12 @@ Presentation: `src/world/TownBuildingFront.ts`; movement: `src/scenes/TownScene.
 The first collision pass included empty plot margins and made invisible walls. Fix geometry, not
 player collision or movement speed. Wide decorative silhouettes are not automatically solid footprints.
 
-## Town interiors: current next polish area
+## Town interiors
 
-Current rooms are functional foundations, **not Jeff-approved final interiors**. Exteriors are approved.
+Eleven of the twelve rooms are now paintings (see Painted areas and `src/world/CivicRoomArt.ts`). The clinic
+still uses the built room from `CivicInteriorMap.ts` and `CivicDecor.ts`. The notes below apply to the built
+room and are kept as history for the rest.
+Built rooms were functional foundations, **not Jeff-approved final interiors**.
 Use Travellers Rest for material richness, spatial hierarchy and coherent furniture scale. Research
 current references when asked; identify the specific visual qualities rather than asking to clone a game.
 
@@ -75,8 +106,8 @@ Test full-screen desktop and narrow/Retina views, mouse targeting, modal focus a
 
 ## Supplied characters and animation
 
-Use `~/.codex/skills/game-character/SKILL.md` and its ShopkeepersLegacy adapter. Do not
-repeat that large workflow here. Preserve identity, complete silhouettes and fixed feet.
+The `game-character` skill and its ShopkeepersLegacy adapter are local to the author's machine.
+They are not in this repo. Do not repeat that large workflow here. Preserve identity, complete silhouettes and fixed feet.
 Residents use `TownResidents.ts` independently of random visits.
 
 Unique image hashes alone do not prove a smooth gait. Watch actual soles alternate at play speed.

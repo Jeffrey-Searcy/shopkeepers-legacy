@@ -1,14 +1,14 @@
 # ShopkeepersLegacy: start here
 
-Last verified: September 15, 2026. This is the short current-state guide for a fresh model.
+Last verified: October 20, 2026 (facts below re-checked against the code). This is the short current-state guide for a fresh model.
 Read the relevant source before changing it. Older roadmap entries remain history, not current status.
 
 ## Where and what
 
-Checkout: `~/Desktop/code/ShopkeepersLegacy`.
+Checkout: the repo root.
 Remote: `https://github.com/Jeffrey-Searcy/shopkeepers-legacy.git`.
 Last branch: `codex/shop-home`; verify it rather than switching automatically.
-The checkout has extensive user-owned uncommitted work. Do not reset, clean, stash, or blanket-stage it.
+The work is committed. Still check `git status` first, and do not reset, clean, stash, or blanket-stage local changes.
 Live game: `http://localhost:5273/`. Docker Desktop runs the game and NPC chat bridge;
 Ollama remains on the Mac. See [local Docker commands](../DOCKER_LOCAL.md).
 iPad: `https://<mac>.<tailnet>.ts.net:10000/` through Tailscale Serve, touch only; see the iPad
@@ -23,11 +23,13 @@ The old V1-only restriction describes the initial milestone; hospitality is alre
 
 - User-approved Farm layout and Town terrain are live. Town has upper-left Farm, lower-left
   Forest, north outdoor mine entrance, and south Beach routes. Three bridges connect its banks.
-- Twelve distinct town facades, walk-in animated doors, expanded public rooms, and named residents are live.
-  Jeff approves the exteriors. The Market set the interior direction; the other eleven now have distinct
-  work zones, connected east homes, visible two-heart bedrooms, and role-specific services. Final visual approval is open.
+- The Town is one painting with twelve businesses, the watch house and named residents. Painted doors do
+  not open; one short step up to a door enters. Eleven of the twelve interiors are paintings (the clinic keeps
+  its built room). Each has a work zone, a connected home, a two-heart bedroom, and role-specific services.
+- The north trail from the Farm opens on day 5. It leads to the Gate Plaza; its portal opens the first dungeon
+  (five painted rooms, shuffled each run). Recruited residents can join the party and fight beside the keeper.
 - Fixed townspeople keep their identities and use the original pixel art.
-- Player Appearance customizes the original wardrobe.
+- Player Appearance picks one of two bodies and edits hair, clothes and colors. The art comes from `tools/keeper-art`.
 - Player shop/bedroom remain separate from public town rooms. Players craft their own stations,
   place from the toolbar with the mouse, rotate where supported, and connect tables/rugs.
 - Inn bookings and tavern opening are independent. Lodgers use guest-only stairs. Batch cooking,
@@ -67,7 +69,8 @@ The old V1-only restriction describes the initial milestone; hospitality is alre
 - Severe chat conduct calls Captain Maren at once and sends the player to the locked jail cell. Sleeping there
   ends the day and returns the player to Farm with half stamina. Lesser conduct warns once, then ends later chat.
 - The Town Watch House and Captain Maren are service content. They do not change the twelve romanceable residents.
-- Save version 15 stores resident warnings, refusals, and a bounded incident list. Version 14 stores the 66-pair
+- The current save version is 30 (`SAVE_VERSION` in `src/systems/SaveSystem.ts`). Older notes:
+  version 15 stores resident warnings, refusals, and a bounded incident list. Version 14 stores the 66-pair
   network and its per-save social seed. Version 13 expands from its six
   original bonds without losing progress. Versions 1–12 migrate to empty progress, and the
   first overwrite preserves the old envelope in byte-exact relationship and justice backups where required.
@@ -75,11 +78,11 @@ The old V1-only restriction describes the initial milestone; hospitality is alre
 ## Not implemented by the town-interior pass
 
 Tool upgrades, a permanent museum collection, hiring, dates, marriage, full relationship cutscenes,
-and a complete Moonlighter dungeon are not finished services. The guild quest board currently exchanges
-existing cave resources for gold and introduces the northern portal trail; it does not open the portal yet. Resident
+and a full Moonlighter dungeon beyond the first one are not finished services. The guild quest board exchanges
+existing cave resources for gold and introduces the northern portal trail. The portal itself is open. Resident
 schedules, changing pairings, open agreements, witnessed cheating, and breakups are foundation systems.
 Do not confuse the public town bar with the player's working tavern simulation.
-Do not describe the hand-authored 12-character pool as a one-click converter for arbitrary images.
+Tavern guests are six wardrobe-built visitors (`TAVERN_VISITORS` in `src/config/Tavern.ts`); the older hand-authored customer pool is gone.
 
 ## Next direction and boundaries
 
@@ -90,7 +93,7 @@ Do not alter Farm, repaint approved facades, or change the player shop layout as
 ## Read only what the task needs
 
 - [Design decisions](DESIGN_DECISIONS.md): latest choices, rejected experiments, and social behavior.
-- [Art workflow](ART_WORKFLOW.md): facade recipe, native geometry, interiors, furniture, character workflow.
+- [Art workflow](ART_WORKFLOW.md): painted areas, keeper art, interiors, furniture, character workflow.
 - [Engineering and tests](ENGINEERING_AND_TESTS.md): source owners, commands, saves, staging, failure handling.
 - [Town catalog and controls](../TOWN_BUILDINGS.md): all twelve owners and scene behavior.
 - [Handoff check](HANDOFF_CHECK.md): skill validation, limited Sol trial, and a restart prompt; read only when checking the handoff itself.
@@ -133,9 +136,9 @@ Final graphics: 24 WebGL entry/exit round trips across desktop and Retina sizes;
 Live port 5273: twelve rendered facades and twelve working mixed-use interiors.
 These are dated results, not permission to skip checks after the next change.
 
-Durable local evidence and exact file backups: `output/town-buildings-install-2026-09-14/`.
-Full test proof: `planning_artifacts/town-buildings-install/captures/1789384795-installed-full-regression-100/manifest.json`.
-These ignored local directories may be absent in another checkout. Do not claim fresh proof there.
+Local evidence and file backups were kept in `output/town-buildings-install-2026-09-14/` and
+`planning_artifacts/town-buildings-install/`. Both folders are git-ignored and local only; they are not in
+this repo. Do not claim fresh proof from them.
 Formal planning-gate metadata remains incomplete; gameplay test results do not imply formal approval.
 
 ## Keep this useful

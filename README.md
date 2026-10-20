@@ -1,52 +1,58 @@
 # Shopkeeper's Legacy
 
-A browser-based 2D top-down pixel-art game: **Stardew Valley** farming crossed with
-**Moonlighter** shop-management and dungeons. You inherit a rundown plot from your grandpa,
-clear the overgrown land, farm it, and grow a shop empire — tavern/inn, potions, blacksmith —
-with dungeon-diving in the mines. Built with Phaser 3 + TypeScript + Vite.
+A browser-based 2D top-down pixel-art life sim. You inherit Grandpa's run-down shop in
+Willowbrook. By day you farm, gather, fish, cook and run the tavern and inn. In the evening you
+sit with the townsfolk by the fire. In the morning you head north through the old gates to delve
+a portal dungeon with friends at your side. Built with Phaser 3, TypeScript and Vite.
 
-> **Heads up on art:** this repo ships the game **code**, not the art. The visuals come from
-> third-party asset packs whose licenses don't allow redistribution, so you download them once
-> yourself (free) and drop them in. See **[Getting the art assets](#getting-the-art-assets)** below.
-> The game runs with placeholder shapes until you add them.
+![Title screen — Shopkeeper's Legacy, "A place to make your own"](docs/screenshots/title-screen.png)
 
 ## Screenshots
 
 | | |
 |---|---|
-| ![The farm at daytime — farmhouse, player, hotbar and stamina HUD](docs/screenshots/farm-daytime.png) | ![The same farm at night, with warm-lit windows and the day/night lighting](docs/screenshots/farm-night.png) |
-| *Your inherited farm and home, by day.* | *The day/night cycle — 10 PM on the farm.* |
-
-![A Moonlighter-style mines fight — the player faces slimes and spiders with an HP bar](docs/screenshots/mines-combat.png)
-
-*Combat in the mines — the Moonlighter side.*
+| ![Guests arrive at the shop and ask for a room, a stew and an ale](docs/screenshots/shop-guests.png) | ![Four residents talk at a candle-lit table in the Wayfarer tavern](docs/screenshots/tavern-table-chat.png) |
+| *Run the shop: check guests in, cook, serve and sweep.* | *Sit with the town at the Wayfarer. Each resident keeps their own voice.* |
+| ![The painted town of Willowbrook](docs/screenshots/town.png) | ![The keeper casts a long fishing line into the town river](docs/screenshots/fishing.png) |
+| *Willowbrook, hand-painted and walkable.* | *Hold to charge a cast, then reel the fish in.* |
+| ![The market interior, full of stalls and goods](docs/screenshots/market.png) | ![The keeper at the Gate Plaza, facing the purple portal](docs/screenshots/gate-plaza.png) |
+| *Eleven painted shops and halls to visit.* | *The Gate Plaza opens north of the farm on day 5.* |
+| ![The keeper and two companions, Bram and Kit, in a mossy dungeon room](docs/screenshots/dungeon-party.png) | ![The wardrobe: pick body, hair, clothes and colours](docs/screenshots/wardrobe.png) |
+| *Bring residents into the portal dungeon as a party.* | *Dress your keeper in the wardrobe.* |
 
 ## What works today
 
-Well past a prototype — it's genuinely playable:
+The first week (days 1–7) plays from start to finish:
 
-- Large 100×100 maps with a multi-scene world (Farm, Forest, Town, Beach, Mountain, Mines, Home)
-- Full farming loop: till → plant → water → grow → harvest
-- Tools, stamina, hotbar; clear land by chopping/mining/scything
-- Inventory and chests, day/night cycle and sleep, building placement
-- NPCs with dialogue, fishing (with a reel minigame), a gold/shipping economy, crafting
-- A Moonlighter-style combat dungeon in the Mines
-- 400+ Playwright gameplay tests
+- **A living town.** Residents keep schedules, remember your gifts, mention each other, and send
+  letters. Friendship, romance stages, bonds between residents and a small justice system are in.
+- **The shop.** Restore Grandpa's shop, then run it as a tavern and inn: check guests in, cook
+  stew, pour ale, book rooms, break up bar fights and sweep up after them.
+- **Farming and gathering.** Till, plant, water and harvest six crops. Chop, mine, scythe, forage
+  and fish (six fish, with a charged cast and a reel minigame). Cook eight recipes.
+- **A world to walk.** Farm, painted Town with eleven painted interiors, the Wayfarer tavern, your
+  bedroom, Forest, Beach, Mountain and Mines.
+- **Adventure.** On day 5 the north trail opens to the Gate Plaza. Its portal leads to a painted
+  dungeon with floors of rooms, a boss and a small bag. Recruit residents as party companions;
+  they follow you and fight. Dungeon loot upgrades the forge and alchemy house.
+- **Your keeper.** A wardrobe (in the pause menu) for body, hair, hat, facial hair, clothes and
+  colours.
+- **Saves** in the browser, with migrations so old saves keep working.
+- **Tests.** 99 Playwright spec files (about 490 gameplay tests).
 
-Friendship, gifts, romance stages, NPC bonds, and an optional guarded local-chat foundation are installed.
-Still on the roadmap: relationship dates and marriage, more crafting, deeper dungeons, and music. See
-`docs/ROADMAP.md`.
+Next on the roadmap: full seasons and festivals, events between residents, more gates, marriage,
+sound and music. See [`docs/VISION.md`](docs/VISION.md).
 
 ## Quick start
 
-Requires **Node.js 18+**.
+You need **Node.js 18+** and the art packs listed in [Art assets](#art-assets). The game does not
+start without them: every texture must load. If a file is missing, the screen stays blank and the
+browser console names each missing file.
 
 ```bash
 npm install
 npm run dev        # play at http://localhost:5273
 ```
-
-Then follow **[Getting the art assets](#getting-the-art-assets)** for the real visuals.
 
 Other commands:
 
@@ -57,7 +63,7 @@ npm run typecheck  # type-check only
 npm test           # run the Playwright gameplay specs
 ```
 
-One-time, before running tests:
+Before you run tests the first time:
 
 ```bash
 npx playwright install chromium
@@ -67,54 +73,79 @@ npx playwright install chromium
 
 | Key | Action |
 |---|---|
-| **WASD** | Move |
-| **1–6 / mouse-wheel / click** | Select tool from the hotbar |
-| **Space or left-click** (hold) | Use the selected tool |
-| **E** | Interact — talk / open chest / harvest / sleep |
-| **I or Tab** | Open the bag |
+| **WASD** or **arrow keys** | Move |
+| **1–8**, mouse wheel or click | Pick a hotbar slot: hoe, axe, pickaxe, scythe, watering can, seeds, rod, sword |
+| **Space** (hold) | Use the tool. Hold the rod to charge a longer cast. In combat, swing the sword. |
+| **Shift** | Dodge (dungeon and mines) |
+| **E** | Talk, open, harvest, check guests in, serve |
+| **Q** | Tell a guest "We're out" |
+| **M** | Shop ledger |
+| **J** | Task list |
+| **R** | Rotate furniture while placing |
+| **I** or **Tab** | Inventory (**C** crafts) |
+| **Esc** | Pause menu (**R** Town Bonds, **M** World Routes) |
 
-Walk east to reach Town; enter the house door for the bed. Trees take 3 chops, rocks 2.
+### Optional: resident voices (local AI chat)
 
-## Getting the art assets
+Residents can talk in their own words through a local language model. This is **off by default**
+and the game plays fully without it. It runs on your machine only, through
+[Ollama](https://ollama.com), and the model can only speak: it cannot change the game.
 
-The art is **not** in this repo because the packs it uses can't be legally redistributed. Getting
-them is a one-time, mostly-free step:
+```bash
+ollama pull gemma4:12b
+npm run npc-chat:local                                   # chat bridge on port 5277
+SHOPKEEPERS_CHAT_PROXY=http://127.0.0.1:5277 npm run dev # game, with /chat forwarded
+```
 
-1. **Cute Fantasy RPG** (terrain, trees, rocks, weeds) by Kenmi —
-   https://kenmi-art.itch.io/cute-fantasy-rpg
-   The free version is fine for playing locally (non-commercial). Buy the premium license before any
-   commercial use.
-2. **Sunnyside World** (player character + tool/crop/resource icons) by Daniel Diggle —
-   https://danieldiggle.itch.io/sunnyside
-3. **Farming tools icons** by PixelLate (base tool icons) —
-   https://pixel-late.itch.io/farming-tools
+Then open the pause menu, press **R** for Town Bonds, and turn **Voice** on.
 
-Download each pack, then place the sprites under `public/assets/` following the layout the game
-expects (`characters/`, `objects/`, `tilesets/`, `ui/`). The full mapping of which sprite goes
-where is in `CREDITS.md` and the asset config under `src/config/`.
+### Optional: Docker
 
-Building/interior art and some icons were generated with **PixelLab** (https://pixellab.ai); those
-are the project's own and don't need downloading.
+`npm run docker:up` runs the game (port 5273) and the chat bridge (port 5277) in Docker, with
+Ollama still on the host. See [`docs/DOCKER_LOCAL.md`](docs/DOCKER_LOCAL.md).
 
-If you'd rather just try the game, it boots with simple placeholder graphics and no downloads.
+## Art assets
+
+Most of the art ships in this repo. It is the project's own:
+
+- **Painted areas** — Town, the eleven interiors, Wayfarer, Beach, Forest, Gate Plaza, dungeon
+  rooms and the title screen. Sources are in `docs/art-source/`; `scripts/pack-*-art.py` cuts
+  them to the 16 px grid.
+- **The keeper and wardrobe** — drawn by code in `tools/keeper-art/`.
+- **Sprites, icons and tiles** made for this project (some with [PixelLab](https://pixellab.ai)).
+
+A few files come from third-party packs whose licenses do not allow redistribution, so they are
+**not** in this repo. Get the packs once and copy the files into `public/assets/`:
+
+1. **Cute Fantasy RPG** by Kenmi (free version is fine for non-commercial play) —
+   https://kenmi-art.itch.io/cute-fantasy-rpg — 11 files: grass, path, water and cliff tiles,
+   trees, rocks, weeds, flowers, a stump and a house.
+2. **Sunnyside World** by Daniel Diggle — https://danieldiggle.itch.io/sunnyside — 11 files: the
+   older player walk, idle and cast strips and seven item icons.
+3. **Farming tools icons** by PixelLate — https://pixel-late.itch.io/farming-tools — 5 tool icons.
+
+[`CREDITS.md`](CREDITS.md) lists all 27 file names and where each comes from in its pack. Most are
+crops or rebuilt sheets, so you may need to cut them to the frame sizes in
+`public/assets/manifest.json`, which names every file the game loads.
 
 ## How this was built
 
-Shopkeeper's Legacy was built as an experiment in "frontloading" — writing a tight spec, art
-bible, and build order up front, then letting an AI coding agent build it milestone by milestone
-with Playwright verifying each step. The methodology kit lives in the repo:
+Shopkeeper's Legacy started as an experiment in "frontloading": write a tight spec, art bible and
+build order first, then let AI coding agents build it milestone by milestone, with Playwright
+checking each step.
 
 | File | Purpose |
 |---|---|
-| `docs/GAME_SPEC.md` | The full spec: definition of done, tech contract, controls, worlds, systems, build order. |
-| `docs/ART_BIBLE.md` | Canonical art style — palette, tile size, perspective — so generated art stays cohesive. |
-| `docs/ROADMAP.md` | What's done and what's next. |
-| `AGENTS.md` / `CLAUDE.md` | Build rules an AI agent auto-reads: stack, hard rules, test protocol. |
+| [`docs/VISION.md`](docs/VISION.md) | What the game should feel like, and what to build next. |
+| [`docs/handbook/START_HERE.md`](docs/handbook/START_HERE.md) | How the code fits together today. |
+| [`docs/GAME_SPEC.md`](docs/GAME_SPEC.md) | The original build spec, kept for history. |
+| [`docs/ART_BIBLE.md`](docs/ART_BIBLE.md) | Art style: palette, tile size, perspective. |
+| [`docs/ROADMAP.md`](docs/ROADMAP.md) | Milestone history. |
+| `AGENTS.md` / `CLAUDE.md` | Rules an AI coding agent reads first. |
 
 ## License
 
-Code is under the MIT License — see `LICENSE`.
+Code is under the MIT License. See [`LICENSE`](LICENSE).
 
-**Art is not covered by that license.** The third-party asset packs listed above are each governed
-by their own licenses (see `CREDITS.md`). You must obtain them from their creators under their
-terms; they are not redistributed here.
+**Art is not covered by the MIT License.** The project's own art in this repo is © its author, all
+rights reserved. Third-party packs keep their own licenses (see [`CREDITS.md`](CREDITS.md)).

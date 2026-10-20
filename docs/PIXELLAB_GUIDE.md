@@ -1,5 +1,8 @@
 # PixelLab Guide — understand the product before using it
 
+> **Retired.** PixelLab is no longer used for new art (as of September 2026). Some early PixelLab
+> sprites remain in the game. Kept for history. For current art, see `docs/handbook/ART_WORKFLOW.md`.
+
 > The video creator explicitly told the model to "understand this product before it goes out
 > there and tries to use it, so we get the best possible use for every token." This doc is that.
 > **Before your first generation, fetch and read `https://api.pixellab.ai/mcp/docs`** for the
@@ -16,8 +19,8 @@ Registered as an HTTP MCP server with a Bearer token:
 claude mcp add pixellab https://api.pixellab.ai/mcp -t http -H "Authorization: Bearer <TOKEN>"
 ```
 Token comes from signing in at `https://api.pixellab.ai/mcp`. Verify with `claude mcp list`
-(look for `pixellab ✔ Connected`). Plan: **$24/mo Artisan tier** (priority queue → faster/parallel
-generation). Reference: the creator used only ~156 of 5,000 credits for a whole game, so there is
+(look for `pixellab ✔ Connected`). The paid tier had a priority queue for faster/parallel
+generation. Reference: the creator used only ~156 of 5,000 credits for a whole game, so there is
 lots of headroom for this project.
 
 ## The tools (confirm exact names/params against the live docs before calling)

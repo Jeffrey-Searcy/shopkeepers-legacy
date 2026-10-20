@@ -1,17 +1,19 @@
 # ShopkeepersLegacy — Art Bible
 
-## Current production clarifications — September 14, 2026
+## Current production clarifications — updated October 20, 2026
 
-Use [ART_WORKFLOW](handbook/ART_WORKFLOW.md) for the approved town facade pipeline and current
-source owners. Built-in image generation produced the new facades/prop atlas; PixelLab notes
-below describe the earlier native-pixel pipeline, not a required provider for every request.
-The active image tool/skill rules take precedence. Do not replace a working provider silently.
-The original actor uses a padded 96×64 logical canvas, not the historical 32×32 target below;
-customers have separate measured contracts. Read GameConfig.
+Use [ART_WORKFLOW](handbook/ART_WORKFLOW.md) for the current pipelines and source owners.
+The Town is now one painting (`src/world/TownArt.ts`, packed by `scripts/pack-town-art.py`).
+Its twelve building fronts and the watch house are part of that painting; the older separate
+facade images are no longer drawn.
+PixelLab was used early and is now retired. Some of its sprites remain in the game. The PixelLab
+notes below are history, not a provider for new work.
+The keeper uses a padded 96×64 logical canvas, not the historical 32×32 target below. Its sheets
+come from `tools/keeper-art/build_sheets.py`. Tavern guests are the only customers left; they use
+the same wardrobe art (`TAVERN_VISITORS` in `src/config/Tavern.ts`). Read GameConfig.
 Multi-tile furnishings and buildings use authored footprints, not a universal one-tile collider.
-Jeff approves the twelve town exteriors, but explicitly says the public interiors need more work.
 
-> The canonical art spec so every PixelLab asset is cohesive. The video creator had no such
+> The canonical art spec from the PixelLab era, kept for its palette and grid rules. The video creator had no such
 > doc, which is partly why his result looked inconsistent (floating houses, mismatched shadows).
 > Read this AND `docs/PIXELLAB_GUIDE.md` before generating art. Keep these values FIXED across
 > every generation so nothing clashes.
@@ -34,7 +36,7 @@ small size against grass and dirt.
   contact grounded — objects sit ON the ground (avoid the "floating" look; a small contact shadow
   ellipse at the base is preferred over a big offset drop shadow).
 - **Tiling:** terrain tilesets must be **seamless** and support transitions (grass↔dirt↔tilled↔water
-  edges). Use PixelLab's top-down/Wang tileset tool for these.
+  edges). (Historical: these were made with PixelLab's top-down/Wang tileset tool.)
 
 ## Palette
 Use a limited, warm, cohesive palette. Seed colors (adjust to taste, then LOCK):
@@ -47,7 +49,7 @@ Use a limited, warm, cohesive palette. Seed colors (adjust to taste, then LOCK):
 - UI parchment/panel: `#e8d8b0` with border `#7a5a3a`
 Keep total colors modest per asset (roughly ≤ 16) so the set feels unified.
 
-## Canonical style prompt (reuse this stem for EVERY PixelLab call)
+## Canonical style prompt (historical: the stem used for every PixelLab call)
 Prepend this to every generation prompt so the whole set matches. Fill in only the subject:
 
 > "16-bit top-down 3/4 farming-sim pixel art, cozy warm palette, subtle dark outline, soft

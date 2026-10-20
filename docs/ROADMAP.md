@@ -2,9 +2,24 @@
 
 > Where we are, what's next, and everything the designer has asked for. Each "prompt" is a milestone-gated
 > build (spec → build → Playwright green → playtest), executed with the custom agents in
-> `.claude/agents/` (art-director, map-designer, gameplay-engineer, playtester).
+> `.claude/agents/` (art-director, map-designer, gameplay-engineer, playtester). Those agents are
+> local only; `.claude/` is git-ignored and not in this repo.
 
-## Current status — September 15, 2026
+## Status note — October 20, 2026
+
+This page is now history. Current state lives in [START_HERE](handbook/START_HERE.md) and
+direction in [VISION](VISION.md). What exists now, checked against the code:
+
+- The Town is one painting (82×75 tiles). It holds the twelve businesses and the watch house.
+- Eleven of the twelve town interiors are paintings. The clinic keeps its built room.
+- The Forest and Beach are also painted areas.
+- The north trail from the Farm opens on day 5. It leads to the Gate Plaza, whose portal opens
+  the first dungeon: five painted rooms, shuffled each run, with the Warden at the end.
+- Recruited residents can join the keeper's party, follow the keeper and join fights.
+- The wardrobe offers two bodies plus hair, clothes and colors.
+- The save version is 30.
+
+## Status — September 15, 2026 (history)
 
 Read [the maintained starting guide](handbook/START_HERE.md) before using the milestones below.
 Save v14, living hospitality, Farm/Town editors and approved layouts,
@@ -13,7 +28,7 @@ gift, romance, NPC-bond, journal, and optional guarded local-chat foundations.
 All twelve residents also follow weekday/weekend routes and record changing daily Town conversations.
 Their 66 possible bonds support emergent romance, open agreements, witnessed cheating, and breakups.
 Jeff approves the town exteriors. All twelve interiors now have connected homes, visible two-heart bedrooms,
-and building-fit service points. The guild board introduces contracts for the future northern portal dungeons.
+and building-fit service points. The guild board introduces contracts for the northern portal trail. The portal now opens to the Dungeon.
 Final interior visual approval, hiring, dates, marriage, and relationship story events remain future work.
 The older notes below include rejected experiments and superseded "future work" claims.
 In particular, the whole-image table rotation experiment is rejected; tabletop rotation keeps feet upright.
@@ -27,11 +42,11 @@ and the title centers conventional controls. Native oak/stone surfaces, deep rea
 substantial stairs remain architectural. Lower horizontal-table and vise-workbench art address
 Jeff's latest feedback; the vertical table keeps its prior image after rejecting its new candidate.
 
-All181 tests pass with four workers, including strict door timing and real craft-to-service flow.
+All 181 tests pass with four workers, including strict door timing and real craft-to-service flow.
 Final visual acceptance remains open. See `playtest-reports/2026-09-12-player-built-shop.md`.
 Ale brewing, product displays, seating, staff, room bookings and NPC lodging remain future work.
 
-Latest follow-up: Jeff chooses literal90° image turns for table/workbench, not a separate
+Latest follow-up: Jeff chooses literal 90° image turns for table/workbench, not a separate
 perspective sprite. Interior views reserve toolbar clearance; camera zoom and outdoor views
 stay unchanged. This supersedes the vertical-table artwork task above. See
 `plans/PLAN-literal-rotation-exit.md` and `planning_artifacts/literal-rotation-exit-2026-09-12/review.md`.
@@ -72,8 +87,8 @@ title informed by Necesse. That new visual work remains open. See `plans/PLAN-sh
 
 The browser now fills its window with integer world-camera zoom. Title, pause, inventory,
 chest and shipping menus share cream surfaces, soft green accents and rounded item pockets.
-Pause > Appearance keeps the current body and edits hair, hats, shirts, pants and five color
-categories. Four-direction and tool previews use a detached draft; Apply changes the keeper,
+Pause > Appearance kept the body and edited hair, hats, shirts, pants and five color
+categories. (Later work made the body a choice too.) Four-direction and tool previews use a detached draft; Apply changes the keeper,
 Cancel leaves the keeper unchanged. Save Game or sleep persists the applied outfit in save v3.
 Explicit v1/v2 migration preserves the original keeper. The wardrobe is cosmetic, not equipment.
 All 132 tests pass. See `plans/PLAN-cozy-interface.md` and
@@ -94,17 +109,17 @@ known visual limits, and the still-open formal review. This is not a finished-ga
 
 ## Earlier milestones
 - **V1 Stardew core (M0–M8):** big maps, camera, transitions, tools/stamina/hotbar, farming loop,
-  inventory/chests, day/night+sleep, tile-valid placement, real PixelLab art. 
+  inventory/chests, day/night+sleep, tile-valid placement, real PixelLab art (PixelLab is now retired). 
 - **Polish pass:** Wang autotiled terrain (grass/dirt/water), designed farm+town, NPCs+dialogue
   (Rosa/Finn), fullscreen scaling, real-keyboard input fixes, SFX, toasts, y-depth sorting.
 - **Precision pass:** 1-tile collision bodies (+m10 gates), Stardew front-facing building facades,
   multi-hit nodes with hit feedback, hold-to-chop (Space/mouse, adjacent-tile click targeting),
   target-tile highlight, slot-grid inventory + chest transfer UI, calm tile-format ground art.
 - **Agent infrastructure:** skills (game-art, game-systems, playtest) + 4 custom agents + this roadmap.
-- Test suite: 27 Playwright specs, all green. PixelLab: <70 of 5,000 generations used.
+- Test suite: 27 Playwright specs, all green. PixelLab (since retired): <70 of 5,000 generations used.
 
 ## Prompt 4 — Animations & feel — DONE (2026-07-07, 30/30 specs green)
-- **Action animations**: chop/sweep/water sheets generated by the art-director agent (PixelLab v3);
+- **Action animations**: chop/sweep/water sheets generated by the art-director agent (PixelLab v3, since retired);
   code plumbing done (`Player.playAction`, one-shot anims, movement lock during swing, wired into
   the single `swing()` entry point for Space/hold/mouse).
 - **Placeable items anywhere not blocked** — DONE: ItemPlacementSystem (any non-solid, non-water,
@@ -227,7 +242,7 @@ better fish table later). Requires the cast anim (in flight) + retuning the pres
   without knowing the scripts. The seam already is the API; this makes it MCP.
 - Data-first content packs: items/recipes/dialogue/schedules as JSON so systems stay reusable
   for future games.
-- CI: run the Playwright suite on push (GitHub Actions) once the repo is on git.
+- CI: run the Playwright suite on push (GitHub Actions). Not set up yet; the repo has no workflow files.
 
 ## Bug/report log
 - "Walked through a tree" (the designer, Jul 6): investigated — trunk/wall/chest collision verified by

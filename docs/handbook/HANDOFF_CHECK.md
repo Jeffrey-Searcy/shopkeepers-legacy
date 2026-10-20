@@ -53,8 +53,8 @@ In a task using 5.6 Sol, send:
 
 > Use $shopkeepers-legacy. Read docs/handbook/START_HERE.md, then help me with my next game request.
 
-If the skill is not shown, ask the agent to read
-`~/.codex/skills/shopkeepers-legacy/SKILL.md` directly. Project AGENTS also points to it.
+The `shopkeepers-legacy` skill is local to the author's machine; it is not in this repo.
+If the skill is not shown, use `docs/handbook/START_HERE.md` and project AGENTS instead.
 This does not change model settings for the user.
 
 The structure follows OpenAI's guidance on [reusable skills](https://learn.chatgpt.com/docs/build-skills)

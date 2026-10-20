@@ -3,39 +3,40 @@
 ## Current continuity entrypoint
 
 Before substantial work, read `docs/handbook/START_HERE.md`, then only the linked guide and source
-needed for the task. It records the live September 2026 state, explicit user decisions, rejected
+needed for the task. It records the current state, explicit user decisions, rejected
 art experiments, and safe test commands. Old milestone plans are history, not current completion evidence.
-The reusable skill is `~/.codex/skills/shopkeepers-legacy/SKILL.md`; read it directly if
-it is not in the skill picker. Character-image work also uses the existing `game-character` skill.
+The `shopkeepers-legacy` and `game-character` skills are local to the author's machine. They are not in
+this repo; use them only if your setup has them.
 Do not promise a smaller model identical results. Preserve quality through measured art, small
 verified changes, and user playtests. Current user requests override historical design choices.
 
 > This file is auto-loaded every session. It is the contract for HOW you build.
-> Current WHAT: `docs/handbook/START_HERE.md`; `docs/GAME_SPEC.md` and `docs/ROADMAP.md` retain historical milestones.
+> Current WHAT: `docs/VISION.md` and `docs/handbook/START_HERE.md`; `docs/GAME_SPEC.md` and `docs/ROADMAP.md` retain historical milestones.
 >
-> **Use the project skills and agents** — they encode everything already learned the hard way:
-> - Skills: `game-art` (PixelLab + tile-format rules), `game-systems` (architecture + Phaser
->   gotchas that were real bugs), `playtest` (seam API + verification).
-> - Agent guides (`.claude/agents/`): **art-director**, **map-designer**, **gameplay-engineer**,
->   **playtester** — delegate matching work to them, in parallel where possible.
-> Read `docs/ART_BIBLE.md` + the `game-art` skill before generating any art.
+> The project skills (`game-art`, `game-systems`, `playtest`) and agent guides (art-director,
+> map-designer, gameplay-engineer, playtester) live in `.claude/`, which is git-ignored. They are
+> local only and not in this repo. Use them if your checkout has them.
+> Read `docs/ART_BIBLE.md` and `docs/handbook/ART_WORKFLOW.md` before making any art.
 
 ## What we're building (one line)
 A browser-based 2D top-down pixel-art game: Stardew Valley core mechanics (near 1:1)
 crossed with Moonlighter (shop management + dungeons). Full vision in `docs/GAME_SPEC.md`.
-The initial V1 covered Stardew core only. The project has since added the player inn/tavern and
-twelve public town rooms. Keep those working; build future services only when requested.
+The initial V1 covered Stardew core only. The project has since added the player inn/tavern,
+twelve public town rooms, the Gate Plaza (`GatePlazaScene`), the first portal dungeon (`DungeonScene`)
+and party companions who follow the keeper and join fights. Keep those working; build future services
+only when requested.
 
 ## The stack (non-negotiable for V1)
 - **Phaser 3** (3.8x line) — game framework.
 - **TypeScript**, `strict: true` — every scene key, texture key, and physics body is typed.
 - **Vite** — dev server + build. Start from the `template-vite-ts` layout.
-- **Maps are authored data** — current `MapData` composition uses TypeScript/JSON plus historical
-  Tiled (`.tmj` / `.tsj`) sources. Preserve existing map/scene owners; do not rewrite them during cosmetic work.
+- **Maps are authored data** — maps are built in `src/world/MapDef.ts` from TypeScript data and JSON
+  files in `src/world/maps/` (the farm uses `farm.json`). No Tiled (`.tmj` / `.tsj`) files are in the repo.
+  Preserve existing map/scene owners; do not rewrite them during cosmetic work.
 - **Playwright** — automated gameplay verification (see Self-Verification below).
 
-Rationale you must respect: the framework's built-ins (`camera.startFollow`, Tiled tilemap
-import, the scene registry) are the reason this project avoids a prior attempt's failures.
+Rationale you must respect: the framework's built-ins (`camera.startFollow`, tilemaps,
+the scene registry) are the reason this project avoids a prior attempt's failures.
 Do not hand-roll a game loop, a camera, a tilemap parser, or scene management. Use Phaser's.
 
 ## Hard rules (these prevent the specific bugs that killed the last attempt)
@@ -59,13 +60,15 @@ Do not hand-roll a game loop, a camera, a tilemap parser, or scene management. U
    `public/assets/manifest.json` maps each key to either
    `{ "type": "placeholder", "color": "#RRGGBB", "w": N, "h": N }` or
    `{ "type": "spritesheet"|"image"|"atlas", "file": "...", ... }`. `AssetLoader` reads the manifest
-   at boot and loads placeholder OR real art transparently. Swapping in a PixelLab PNG must be a
-   **one-line manifest edit + drop the file** — zero game-logic changes. Sprite origin and physics
-   body size come from `GameConfig`, not from image dimensions, so a differently-sized PNG never
-   shifts collision.
+   at boot and loads placeholder OR real art transparently. All art loads through this manifest.
+   For a sprite or prop, a swap is a manifest edit plus the new file. Painted areas (town, rooms,
+   dungeon) are different: their data module (for example `src/world/CivicRoomArt.ts`) must match the
+   texture, and `PaintedRoomRenderer` throws if the texture is missing or its size is wrong.
+   Sprite origin and physics body size come from `GameConfig`, not from image dimensions, so a
+   differently-sized PNG never shifts collision.
 
 5. **Building placement is tile-validated.** `PlacementSystem` checks a footprint against map
-   bounds, a `buildable` layer/property from Tiled, and existing `GameState.placements`. Ghost
+   bounds, the map's `buildable` grid (from `MapDef.ts`), and existing `GameState.placements`. Ghost
    preview tints green/red; commit only when every footprint tile passes.
 
 ## Engineering discipline (from the designer's global standards — enforce them)
@@ -86,12 +89,16 @@ Do not hand-roll a game loop, a camera, a tilemap parser, or scene management. U
   comments on non-obvious logic (especially the transition/camera/placement code). Comment the
   shape of non-trivial state objects (`GameState`, `manifest.json` entries).
 
-## Art / PixelLab rules
-- **Read `https://api.pixellab.ai/mcp/docs` before your first generation.** Understand the tools
-  and their parameters so you don't waste credits. Details in `docs/PIXELLAB_GUIDE.md`.
-- **Style-test before batch.** Generate a tiny style-test set first (farmer + a few tiles),
-  drop into the manifest, look at them together, get the style locked, THEN batch-generate the
-  rest. Follow the palette/perspective/size rules in `docs/ART_BIBLE.md` so everything is cohesive.
+## Art rules
+- **PixelLab is retired.** It made early sprites, and some remain in the game. Do not use it for
+  new art. `docs/PIXELLAB_GUIDE.md` is history.
+- **Painted areas** start as AI paintings in `docs/art-source/`. A `scripts/pack-*-art.py` script
+  (shared helpers in `scripts/painted_art.py`) turns each painting into textures. A data module such
+  as `src/world/DungeonRooms.ts` or `src/world/CivicRoomArt.ts` holds walls and pieces, and
+  `src/world/PaintedRoomRenderer.ts` draws them. See `docs/handbook/ART_WORKFLOW.md`.
+- **The keeper's sprites** are built by `tools/keeper-art/build_sheets.py`, which also writes
+  `src/config/KeeperArt.generated.ts`. Do not edit the generated file by hand.
+- Follow the palette/perspective/size rules in `docs/ART_BIBLE.md` so everything is cohesive.
 - **Look at what you generate.** After assets land, use Playwright screenshots to confirm sprites
   and tiles don't overlap incorrectly or z-fight; fix sizing/placement before moving on.
 
@@ -102,9 +109,9 @@ Do not hand-roll a game loop, a camera, a tilemap parser, or scene management. U
   `stepTime(minutes)`.
 - Boot tests with `?test=1&seed=42`; seed all RNG from the URL so runs are deterministic. Drive the
   in-game clock via `stepTime`, never wall-clock.
-- **Each build-order milestone is gated by its own spec.** The four regression specs
-  (`scene-transition`, `camera-follow`, map-bounds, `placement`) are permanent, non-negotiable
-  gates — they encode the last attempt's failures and must stay green forever.
+- **Each build-order milestone is gated by its own spec.** The regression specs
+  `tests/m2-scene-transition.spec.ts`, `tests/m1-camera-movement.spec.ts` (camera follow and map
+  bounds) and `tests/m7-placement.spec.ts` are permanent, non-negotiable gates — they encode the last attempt's failures and must stay green forever.
 
 ## Definition of Done
 See `docs/GAME_SPEC.md` → "Definition of Done." V1 is done when every criterion there passes in

@@ -5,13 +5,13 @@
 | Concern | Current source owners |
 | --- | --- |
 | World/scenes/arrival | `src/world/MapDef.ts`, `TownMap.ts`, `src/scenes/BaseWorldScene.ts`, `src/systems/SceneTransitionSystem.ts` |
-| Town architecture | `src/config/TownBuildings.ts`, `CivicFeatures.ts`, `src/world/TownBuildingFront.ts`, `CivicInteriorMap.ts`, `CivicDecor.ts`, `src/scenes/CivicInteriorScene.ts` |
+| Town architecture | `src/config/TownBuildings.ts`, `CivicFeatures.ts`, `src/world/TownArt.ts`, `CivicRoomArt.ts`, `PaintedRoomRenderer.ts`, `CivicInteriorMap.ts`, `CivicDecor.ts`, `src/scenes/CivicInteriorScene.ts` |
 | Fixed residents | `src/config/TownResidents.ts`, `TownSchedules.ts`, `src/entities/TownResident.ts`, `src/systems/TownScheduleSystem.ts`, `TownSocialLifeSystem.ts`, `AppearanceTextureSystem.ts` |
 | Resident chat/justice | `src/systems/LocalNpcChatSystem.ts`, `ResidentDialogueSystem.ts`, `JusticeSystem.ts`, `scripts/npc-chat-supervisor.mjs`, `src/entities/TownGuard.ts`, `src/scenes/JailScene.ts` |
 | Private romance | `src/config/Cuddle.ts`, `src/systems/CuddleSystem.ts`, `src/world/CuddleEffectRenderer.ts` |
 | Customers/inn/tavern | `src/config/Tavern.ts`, `TavernConversations.ts`, `src/systems/TavernSystem.ts`, `TavernLayout.ts`, `src/ui/GuestServicePrompt.ts` |
 | Furniture | `src/config/Furniture.ts`, `FurnitureConnections.ts`, `src/world/FurnitureSurfaceRenderer.ts`, `src/systems/ItemPlacementSystem.ts` |
-| Player/tools | `src/entities/Player.ts`, `HeldItemView.ts`, `ToolSystem.ts` |
+| Player/tools | `src/entities/Player.ts`, `src/systems/HeldItemView.ts`, `ToolSystem.ts` |
 | Persistence | `src/state/GameState.ts`, `src/systems/SaveSystem.ts`, `TownLayoutMigration.ts`, `FarmLayoutMigration.ts` |
 | Editor | `src/debug/MapEditorMode.ts`, `TownLayoutDraft.ts`, `FarmLayoutDraft.ts`, `src/scenes/MapEditorScene.ts` |
 | UI | `src/ui/CozyTheme.ts`, `TextRendering.ts`, `UILayout.ts`, affected menu; `src/scenes/UIScene.ts` |
@@ -36,7 +36,8 @@ TypeScript/JSON MapData as well as historical Tiled sources. Do not rewrite it t
 - Check migration needs for new scene keys, solid cells, footprints and active saved player positions—not
   just new fields. Read old-version tests before incrementing SAVE_VERSION or loosening validation.
 - Keep private-event runtime state outside saves. Validate resident jail release days in save candidates and
-  preserve the byte-exact v15 backup before the first v16 write.
+  preserve the byte-exact v15 backup before the first v16 write. The current `SAVE_VERSION` is 30; that
+  backup step still runs when an old save loads.
 
 ## Safe test commands
 
@@ -59,7 +60,7 @@ Never use blanket pkill or quietly attach to a different server. Check an occupi
 a service. Do not run two suites/visual probes that both own 5276 at once. Avoid a simultaneous heavy build
 when investigating browser timing. A full run last took 5.2 minutes; give command wrappers enough total time.
 Keep one browser worker unless Jeff explicitly asks for more; large parallel runs previously overloaded his Mac.
-For `run_cmd_capture.py`, the default limit is 300 seconds: use `--timeout-sec 1200` for the full suite.
+`run_cmd_capture.py` is a local command wrapper; it is not in this repo. With it, the default limit is 300 seconds: use `--timeout-sec 1200` for the full suite.
 This raises the wrapper limit, not individual test assertions. No retries are enabled in the project config.
 
 Useful focused groups (same config; pass matching filenames to Playwright):
@@ -78,7 +79,7 @@ Screenshots are not inspected merely because a file exists—open them.
 
 ## Input and visual verification
 
-The canvas game's dev seam is `window.__TEST__`; see `tests/helpers/gameHarness.ts` and project playtest skill.
+The canvas game's dev seam is `window.__TEST__`; see `tests/helpers/gameHarness.ts`. The playtest skill is local to the author's machine; it is not in this repo.
 Use `?test=1&seed=42` for deterministic Canvas tests; add `renderer=webgl` for actual graphics behavior.
 Fresh browser contexts isolate saves. Set up prerequisites through the seam, then exercise real keys/mouse.
 Use readiness/state predicates for transitions, `stepTime` for game-time rules. Short screenshot settling
